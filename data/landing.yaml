@@ -1,0 +1,30 @@
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  backgroundImage:
+    path: "images/templates/hero"
+    filename:
+      desktop: "gradient-desktop.webp"
+      mobile: "gradient-mobile.webp"
+
+  badge:
+    text: v0.0.1
+    color: success
+    pill: false
+    soft: true
+
+  title: "Coll Wiki"
+  subtitle: A wiki containg my personal notes and documentation about various topics I found interesting.
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Go to wiki"
+    url: "/docs/"
+  cta2Button:
+    icon: code
+    btnText: "GitHub Repository"
+    url: "https://github.com/colllijo/wiki"
+
+  info: ""
