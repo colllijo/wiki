@@ -5,7 +5,7 @@ description: "Simple Information and notes about the Onion Architecture"
 icon: "article"
 date: "2024-06-14T16:10:13+02:00"
 lastmod: "2024-06-14T16:10:13+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
