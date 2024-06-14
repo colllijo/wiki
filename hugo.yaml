@@ -8,11 +8,36 @@ module:
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
       disable: false
 params:
+  globalFrontmatter:
+    author: "Liam Metzger"
   docs:
+    # Core options
+    themeColor: "green"
+    darkMode: true
+    prism: true
+    prismTheme: "lotusdocs"
+    # Icon options
+    sidebarIcons: true
+    titleIcon: true
+    # GitInfo options
+    lastMod: true
+    # Linking options
     intLinkTooltip: true
-menu:
-  primary:
-    - name: "Wiki"
-      url: "/docs/"
-      identifier: "docs"
-      weight: 10
+  flexsearch:
+    maxResult: 8
+  social:
+    github: "colllijo/wiki"
+defaultContentLanguage: "en"
+languages:
+  de:
+    disabled: false
+    languageCode: "de-CH"
+    languageName: "Deutsch"
+    langaugeDirection: "ltr"
+    weight: 2
+  en:
+    disabled: false
+    languageCode: "en-CH"
+    languageName: "English"
+    langaugeDirection: "ltr"
+    weight: 1
