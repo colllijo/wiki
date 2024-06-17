@@ -9,6 +9,15 @@ draft: false
 toc: true
 ---
 
+{{< rawhtml >}}
+<style>
+  .split-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+</style>
+{{< /rawhtml >}}
+
 ## Introduction
 
 The Onion Architecture tries to create applications as *modular* as possible.
@@ -20,7 +29,10 @@ without needing to break open other parts of the application, a core part of
 making this possible is to avoid creating fixed dependencies and only using
 interfaces for communication between components.
 
-![Model of an Onion Architecture](images/architecture/onion/onion-model.png)
+{{< rawhtml >}}
+<div class="split-container">
+  <div>
+{{< /rawhtml >}}
 
 ## Concepts
 
@@ -49,3 +61,11 @@ services needed by the application.
 **Presentation:** The presentation layer is part of the infrastructure. But
 instead of communication with other systems, it communicates with the user.
 This is done by providing a user interface like a website for example.
+
+{{< rawhtml >}}
+  </div>
+  <div>
+    <img src="/images/architecture/onion/onion-model.png" alt="Model of an Onion Architecture" />
+  </div>
+</div>
+{{< /rawhtml >}}

@@ -9,6 +9,20 @@ draft: true
 toc: true
 ---
 
+{{< rawhtml >}}
+<style>
+  .split-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+  }
+</style>
+{{< /rawhtml >}}
+
+{{< rawhtml >}}
+<div class="split-container">
+  <div>
+{{< /rawhtml >}}
 ## Einführung
 
 Mit dependency Injection wird bewirkt das eine Klasse selber keine
@@ -26,7 +40,7 @@ Die letze Möglichkeit ist es die Abhängikeit direkt im Feld einzuführen, soda
 weder eine Konstruktor noch eine spezifische Setter Methode benötigt wird.
 
 Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
-SOLID Prinzip. welche die Abhängikeit von unten nach oben bringt.
+[SOLID Prinzip](/docs/design-patterns/solid). welche die Abhängikeit von unten nach oben bringt.
 
 ## Rollen
 
@@ -61,18 +75,237 @@ Die Aufgabe des Injectors ist es die jeweiligen Services in die
 unterschiedlichen Interfaces der Clients "einzuspritzen", damit diese sie benutzen
 können. Der Injector ist im Vergleich zur Dependency Inversion die einzig neue
 Rolle welche zu vor noch nicht benötigt wurde.
+{{< rawhtml >}}
+  </div>
+  <div>
+{{< /rawhtml >}}
+
+## Resourcen
+
+[Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)  
+[Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)  
+[Stackify - Dependency Injection](https://stackify.com/dependency-injection/)  
+[Stackify - Dependency Inversion Principle](https://stackify.com/dependency-inversion-principle/)  
 
 ## CDI
 
-Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher die
-Konfiguration von Modulen abhängig von verschiedenen Zusammenhängen durch
-Injetion von Abhängigkeiten erlaubt.
-
-## Quellen
-
-[Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)
-[Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)
-[Stackify - Dependency Injection](https://stackify.com/dependency-injection/)
+Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher das Prinzip
+der Dependency Injection erweitert. CDI ermöglicht es, die Abhängigkeiten der
+verschiedenen Module automatisiert zu injitzieren, wodurch es nicht mehr nötig ist
+die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhder verschiedener
+Zusammenhänge, sowie einer Konfiguration, welche Abhängigkeit wo benötigt wird.
+{{< rawhtml >}}
+  </div>
+</div>
+{{< /rawhtml >}}
 
 ## Beispiel
 
+Um dieses Prinzip zu verdeutlichen gibt es hier ein kleines Beispiel in Java.
+Dabei soll eine Applikation erstellt werden, welche genutzt werden kann um mit
+unterschiedlichen Kaffeemachinen Kaffee zu brühen.
+
+### Ausgangslage
+
+Für die Ausgangslage gibt es zwei Kaffeemachinen, die `BadicCoffeeMachine` und die `PremiumCoffeeMachine`.
+Beide Machinen haben eine Method um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
+Filterkaffee auch noch Espresso brühen.
+
+{{< tabs tabTotal="2" >}}
+{{< tab tabName="BasicCoffeeMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+import java.util.Map;
+
+public class BasicCoffeeMachine {
+  private Configuration config;
+  private Map<CoffeeSelection, GroundCoffee> groudnCoffee;
+  private BrewingUnit brewingUnit;
+
+  public BasicCoffeeMachine(Map<CoffeeSelection, GroundCoffee> coffee) {
+    this.config = new Configuration(30, 480);
+    this.groundCoffee = coffee;
+    this.brewingUnit = new BrewingUnit();
+  }
+
+  public Coffee brewFilterCoffee() {
+    GroundCoffee groundCoffee = this.groundCoffee.get(CoffeeSelection.FILTER_COFFEE);
+    return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, this.config.getQuantityWater());
+  }
+
+  public void addGroundCoffee(CoffeeSelection selection, GroundCoffee coffee) throws CoffeeException {
+    GourndCoffee existingCoffee = this.groundCoffee.get(selection);
+    if (existingCoffee != null) {
+      if (existingCoffee.getName().equals(coffee.getName())) {
+        existingCoffee.setQuantity(existingCoffee.getQuantity() + coffee.getQuantity());
+      } else {
+        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
+      }
+    } else {
+      this.groundCoffee.put(selection, coffee);
+    }
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+
+{{< tab tabName="PermiumCoffeeMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+import java.util.HashMap;
+import java.util.Map;
+ 
+public class PremiumCoffeeMachine {
+  private Map<CoffeeSelection, Configuration> configMap;
+  private Map<CoffeeSelection, CoffeeBean> beans;
+  private Grinder grinder
+  private BrewingUnit brewingUnit;
+
+  public PremiumCoffeeMachine(Map<CoffeeSelection, CoffeeBean> beans) {
+    this.beans = beans;
+    this.grinder = new Grinder();
+    this.brewingUnit = new BrewingUnit();
+    this.configMap = new HashMap<>();
+    this.configMap.put(CoffeeSelection.FILTER_COFFEE, new Configuration(30, 480));
+    this.configMap.put(CoffeeSelection.ESPRESSO, new Configuration(8, 28));
+  }
+
+  public Coffee brewEspresso() {
+    Configuration config = configMap.get(CoffeeSelection.ESPRESSO);
+    GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.ESPRESSO), config.getQuantityCoffee())
+    return this.brewingUnit.brew(CoffeeSelection.ESPRESSO, groundCoffee, config.getQuantityWater());
+  }
+
+  public Coffee brewFilterCoffee() {
+    Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE);
+    GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.FILTER_COFFEE), config.getQuantityCoffee());
+    return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, config.getQuantityWater());
+  }
+
+  public void addCoffeeBeans(CoffeeSelection sel, CoffeeBean newBeans) throws CoffeeException {
+    CoffeeBean existingBeans = this.beans.get(sel);
+    if (existingBeans != null) {
+      if (existingBeans.getName().equals(newBeans.getName())) {
+        existingBeans.setQuantity(existingBeans.getQuantity() + newBeans.getQuantity());
+      } else {
+        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
+      }
+    } else {
+      this.beans.put(sel, newBeans);
+    }
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+### Abstraktion
+
+Der erste Schritt zur Dependency Injection ist die Abstraktion der öffentlichen Methoden.
+Dazu muss ein Interface für die Kaffeemachinen erstellt werden. Da nicht jede Kaffeemachinen
+Espresso brühen kann gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemachinen,
+welches Filterkaffee brühen kann und ein zweites für die Premium Kaffeemachinen, welche auch
+Espresso brühen kann. Die `BasicCoffeeMachine` kann dann das einfach Interface implementieren
+und die `PremiumCoffeeMachine` implementiert einfach beide.
+
+{{< tabs tabTotal="2" >}}
+{{< tab tabName="CoffeeMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+public interface CoffeeMachine {
+  Coffee brewFilterCoffee();
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< tab tabName="EspressoMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+public interface EspressoMachine {
+  Coffee brewEspresso();
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+**Refactoring**
+{{< tabs tabTotal="2" >}}
+{{< tab tabName="BasicCoffeeMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+import java.util.Map;
+
+public class BasicCoffeeMachine {
+  private Configuration config;
+  private Map<CoffeeSelection, GroundCoffee> groudnCoffee;
+  private BrewingUnit brewingUnit;
+
+  public BasicCoffeeMachine(Map<CoffeeSelection, GroundCoffee> coffee) {
+    this.config = new Configuration(30, 480);
+    this.groundCoffee = coffee;
+    this.brewingUnit = new BrewingUnit();
+  }
+
+  public Coffee brewFilterCoffee() {
+    GroundCoffee groundCoffee = this.groundCoffee.get(CoffeeSelection.FILTER_COFFEE);
+    return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, this.config.getQuantityWater());
+  }
+
+  public void addGroundCoffee(CoffeeSelection selection, GroundCoffee coffee) throws CoffeeException {
+    GourndCoffee existingCoffee = this.groundCoffee.get(selection);
+    if (existingCoffee != null) {
+      if (existingCoffee.getName().equals(coffee.getName())) {
+        existingCoffee.setQuantity(existingCoffee.getQuantity() + coffee.getQuantity());
+      } else {
+        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
+      }
+    } else {
+      this.groundCoffee.put(selection, coffee);
+    }
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+
+{{< tab tabName="PermiumCoffeeMachine.java" >}}
+{{< prism lang="java" line-numbers=true >}}
+import java.util.HashMap;
+import java.util.Map;
+ 
+public class PremiumCoffeeMachine {
+  private Map<CoffeeSelection, Configuration> configMap;
+  private Map<CoffeeSelection, CoffeeBean> beans;
+  private Grinder grinder
+  private BrewingUnit brewingUnit;
+
+  public PremiumCoffeeMachine(Map<CoffeeSelection, CoffeeBean> beans) {
+    this.beans = beans;
+    this.grinder = new Grinder();
+    this.brewingUnit = new BrewingUnit();
+    this.configMap = new HashMap<>();
+    this.configMap.put(CoffeeSelection.FILTER_COFFEE, new Configuration(30, 480));
+    this.configMap.put(CoffeeSelection.ESPRESSO, new Configuration(8, 28));
+  }
+
+  public Coffee brewEspresso() {
+    Configuration config = configMap.get(CoffeeSelection.ESPRESSO);
+    GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.ESPRESSO), config.getQuantityCoffee())
+    return this.brewingUnit.brew(CoffeeSelection.ESPRESSO, groundCoffee, config.getQuantityWater());
+  }
+
+  public Coffee brewFilterCoffee() {
+    Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE);
+    GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.FILTER_COFFEE), config.getQuantityCoffee());
+    return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, config.getQuantityWater());
+  }
+
+  public void addCoffeeBeans(CoffeeSelection sel, CoffeeBean newBeans) throws CoffeeException {
+    CoffeeBean existingBeans = this.beans.get(sel);
+    if (existingBeans != null) {
+      if (existingBeans.getName().equals(newBeans.getName())) {
+        existingBeans.setQuantity(existingBeans.getQuantity() + newBeans.getQuantity());
+      } else {
+        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
+      }
+    } else {
+      this.beans.put(sel, newBeans);
+    }
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< /tabs >}}

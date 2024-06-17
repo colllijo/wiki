@@ -9,6 +9,15 @@ draft: false
 toc: true
 ---
 
+{{< rawhtml >}}
+<style>
+  .split-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+</style>
+{{< /rawhtml >}}
+
 ## Einführung
 
 Eine Onion Architektur zielt darauf ab, eine Applikation möglichs *modular* zu
@@ -20,8 +29,10 @@ werden können, ohne dass andere Teile der Applikation davon betroffen sind,
 indem keine festen Abhängigkeiten erstellt werden und nur Interfaces verwendet
 werden.
 
-![Onion Architektur Model](images/architecture/onion/onion-model.png)
-
+{{< rawhtml >}}
+<div class="split-container">
+  <div>
+{{< /rawhtml >}}
 ## Konzepte
 
 ### Abhängigkeiten
@@ -52,3 +63,10 @@ REST-Schnittstelle und viele weitere Services welche in der Applikation benötig
 übernimmt sie keine Kommunikation mit anderen System sondern mit dem Benutzer.
 Indem sie ihm eine Benutzeroberfläche zum Beispiel in Form einer Website zur
 Verfügung stellt.
+{{< rawhtml >}}
+  </div>
+  <div>
+    <img src="/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
+  </div>
+</div>
+{{< /rawhtml >}}
