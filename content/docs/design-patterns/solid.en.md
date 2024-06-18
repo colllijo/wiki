@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 100
 title: "SOLID"
 description: ""
 icon: "article"

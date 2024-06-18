@@ -1,11 +1,11 @@
 ---
-weight: 999
+weight: 200
 title: "Dependency Injection"
 description: "Eine kurze Einführung in das Thema Depedency Injection mit einem kleinen Java Beispiel"
 icon: "article"
 date: "2024-06-14T16:56:19+02:00"
 lastmod: "2024-06-14T16:56:19+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
@@ -113,7 +113,7 @@ Filterkaffee auch noch Espresso brühen.
 
 {{< tabs tabTotal="2" >}}
 {{< tab tabName="BasicCoffeeMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" >}}
 import java.util.Map;
 
 public class BasicCoffeeMachine {
@@ -132,16 +132,16 @@ public class BasicCoffeeMachine {
     return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, this.config.getQuantityWater());
   }
 
-  public void addGroundCoffee(CoffeeSelection selection, GroundCoffee coffee) throws CoffeeException {
-    GourndCoffee existingCoffee = this.groundCoffee.get(selection);
+  public void addGroundCoffee(CoffeeSelection sel, GroundCoffee newBeans) throws CoffeeException {
+    GourndCoffee existingCoffee = this.groundCoffee.get(sel);
     if (existingCoffee != null) {
-      if (existingCoffee.getName().equals(coffee.getName())) {
-        existingCoffee.setQuantity(existingCoffee.getQuantity() + coffee.getQuantity());
+      if (existingCoffee.getName().equals(newBeans.getName())) {
+        existingCoffee.setQuantity(existingCoffee.getQuantity() + newBeans.getQuantity());
       } else {
         throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
       }
     } else {
-      this.groundCoffee.put(selection, coffee);
+      this.groundCoffee.put(sel, coffee);
     }
   }
 }
@@ -149,10 +149,10 @@ public class BasicCoffeeMachine {
 {{< /tab >}}
 
 {{< tab tabName="PermiumCoffeeMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" >}}
 import java.util.HashMap;
 import java.util.Map;
- 
+
 public class PremiumCoffeeMachine {
   private Map<CoffeeSelection, Configuration> configMap;
   private Map<CoffeeSelection, CoffeeBean> beans;
@@ -208,14 +208,14 @@ und die `PremiumCoffeeMachine` implementiert einfach beide.
 
 {{< tabs tabTotal="2" >}}
 {{< tab tabName="CoffeeMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" >}}
 public interface CoffeeMachine {
   Coffee brewFilterCoffee();
 }
 {{< /prism >}}
 {{< /tab >}}
 {{< tab tabName="EspressoMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" line="3" >}}
 public interface EspressoMachine {
   Coffee brewEspresso();
 }
@@ -226,35 +226,37 @@ public interface EspressoMachine {
 **Refactoring**
 {{< tabs tabTotal="2" >}}
 {{< tab tabName="BasicCoffeeMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" line="3,15-19" >}}
 import java.util.Map;
 
-public class BasicCoffeeMachine {
+public class BasicCoffeeMachine implements CoffeeMachine {
+
   private Configuration config;
-  private Map<CoffeeSelection, GroundCoffee> groudnCoffee;
+  private Map<CoffeeSelection, GroundCoffee> groundCoffee;
   private BrewingUnit brewingUnit;
 
-  public BasicCoffeeMachine(Map<CoffeeSelection, GroundCoffee> coffee) {
-    this.config = new Configuration(30, 480);
+  public BasicCoffeeMachine(Map<CoffeeSelection, GroundCoffee> coffee).  
     this.groundCoffee = coffee;
     this.brewingUnit = new BrewingUnit();
+    this.config = new Configuration(30, 480);
   }
 
+  @Overrride
   public Coffee brewFilterCoffee() {
     GroundCoffee groundCoffee = this.groundCoffee.get(CoffeeSelection.FILTER_COFFEE);
     return this.brewingUnit.brew(CoffeeSelection.FILTER_COFFEE, groundCoffee, this.config.getQuantityWater());
   }
 
-  public void addGroundCoffee(CoffeeSelection selection, GroundCoffee coffee) throws CoffeeException {
-    GourndCoffee existingCoffee = this.groundCoffee.get(selection);
+  public void addGroundCoffee(CoffeeSelection sel, GroundCoffee newCoffee) throws CoffeeException {
+    GroundCoffee existingCoffee = this.groundCoffee.get(sel);
     if (existingCoffee != null) {
-      if (existingCoffee.getName().equals(coffee.getName())) {
-        existingCoffee.setQuantity(existingCoffee.getQuantity() + coffee.getQuantity());
+      if (existingCoffee.getName().equals(newCoffee.getName())) {
+        existingCoffee.setQuantity(existingCoffee.getQuantity() + newCoffee.getQuantity())
       } else {
-        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.");
+        throw new CoffeeException("Only one kind of coffee supported for each CoffeeSelection.")
       }
     } else {
-      this.groundCoffee.put(selection, coffee);
+      this.groundCoffee.put(sel, newCoffee)
     }
   }
 }
@@ -262,11 +264,11 @@ public class BasicCoffeeMachine {
 {{< /tab >}}
 
 {{< tab tabName="PermiumCoffeeMachine.java" >}}
-{{< prism lang="java" line-numbers=true >}}
+{{< prism lang="java" line-numbers="true" line="4,19-24,26-31" >}}
 import java.util.HashMap;
 import java.util.Map;
- 
-public class PremiumCoffeeMachine {
+
+public class PremiumCoffeeMachine implements CoffeeMachine, EspressoMachine {
   private Map<CoffeeSelection, Configuration> configMap;
   private Map<CoffeeSelection, CoffeeBean> beans;
   private Grinder grinder
@@ -281,12 +283,14 @@ public class PremiumCoffeeMachine {
     this.configMap.put(CoffeeSelection.ESPRESSO, new Configuration(8, 28));
   }
 
+  @Override
   public Coffee brewEspresso() {
     Configuration config = configMap.get(CoffeeSelection.ESPRESSO);
     GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.ESPRESSO), config.getQuantityCoffee())
     return this.brewingUnit.brew(CoffeeSelection.ESPRESSO, groundCoffee, config.getQuantityWater());
   }
 
+  @Override
   public Coffee brewFilterCoffee() {
     Configuration config = configMap.get(CoffeeSelection.FILTER_COFFEE);
     GroundCoffee groundCoffee = this.grinder.grind( this.beans.get(CoffeeSelection.FILTER_COFFEE), config.getQuantityCoffee());
@@ -303,6 +307,59 @@ public class PremiumCoffeeMachine {
       }
     } else {
       this.beans.put(sel, newBeans);
+    }
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+### Applikation
+
+Da nun beide Klassen ihre Interfaces implementieren, kann die Kaffeeapplikation nach dem Dependency Injection
+Prinzip erstellt werden. Die Applikation muss jetzt nicht mehr selber verwalten, welche Kaffeemachine sie
+benötigt, sondern kann einfach die Interfaces, welche sie benötigt über ihren Konstruktor anfordern.
+Wodurch die richtige Kaffeemachine bei der Erstellung der Kaffeeapplikation injiziert werden kann.
+
+{{< tabs tabTotal="1" >}}
+{{< tab tabName="CoffeeApp.java" >}}
+{{< prism lang="java" line-numbers="true" >}}
+public class CoffeeApp {
+  private CoffeeMachine coffeeMachine;
+
+  public CoffeeApp(CoffeeMachine coffeeMachine) {
+    this.coffeeMachine = coffeeMachine;
+  }
+
+  public Coffee prepareCoffee() throws CoffeeException {
+    Coffee coffee = this.coffeeMachine.brewFilterCoffee();
+    System.out.println("Coffee is ready");
+    return coffee;
+  }
+}
+{{< /prism >}}
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< tabs tabTotal="1" >}}
+{{< tab tabName="CoffeeAppStarter.java" >}}
+{{< prism lang="java" line-numbers="true" >}}
+import java.util.HashMap;
+import java.util.Map;
+
+public class CoffeeAppStarter {
+  public static void main(String[] args) {
+    Map<CoffeeSelection, CoffeeBean> beans = new HashMap<CoffeeSelection, CoffeeBean>();
+    beans.put(CoffeeSelection.ESPRESSO, new CoffeeBean("My favorite espresso bean", 1000));
+    beans.put(CoffeeSelection.FILTER_COFFEE, new CoffeeBean("My favorite filter coffee bean", 600));
+
+    PremiumCoffeeMachine machine = new PremiumCoffeeMachine(beans);
+    CoffeeApp app = new CoffeeApp(machine);
+
+    try {
+      app.prepareCoffee();
+    } catch (CoffeeException e) {
+      e.printStackTrace();
     }
   }
 }

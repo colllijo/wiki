@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 200
 title: "Dependency Injection"
 description: ""
 icon: "article"
