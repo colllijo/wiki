@@ -107,7 +107,7 @@ unterschiedlichen Kaffeemaschine Kaffee zu brühen.
 
 ### Ausgangslage
 
-Für die Ausgangslage gibt es zwei Kaffeemaschine, die `BadicCoffeeMachine` und die `PremiumCoffeeMachine`.
+Für die Ausgangslage gibt es zwei Kaffeemaschine, die `BasicCoffeeMachine` und die `PremiumCoffeeMachine`.
 Beide Machinen haben eine Method um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
 Filterkaffee auch noch Espresso brühen.
 

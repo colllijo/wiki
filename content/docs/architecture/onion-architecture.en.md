@@ -41,7 +41,7 @@ interfaces for communication between components.
 In an Onion Architecture, dependencies flow from the outside to the inside.
 This results in the inner layers of the application not needing to know
 about the outer components. This gets rid of fixed dependencies and makes
-it possible to easily exchange conpomnents without editing other parts of
+it possible to easily exchange components without editing other parts of
 the application.
 
 ### Layers
@@ -65,7 +65,7 @@ This is done by providing a user interface like a website for example.
 {{< rawhtml >}}
   </div>
   <div>
-    <img src="/images/architecture/onion/onion-model.png" alt="Model of an Onion Architecture" />
+    <img src="/docs/images/architecture/onion/onion-model.png" alt="Model of an Onion Architecture" />
   </div>
 </div>
 {{< /rawhtml >}}
