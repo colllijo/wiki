@@ -66,7 +66,7 @@ Verfügung stellt.
 {{< rawhtml >}}
   </div>
   <div>
-    <img src="/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
+    <img src="/docs/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
   </div>
 </div>
 {{< /rawhtml >}}
