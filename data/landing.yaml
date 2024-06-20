@@ -21,7 +21,7 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Go to wiki"
-    url: "/docs/"
+    url: "./docs/"
   cta2Button:
     icon: code
     btnText: "GitHub Repository"
