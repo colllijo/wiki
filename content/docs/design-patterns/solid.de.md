@@ -5,7 +5,7 @@ description: "Informationen zu den grundlegenden Prinzipien der Objektorientiert
 icon: "article"
 date: "2024-06-14T16:56:19+02:00"
 lastmod: "2024-06-14T16:56:19+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
