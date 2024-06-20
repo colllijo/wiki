@@ -1,0 +1,62 @@
+baseURL: "https://wiki.coll.dev/"
+languageCode: "en-ch"
+title: "Coll Wiki"
+contentDir: "content"
+enableEmoji: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.120.0"
+  imports:
+    - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+      disable: false
+
+defaultContentLanguage: en
+languages:
+  en:
+    params:
+      disbaled: false
+      languageName: "English"
+      weight: 10
+  de:
+    params:
+      disabled: false
+      languageName: "Deutsch"
+      weight: 20
+
+markup:
+  defaultMarkdownHandler: "goldmark"
+  markup:
+    tableOfContents:
+      startLevel: 1
+      endLevel: 3
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  globalFrontmatter:
+    author: "Liam Metzger"
+  footer:
+    copyright: |
+      © :YEAR: Liam Metzger.  
+      Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)
+  social:
+    github: "colllijo/wiki"
+  docs:
+    # Core Options
+    pathName: "docs"
+    themeColor: "green"
+    darkMode: true
+    prism: true
+    prismTheme: "lotusdocs"
+    # Icon options
+    sidebarIcons: true
+    titleIcon: true
+    # GitInfo options
+    lastMod: true
+    # Linking options
+    intLinkTooltip: true
+  flexsearch:
+    maxResult: 8
