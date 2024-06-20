@@ -27,8 +27,8 @@ toc: true
 
 Mit dependency Injection wird bewirkt das eine Klasse selber keine
 Abhängigkeiten mehr verwalten muss, da diese automatisch zur Verfügung gestellt
-werden. Dadurch soll es einefacher sein Abhängigkeiten zu verändern, da diese
-weniger Anpassungen in ihren Anhängigkeiten zur folge haben, im besten fall
+werden. Dadurch soll es einfacher sein Abhängigkeiten zu verändern, da diese
+weniger Anpassungen in ihren Abhängigkeiten zur folge haben, im besten fall
 sogar gar keine Veränderungen mehr.
 
 Eine Abhängigkeit kann mittels Dependency Injection an drei verschiedenen
@@ -36,11 +36,11 @@ Stellen eingeführt werden. Es ist möglich die Abhängigkeit bei der
 Konstruktion des Clients zu erstellen, hierbei wird die Abhängigkeit in den
 Konstruktor eingeführt, eine zweite Möglichkeit ist es, die Abhängigkeit mittels
 einer Setter Method einzuführen, welche nach dem Konstruktor aufgerufen wird.
-Die letze Möglichkeit ist es die Abhängikeit direkt im Feld einzuführen, sodass
+Die letzte Möglichkeit ist es die Abhängigkeit direkt im Feld einzuführen, sodass
 weder eine Konstruktor noch eine spezifische Setter Methode benötigt wird.
 
 Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
-[SOLID Prinzip](/docs/design-patterns/solid). welche die Abhängikeit von unten nach oben bringt.
+[SOLID Prinzip](/docs/design-patterns/solid), welche die Abhängigkeit von unten nach oben bringt.
 
 ## Rollen
 
@@ -48,18 +48,18 @@ Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
 
 Der Service ist der Teil der Applikation, welcher an einer anderen Stelle
 genutzt werden soll, da dieser einen Teil der Benötigten Geschäftslogik
-implementiert. Damit die Applikation möglichst Modulat bleibt und mit dem
-Dependency Inversion Ptinziple übereinstimmt, wird ein Service nie direkt in
+implementiert. Damit die Applikation möglichst Modular bleibt und mit dem
+Dependency Inversion Principle übereinstimmt, wird ein Service nie direkt in
 einem Client genutzt. Anstelle dessen implementiert ein Service ein Interface,
 welches wiederum von Clients verwendet werden kann.
 
 
 ### Client
 
-Der Client bezeichnet den Teil der Applikation, welcher einen Serivce
-konsummieren und benutzen soll. Die Abhängigkeit soll hier "eingesrpitzt"
+Der Client bezeichnet den Teil der Applikation, welcher einen Service
+konsummieren und benutzen soll. Die Abhängigkeit soll hier "eingespritzt"
 werden. Dadurch kann der Client die Funktionalitäten des Interfaces, welche vom
-Service impelmentiert werden einfach Nutzen ohne sich darum kümmern zu müssen,
+Service implementiert werden einfach Nutzen ohne sich darum kümmern zu müssen,
 welche implementation er jetzt benutzt.
 
 ### Interface
@@ -80,7 +80,7 @@ Rolle welche zu vor noch nicht benötigt wurde.
   <div>
 {{< /rawhtml >}}
 
-## Resourcen
+## Ressourcen
 
 [Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)  
 [Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)  
@@ -91,8 +91,8 @@ Rolle welche zu vor noch nicht benötigt wurde.
 
 Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher das Prinzip
 der Dependency Injection erweitert. CDI ermöglicht es, die Abhängigkeiten der
-verschiedenen Module automatisiert zu injitzieren, wodurch es nicht mehr nötig ist
-die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhder verschiedener
+verschiedenen Module automatisiert zu injizieren, wodurch es nicht mehr nötig ist
+die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhand der verschiedener
 Zusammenhänge, sowie einer Konfiguration, welche Abhängigkeit wo benötigt wird.
 {{< rawhtml >}}
   </div>
@@ -103,11 +103,11 @@ Zusammenhänge, sowie einer Konfiguration, welche Abhängigkeit wo benötigt wir
 
 Um dieses Prinzip zu verdeutlichen gibt es hier ein kleines Beispiel in Java.
 Dabei soll eine Applikation erstellt werden, welche genutzt werden kann um mit
-unterschiedlichen Kaffeemachinen Kaffee zu brühen.
+unterschiedlichen Kaffeemaschine Kaffee zu brühen.
 
 ### Ausgangslage
 
-Für die Ausgangslage gibt es zwei Kaffeemachinen, die `BadicCoffeeMachine` und die `PremiumCoffeeMachine`.
+Für die Ausgangslage gibt es zwei Kaffeemaschine, die `BadicCoffeeMachine` und die `PremiumCoffeeMachine`.
 Beide Machinen haben eine Method um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
 Filterkaffee auch noch Espresso brühen.
 
@@ -200,9 +200,9 @@ public class PremiumCoffeeMachine {
 ### Abstraktion
 
 Der erste Schritt zur Dependency Injection ist die Abstraktion der öffentlichen Methoden.
-Dazu muss ein Interface für die Kaffeemachinen erstellt werden. Da nicht jede Kaffeemachinen
-Espresso brühen kann gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemachinen,
-welches Filterkaffee brühen kann und ein zweites für die Premium Kaffeemachinen, welche auch
+Dazu muss ein Interface für die Kaffeemaschine erstellt werden. Da nicht jede Kaffeemaschine
+Espresso brühen kann gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemaschine,
+welches Filterkaffee brühen kann und ein zweites für die Premium Kaffeemaschine, welche auch
 Espresso brühen kann. Die `BasicCoffeeMachine` kann dann das einfach Interface implementieren
 und die `PremiumCoffeeMachine` implementiert einfach beide.
 
@@ -317,9 +317,9 @@ public class PremiumCoffeeMachine implements CoffeeMachine, EspressoMachine {
 ### Applikation
 
 Da nun beide Klassen ihre Interfaces implementieren, kann die Kaffeeapplikation nach dem Dependency Injection
-Prinzip erstellt werden. Die Applikation muss jetzt nicht mehr selber verwalten, welche Kaffeemachine sie
+Prinzip erstellt werden. Die Applikation muss jetzt nicht mehr selber verwalten, welche Kaffeemaschine sie
 benötigt, sondern kann einfach die Interfaces, welche sie benötigt über ihren Konstruktor anfordern.
-Wodurch die richtige Kaffeemachine bei der Erstellung der Kaffeeapplikation injiziert werden kann.
+Wodurch die richtige Kaffeemaschine bei der Erstellung der Kaffeeapplikation injiziert werden kann.
 
 {{< tabs tabTotal="1" >}}
 {{< tab tabName="CoffeeApp.java" >}}
