@@ -63,3 +63,12 @@ params:
     intLinkTooltip: true
   flexsearch:
     maxResult: 8
+  feedback:
+    enabled: true
+    emoticonTpl: false
+    eventDest:
+      - google
+
+services:
+  googleAnalytics:
+    id: "G-J0MTL4YQF1"
