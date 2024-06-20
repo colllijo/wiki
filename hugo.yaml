@@ -38,6 +38,9 @@ markup:
 params:
   globalFrontmatter:
     author: "Liam Metzger"
+  sans_serif_font: "hack"
+  secondary_font: "hack"
+  mono_font: "hack"
   footer:
     copyright: |
       © :YEAR: Liam Metzger.  
