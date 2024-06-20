@@ -68,6 +68,24 @@ params:
     emoticonTpl: false
     eventDest:
       - google
+    positiveForm:
+      - - Accurate
+        - Accurately describes the feature or option.
+      - - Solved my problem
+        - Helped me resolve an issue.
+      - - Easy to understand
+        - Easy to follow and comprehend.
+      - - Something else
+    negativeForm:
+      - - Inaccurate
+        - Doesn't accurately describe the feature or option.
+      - - Couldn't find what I was looking for
+        - Missing important information.
+      - - Hard to understand
+        - Too complicated or unclear.
+      - - Code sample errors
+        - One or more code samples are incorrect.
+      - - Something else
 
 services:
   googleAnalytics:
