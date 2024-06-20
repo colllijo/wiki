@@ -6,6 +6,87 @@
    Version: 1.2.0
    File Description: Main CSS file for Lotus Docs
 */
+/* Hack Nerd Font */
+@font-face {
+  font-family: 'hack';
+  font-weight: bold;
+  font-style: italic;
+  src: url("/docs/fonts/hack-bold-italic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'hack';
+  font-weight: bold;
+  font-style: normal;
+  src: url("/docs/fonts/hack-bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'hack';
+  font-weight: normal;
+  font-style: italic;
+  src: url("/docs/fonts/hack-italic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'hack';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/docs/fonts/hack.woff") format("woff"); }
+
+/* nunito-300 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/nunito-v25-latin-300.woff2") format("woff2"); }
+
+/* nunito-regular - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/nunito-v25-latin-regular.woff2") format("woff2"); }
+
+/* nunito-500 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/nunito-v25-latin-500.woff2") format("woff2"); }
+
+/* nunito-600 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/nunito-v25-latin-600.woff2") format("woff2"); }
+
+/* nunito-700 - latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/nunito-v25-latin-700.woff2") format("woff2"); }
+
+/* source-code-pro-500 - latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/source-code-pro-v22-latin-500.woff2") format("woff2"); }
+
+/* source-code-pro-700 - latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("/docs/fonts/source-code-pro-v22-latin-700.woff2") format("woff2"); }
+
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-weight: 400 700;
@@ -100,8 +181,8 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: hack;
+  --bs-font-monospace: hack;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -9575,7 +9656,7 @@ html {
   background-color: var(--body-bg); }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Ubuntu";
+  font-family: hack;
   overflow-x: hidden !important;
   font-size: 1rem;
   color: var(--body-color);
@@ -10387,18 +10468,6 @@ button:not(:disabled) {
   outline: none; }
 
 :root {
-  --modal-bg: var(--gray-50); }
-
-[data-dark-mode] {
-  --modal-bg: var(--gray-900); }
-
-.modal {
-  --bs-modal-bg: var(--modal-bg); }
-
-.modal-header {
-  border-bottom: none; }
-
-:root {
   --breadcrumb-item-color: var(--primary); }
 
 [data-dark-mode] {
@@ -10442,6 +10511,31 @@ button:not(:disabled) {
   background-color: var(--btn-primary-bg) !important;
   border: 1px solid var(--btn-primary-border) !important;
   color: var(--btn-primary-color) !important; }
+
+:root {
+  --dropdown-link-color: var(--text-default);
+  --dropdown-bg: var(--body-bg);
+  --dropdown-border-color: var(--alert-border-color);
+  --dropdown-border-radius: 0 0 4px 4px;
+  --dropdown-link-hover-color: var(--primary); }
+
+[data-dark-mode] {
+  --dropdown-link-color: var(--text-default);
+  --dropdown-bg: var(--body-bg);
+  --dropdown-border-color: var(--alert-border-color);
+  --dropdown-border-radius: 0 0 4px 4px;
+  --dropdown-link-hover-color: var(--primary-300); }
+
+.dropdown-menu {
+  --bs-dropdown-min-width: 7rem;
+  --bs-dropdown-link-color: var(--dropdown-link-color);
+  --bs-dropdown-bg: var(--dropdown-bg);
+  --bs-dropdown-border-color: var(--dropdown-border-color);
+  --bs-dropdown-link-hover-bg: none;
+  --bs-dropdown-link-hover-color: var(--dropdown-link-hover-color);
+  --bs-dropdown-border-radius: var(--dropdown-border-radius);
+  transform: translate(0px, 57px) !important;
+  border-top: none; }
 
 :root {
   --alert-border-color: #dee2e6;
@@ -11384,7 +11478,7 @@ code {
 code[class*="language-"],
 pre[class*="language-"] {
   border: none !important;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: hack;
   font-size: 0.8rem;
   text-align: left;
   white-space: pre;
@@ -11976,6 +12070,138 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
   .suggestion__description {
     width: 20.1rem;
     padding-left: 1rem; } }
+
+/* Feedback Widget */
+:root {
+  --emoticon-container-border-color: var(--gray-500);
+  --emoticon-color: var(--gray-500);
+  --emoticon-checked-color: var(--primary);
+  --emoticon-checked--bg-color: var(--primary-100); }
+
+[data-dark-mode] {
+  --emoticon-container-border-color: var(--gray-700);
+  --emoticon-color: var(--gray-600);
+  --emoticon-checked-color: var(--primary-300);
+  --emoticon-checked--bg-color: var(--gray-800); }
+
+#feedback-init {
+  transition: opacity 0.5s; }
+
+#feedback-form-pos,
+#feedback-form-neg,
+#feedback-end,
+#feedback-emoji-end,
+#feedback-submit-container,
+#feedback-emoji-submit-container {
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s; }
+  #feedback-form-pos.is-visible,
+  #feedback-form-neg.is-visible,
+  #feedback-end.is-visible,
+  #feedback-emoji-end.is-visible,
+  #feedback-submit-container.is-visible,
+  #feedback-emoji-submit-container.is-visible {
+    height: auto;
+    line-height: inherit;
+    overflow: inherit;
+    opacity: 1; }
+  #feedback-form-pos .form-check,
+  #feedback-form-neg .form-check,
+  #feedback-end .form-check,
+  #feedback-emoji-end .form-check,
+  #feedback-submit-container .form-check,
+  #feedback-emoji-submit-container .form-check {
+    margin-bottom: 0.525rem; }
+  #feedback-form-pos .form-check-label,
+  #feedback-form-pos .form-check-input,
+  #feedback-form-neg .form-check-label,
+  #feedback-form-neg .form-check-input,
+  #feedback-end .form-check-label,
+  #feedback-end .form-check-input,
+  #feedback-emoji-end .form-check-label,
+  #feedback-emoji-end .form-check-input,
+  #feedback-submit-container .form-check-label,
+  #feedback-submit-container .form-check-input,
+  #feedback-emoji-submit-container .form-check-label,
+  #feedback-emoji-submit-container .form-check-input {
+    font-weight: 600;
+    cursor: pointer; }
+
+#feedback-emoji-end {
+  padding: 0; }
+  #feedback-emoji-end.is-visible {
+    padding: 10px 30px;
+    width: 40vh; }
+
+.feedback-radio-desc {
+  color: var(--text-muted);
+  font-size: 14px; }
+
+.feedback-textarea {
+  width: 50%;
+  font-size: 0.875rem;
+  color: var(--text-default);
+  background: var(--card-bg);
+  resize: none;
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: var(--card-border-color); }
+  @media (max-width: 578px) {
+    .feedback-textarea {
+      width: 100%; } }
+#feedback-widget-emoticon {
+  border: 1px solid var(--emoticon-container-border-color);
+  border-radius: 30px;
+  padding: 1px 5px;
+  width: min-content; }
+
+#feedback-cta {
+  width: max-content; }
+
+#text-wrapper {
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s; }
+  #text-wrapper.is-visible {
+    height: auto;
+    line-height: inherit;
+    overflow: inherit;
+    opacity: 1;
+    padding: 10px 3px 0px 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; }
+
+.feedback-textarea-emoji {
+  width: 100%;
+  font-size: 0.875rem;
+  color: var(--text-default);
+  background: var(--card-bg);
+  resize: none;
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: var(--card-border-color); }
+
+.radio-emoji > input[type="radio"] {
+  display: none; }
+  .radio-emoji > input[type="radio"] + label {
+    background: transparent;
+    color: var(--emoticon-color);
+    height: 32px;
+    width: 32px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .2s,border-color .2s; }
+
+.radio-emoji input[type="radio"]:checked + label {
+  background: var(--emoticon-checked--bg-color);
+  color: var(--emoticon-checked-color); }
 
 /* Mermaid */
 .docs-content .main-content pre.mermaid {
