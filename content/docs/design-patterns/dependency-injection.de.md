@@ -44,6 +44,9 @@ Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
 
 ## Rollen
 
+Für die Umsetzung der Dependency Injection werden vier Rollen benötigt
+Diese werden folgend kurz erläutert.
+
 ### Service
 
 Der Service ist der Teil der Applikation, welcher an einer anderen Stelle
@@ -71,8 +74,8 @@ implementiert werden müssen.
 
 ### Injector
 
-Die Aufgabe des Injectors ist es die jeweiligen Services in die
-unterschiedlichen Interfaces der Clients "einzuspritzen", damit diese sie benutzen
+Die Aufgabe des Injectors ist es die jeweiligen Services mittels der
+Interfaces in die Clients "einzuspritzen", damit diese sie benutzen
 können. Der Injector ist im Vergleich zur Dependency Inversion die einzig neue
 Rolle welche zu vor noch nicht benötigt wurde.
 {{< rawhtml >}}
