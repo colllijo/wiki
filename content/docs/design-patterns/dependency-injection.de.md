@@ -74,8 +74,8 @@ implementiert werden müssen.
 
 ### Injector
 
-Die Aufgabe des Injectors ist es die jeweiligen Services in die
-unterschiedlichen Interfaces der Clients "einzuspritzen", damit diese sie benutzen
+Die Aufgabe des Injectors ist es die jeweiligen Services mittels der
+Interfaces in die Clients "einzuspritzen", damit diese sie benutzen
 können. Der Injector ist im Vergleich zur Dependency Inversion die einzig neue
 Rolle welche zu vor noch nicht benötigt wurde.
 {{< rawhtml >}}
