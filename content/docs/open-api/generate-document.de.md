@@ -1,15 +1,13 @@
 ---
 weight: 999
-title: "Docs"
-description: ""
+title: "Generate Document"
+description: "(PDF) Dokument aus einer OpenApi-Spezifikation generieren."
 icon: "picture_as_pdf"
-date: "2024-06-14T15:30:16+02:00"
-lastmod: "2024-06-14T15:30:16+02:00"
+date: "2024-06-21T13:14:08+02:00"
+lastmod: "2024-06-21T13:14:08+02:00"
 draft: false
 toc: true
 ---
-
-## Title
 
 OpenApi Spezifikationen sind sehr hilfreich um Schnittstellen zu dokumentieren.
 Jedoch ist es nicht wirklich einfach die YAML oder JSON Datei zu lesen und verstehen.

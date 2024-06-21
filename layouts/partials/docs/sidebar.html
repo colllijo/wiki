@@ -20,7 +20,7 @@
                           <li class="sidebar-dropdown {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
                               <button class="btn">
                                   {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                      <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                    <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
                                   {{ end }}
                                   {{- .Title }}
                               </button>
