@@ -5,7 +5,7 @@ description: "Dokumentation für WSL"
 icon: "article"
 date: "2024-06-27T08:18:41+02:00"
 lastmod: "2024-06-27T08:18:41+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
