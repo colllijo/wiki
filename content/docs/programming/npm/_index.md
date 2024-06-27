@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 320
 title: "NPM"
 description: "Documentation for NPM."
 icon: "inventory_2"

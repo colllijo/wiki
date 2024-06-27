@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 120
 title: "Dependency Injection"
 description: "Short documentation of the Dependency Injection design pattern, including a simple example."
 icon: "article"

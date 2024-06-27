@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 341
 title: "Mocking Globals"
 description: "Using Jest to mock global classes and functions."
 icon: "article"

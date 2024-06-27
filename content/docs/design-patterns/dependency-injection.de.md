@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 120
 title: "Dependency Injection"
 description: "Eine kurze Einführung in das Thema Depedency Injection mit einem kleinen Java Beispiel"
 icon: "article"

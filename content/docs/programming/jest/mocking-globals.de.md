@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 341
 title: "Mocking Globals"
 description: "Jest verwenden, um globale Klassen und Funktionen zu mocken."
 icon: "article"

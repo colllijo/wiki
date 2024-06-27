@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 331
 title: "Ngrx"
 description: "Documentation for Ngrx. Reactive State Framework for Angular."
 icon: "article"

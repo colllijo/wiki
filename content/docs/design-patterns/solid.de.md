@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 110
 title: "SOLID"
 description: "Informationen zu den grundlegenden Prinzipien der Objektorientierten Programmierung, welche hinter dem Akronym SOLID stehen."
 icon: "article"

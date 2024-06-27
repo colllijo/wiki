@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 210
 title: "Onion Architektur"
 description: "Informationen und Notizen zur Onion Architektur"
 icon: "article"

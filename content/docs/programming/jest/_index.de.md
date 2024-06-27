@@ -1,5 +1,5 @@
 ---
-weight: 300
+weight: 340
 title: "Jest"
 description: "Dokumentation für Jest."
 icon: "analytics"
