@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 311
 title: "Annotations"
 description: "Dokumentation zu Java-Annotationen."
 icon: "alternate_email"

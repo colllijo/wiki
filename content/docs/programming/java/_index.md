@@ -1,5 +1,5 @@
 ---
-weight: 999
+weight: 310
 title: "Java"
 description: "Documentation for Java."
 icon: "coffee"
