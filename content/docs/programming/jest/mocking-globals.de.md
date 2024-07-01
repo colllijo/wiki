@@ -28,7 +28,7 @@ Damit Typescript keine Fehler anzeigt kann der Mock einfach über `unknown` zum 
 Die File implementation in JSDOM verfügt nicht über die Method [File#text()](https://w3c.github.io/FileAPI/#text-method-algo), welche im Browser genutzt werden kann.
 Wenn nun eine Komponente getestet werden soll, welche eine Datei erstellt und diese ausliest, muss die File Klasse gemockt werden.
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 global.File = jest.fn().mockImplementation((content, name, options) => {
   const file = Object.create(File.prototype);
 
@@ -38,4 +38,4 @@ global.File = jest.fn().mockImplementation((content, name, options) => {
     text: jest.fn().mockResolvedValue(content),
   });
 }) as unknown as typeof File;
-```
+{{< /prism >}}

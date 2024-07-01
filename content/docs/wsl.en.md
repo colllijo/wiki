@@ -34,7 +34,7 @@ It is possible to change the resources available for WSL.
 For this, the file `.wslconfig` can be created in Windows.
 This file should be located in the user's home directory.
 
-%UserProfile%\.wslconfig
+%UserProfile%\\.wslconfig
 
 ```plaintext
 [wsl2]

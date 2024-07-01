@@ -70,18 +70,18 @@ ng add @ngrx/effects
 
 session.model.ts
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 export interface SessionState {
   username: string | null;
   active: boolean;
   loading: boolean;
   errors: string[];
 }
-```
+{{< /prism >}}
 
 session.action.ts
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
 
 export const SessionAction = createActionGroup({
@@ -95,11 +95,11 @@ export const SessionAction = createActionGroup({
     logoutFailure: props<{ errors: string[] }>(),
   }
 });
-```
+{{< /prism >}}
 
 session.reducer.ts
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 import { createFeature, createReducer, on } from '@ngrx/store';
 
 import { SessionAction } from './session.action';
@@ -166,7 +166,7 @@ export const SessionFeature = createFeature({
     ),
   )
 });
-```
+{{< /prism >}}
 
 {{% alert context="warning" %}}
 Wenn der Reducer mit `createFeature` erstellt wird darf es im State keine
@@ -177,7 +177,7 @@ optionalen Eigenschaften geben.
 
 session.effect.ts
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, exhaustMap, of } from 'rxjs';
@@ -224,13 +224,13 @@ export class SessionEffect {
     private authenticationService: AuthenticationService
   ) {}
 }
-```
+{{< /prism >}}
 
 ### Registrierung
 
 app.config.ts
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 ...
 import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -247,11 +247,11 @@ export const appConfig: ApplicationConfig = {
   ],
   ...
 }
-```
+{{< /prism >}}
 
 ### Nutzung
 
-```typescript
+{{< prism lang="typescript" line-numbers="true" >}}
 ...
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -279,4 +279,4 @@ export class SessionComponent {
     this.store.dispatch(SessionAction.authenticate({ username, password }));
   }
 }
-```
+{{< /prism >}}
