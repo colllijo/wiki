@@ -1,5 +1,5 @@
 ---
-weight: 312
+weight: 313
 title: "Fehlerbehebung"
 description: "Dokumentation der Lösungen für einige gängige Probleme in Java."
 icon: "troubleshoot"
