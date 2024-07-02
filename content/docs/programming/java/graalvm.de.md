@@ -11,23 +11,30 @@ toc: true
 
 ## Einleitung
 
-[GraalVM](https://www.graalvm.org/) ist ein Java Development Kit (JDK), welches neben den standard Funktionalitäten
-einer JDK auch Tools mitbringt, welche es ermöglichen aus einer Java-Applikation ein
-Native-Image zu erstellen. Ein Native-Image ist eine ausführbare Datei ohne Abhängigkeiten
-zu Java. Das heisst sobald aus einer Java-Applikation ein Native-Image erstellt wurde kann
-dieses auf allen System der Zielplattform direkt ausgeführt werden ohne das Java
-installiert sein muss. Dadurch muss nicht mehr auf allen Systemen Java installiert werden
-und es ist einfacher Möglich die Applikation zu starten, da kein Startscripts benötigt
-wird und man keinen Java Befehl, wie `java -jar programm.jar` , mehr nutzen muss. Der grösste
-nachteil dabei ist jedoch, dass das so erstellte Native-Image für eine Zielplattform, zum
-Beispiel Windows **oder** Unix erstellt wird.
+GraalVM ist ein erweitertes Java Development Kit (JDK), welches es ermöglicht
+Java-Applikationen zu Native-Images zu kompilieren. Ein Native-Image ist eine
+ausführbare Datei ohne Abhängigkeiten zu Java. Das heisst sobald aus einer
+Java-Applikation ein Native-Image erstellt wurde, kann dieses auf allen System
+der Zielplattform direkt ausgeführt werden ohne das Java installiert sein muss.
+Dadurch muss man nicht mehr Java installieren um das Programm zu nutzen und es
+ist einfacher Möglich das Programm zu starten, da es direkt und nicht über Java
+gestartet werden kann.  
+Anstelle von `java -jar App.jar` kann das Programm direkt mit `./App` gestartet.
+Ein Nachteil von Native-Images ist es jedoch, dass diese wieder
+Plattformabhängig sind, im gegensatz zu Java-Archiven funktioniert ein
+Native-Image entweder auf Unix **oder** Windows.
 
 ## Installation
 
-Alle Releases der GraalVM-Community JDK sind im [GraalVM-CE-Builds](https://github.com/graalvm/graalvm-ce-builds) GitHub-Repository
-unter den Releases zu finden. Die heruntergeladene JDK kann gleich der anderen JDK,
-zum Beispiel temurin ausgepackt und in einen Ordner verschoben werden.  
-Auf Unix werden die Java Versionen oft unter `/lib/jvm/` gespeichert.
+Alle Releases der GraalVM JDK sind im [GraalVM-CE-Builds](https://github.com/graalvm/graalvm-ce-builds) GitHub-Repository
+unter den Releases zu finden. Die heruntergeladene JDK kann gleich jeder anderen
+JDK, zum Beispiel temurin ausgepackt und in einen Ordner verschoben werden.  
+*Auf Unix werden die Java Versionen meist unter `/lib/jvm/` gespeichert.*
+
+{{% alert context="info" %}}
+Damit GraalVM genutzt werden kann muss die `JAVA_HOME` Umgebungsvariable auf
+das Verzeichnis der GraalVM-JDK gesetzt werden.
+{{% /alert %}}
 
 ## Erstellung eines Native-Images
 
@@ -193,7 +200,7 @@ werden, dass die GraalVM JDK genutzt wird.
   zwischen dem lokalen Build und dem Pipeline-Build Unterschiede gibt ist eine
   unvollständige Konfiguration vorhanden.
 
-  Der Grund weshalb die Konfiguration nicht immer gleich ist, ist noch nicht
+  Der Grund weshalb die Konfiguration nicht immer gleich ist, ist mir noch nicht
   bekannt jedoch gibt es einen Workaround für dieses Problem, die nicht erkannten
   Klassen können per manuelle Konfiguration hinzugefügt werden, hierbei kann die
   `merge` Funktion des Javaagenten genutzt werden, damit nicht die vollständige
