@@ -15,15 +15,16 @@ module:
 defaultContentLanguage: en
 languages:
   en:
-    params:
-      disbaled: false
-      languageName: "English"
-      weight: 10
+    disabled: false
+    languageName: "English"
+    weight: 10
+    params: {}
   de:
-    params:
-      disabled: false
-      languageName: "Deutsch"
-      weight: 20
+    disabled: false
+    languageName: "Deutsch"
+    contentDir: "content/de"
+    weight: 20
+    params: {}
 
 markup:
   defaultMarkdownHandler: "goldmark"
