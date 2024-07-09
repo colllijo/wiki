@@ -1,0 +1,5 @@
+{{ .Parent.Scratch.Add "size" (slice (or (.Get "size") "1")) }}
+
+<div class="split">
+  {{ .Inner }}
+</div>
