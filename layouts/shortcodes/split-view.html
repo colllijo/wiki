@@ -1,5 +1,0 @@
-{{ $size := .Scratch.Get "size" }}
-
-<div style="display: grid; grid-template-columns: {{ index $size 0}}fr {{ index $size 1 }}fr; grid-gap: 2rem">
-  {{ .Inner }}
-</div>

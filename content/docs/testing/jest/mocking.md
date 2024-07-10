@@ -1,7 +1,7 @@
 ---
-weight: 341
-title: "Mocking Globals"
-description: "Using Jest to mock global classes and functions."
+weight: 411
+title: "Mocking"
+description: "Using Jest to mock classes and functions."
 icon: "article"
 date: "2024-06-25T10:23:56+02:00"
 lastmod: "2024-06-25T10:23:56+02:00"
@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## Introduction
+## Mocking global classes and functions
 
 Using Jest it is possible to mock not only individual components. But also global classes and functions.
 This is especially useful when a certain functionality is only available in a specific Javascript runtime
@@ -21,9 +21,9 @@ To prevent Typescript from showing errors, the mock can simply be converted to t
 `... as unknown as typeof Object;`
 {{% /alert %}}
 
-## Examples
+### Examples
 
-### File
+#### File
 
 The File implementation in JSDOM does not have the method [File#text()](https://w3c.github.io/FileAPI/#text-method-algo), which can be used in the browser.
 If a component is now to be tested, which creates a file and reads it, the File class must be mocked.

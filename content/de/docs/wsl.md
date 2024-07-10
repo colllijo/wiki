@@ -11,7 +11,7 @@ toc: true
 
 ## Einführung
 
-Das Windows Subsystem for Linux (WSL) ist eine Kompatibilitätsschicht von Windows, welche es ermöglicht
+Das Windows Subsystem for Linux (WSL) ist eine Kompatibilitätsschicht von Windows, welche es ermöglicht,
 Linux Distributionen als Subsystem auf Windows auszuführen.
 
 WSL kann für verschiedene Zwecke genutzt werden, wie zum Beispiel:
@@ -23,7 +23,7 @@ WSL kann für verschiedene Zwecke genutzt werden, wie zum Beispiel:
 ## Konfiguration
 
 Neben den normalen Einstellungen der Distribution, welche für WSL genutzt wird,
-gibt es auch noch einige Einstellungen für die WSL Instanz selbst.
+gibt es auch noch einige Einstellungen für die WSL Instanz selbst.  
 [Dokumentation von Microsoft](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
 
 ### Ressourcen

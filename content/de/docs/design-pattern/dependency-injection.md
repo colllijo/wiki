@@ -9,49 +9,36 @@ draft: false
 toc: true
 ---
 
-{{< rawhtml >}}
-<style>
-  .split-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 2rem;
-  }
-</style>
-{{< /rawhtml >}}
+{{< split type="start" size="2fr 1fr" >}}
 
-{{< rawhtml >}}
-<div class="split-container">
-  <div>
-{{< /rawhtml >}}
 ## Einführung
 
-Mit dependency Injection wird bewirkt das eine Klasse selber keine
-Abhängigkeiten mehr verwalten muss, da diese automatisch zur Verfügung gestellt
-werden. Dadurch soll es einfacher sein Abhängigkeiten zu verändern, da diese
-weniger Anpassungen in ihren Abhängigkeiten zur folge haben, im besten fall
-sogar gar keine Veränderungen mehr.
+Mit Dependency Injection wird bewirkt, dass eine Klasse selber keine
+Abhängigkeiten mehr verwalten muss, da diese von aussen zur Verfügung gestellt
+werden. Dadurch soll es möglich werden, die Module, von welchen eine Klasse abhängig
+ist, frei zu wechseln, ohne die Klasse selber zu verändern.
 
 Eine Abhängigkeit kann mittels Dependency Injection an drei verschiedenen
-Stellen eingeführt werden. Es ist möglich die Abhängigkeit bei der
+Stellen eingeführt werden. Es ist möglich, die Abhängigkeit bei der
 Konstruktion des Clients zu erstellen, hierbei wird die Abhängigkeit in den
-Konstruktor eingeführt, eine zweite Möglichkeit ist es, die Abhängigkeit mittels
-einer Setter Method einzuführen, welche nach dem Konstruktor aufgerufen wird.
-Die letzte Möglichkeit ist es die Abhängigkeit direkt im Feld einzuführen, sodass
-weder eine Konstruktor noch eine spezifische Setter Methode benötigt wird.
+Konstruktor eingeführt, eine zweite Möglichkeit ist es, die Abhängigkeit mit
+einer Methode zu setzen, welche nach dem Konstruktor aufgerufen wird.
+Die letzte Möglichkeit ist es, die Abhängigkeit direkt im Feld einzuführen, sodass
+weder ein Konstruktor noch eine spezifische Methode benötigt wird.
 
 Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
 [SOLID Prinzip](/docs/design-patterns/solid), welche die Abhängigkeit von unten nach oben bringt.
 
 ## Rollen
 
-Für die Umsetzung der Dependency Injection werden vier Rollen benötigt
+Für die Umsetzung der Dependency Injection werden vier Rollen benötigt.
 Diese werden folgend kurz erläutert.
 
 ### Service
 
 Der Service ist der Teil der Applikation, welcher an einer anderen Stelle
-genutzt werden soll, da dieser einen Teil der Benötigten Geschäftslogik
-implementiert. Damit die Applikation möglichst Modular bleibt und mit dem
+genutzt werden soll, da dieser einen Teil der benötigten Geschäftslogik
+implementiert. Damit die Applikation möglichst modular bleibt und mit dem
 Dependency Inversion Principle übereinstimmt, wird ein Service nie direkt in
 einem Client genutzt. Anstelle dessen implementiert ein Service ein Interface,
 welches wiederum von Clients verwendet werden kann.
@@ -60,28 +47,34 @@ welches wiederum von Clients verwendet werden kann.
 ### Client
 
 Der Client bezeichnet den Teil der Applikation, welcher einen Service
-konsummieren und benutzen soll. Die Abhängigkeit soll hier "eingespritzt"
-werden. Dadurch kann der Client die Funktionalitäten des Interfaces, welche vom
-Service implementiert werden einfach Nutzen ohne sich darum kümmern zu müssen,
-welche implementation er jetzt benutzt.
+konsumieren und benutzen soll. Die Abhängigkeit soll hier "eingespritzt"
+werden. Dadurch kann der Client die Funktionalitäten des Interface, welche vom
+Service implementiert werden, einfach nutzen ohne sich darum kümmern zu müssen,
+welche Implementation er jetzt benutzt.
 
 ### Interface
 
 Das Interface ist die Abstraktion zwischen Client und Service. Es definiert eine
-Schnittstelle wodurch ein Client weiss, welche Methoden ihm auf einem Service
+Schnittstelle, wodurch ein Client weiss, welche Methoden ihm auf einem Service
 zur Verfügung stehen und macht es für einen Service klar, welche Methoden
 implementiert werden müssen.
 
 ### Injector
 
-Die Aufgabe des Injectors ist es die jeweiligen Services mittels der
+Die Aufgabe des Injektors ist es, die jeweiligen Services mittels der
 Interfaces in die Clients "einzuspritzen", damit diese sie benutzen
 können. Der Injector ist im Vergleich zur Dependency Inversion die einzig neue
-Rolle welche zu vor noch nicht benötigt wurde.
-{{< rawhtml >}}
-  </div>
-  <div>
-{{< /rawhtml >}}
+Rolle, welche zu vor noch nicht benötigt wurde.
+
+{{< split >}}
+
+## CDI
+
+Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher das Prinzip
+der Dependency Injection erweitert. CDI ermöglicht es, die Abhängigkeiten der
+verschiedenen Module automatisiert zu injizieren, wodurch es nicht mehr nötig ist,
+die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhand des Programmcodes
+und einer Konfiguration, welche Abhängigkeit wo benötigt wird.
 
 ## Ressourcen
 
@@ -90,28 +83,18 @@ Rolle welche zu vor noch nicht benötigt wurde.
 [Stackify - Dependency Injection](https://stackify.com/dependency-injection/)  
 [Stackify - Dependency Inversion Principle](https://stackify.com/dependency-inversion-principle/)  
 
-## CDI
-
-Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher das Prinzip
-der Dependency Injection erweitert. CDI ermöglicht es, die Abhängigkeiten der
-verschiedenen Module automatisiert zu injizieren, wodurch es nicht mehr nötig ist
-die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhand der verschiedener
-Zusammenhänge, sowie einer Konfiguration, welche Abhängigkeit wo benötigt wird.
-{{< rawhtml >}}
-  </div>
-</div>
-{{< /rawhtml >}}
+{{< split type="end" >}}
 
 ## Beispiel
 
-Um dieses Prinzip zu verdeutlichen gibt es hier ein kleines Beispiel in Java.
-Dabei soll eine Applikation erstellt werden, welche genutzt werden kann um mit
-unterschiedlichen Kaffeemaschine Kaffee zu brühen.
+Um dieses Prinzip zu verdeutlichen, gibt es hier ein kleines Beispiel in Java.
+Dabei soll eine Applikation erstellt werden, welche genutzt werden kann, um mit
+unterschiedlichen Kaffeemaschinen Kaffee zu brühen.
 
 ### Ausgangslage
 
 Für die Ausgangslage gibt es zwei Kaffeemaschine, die `BasicCoffeeMachine` und die `PremiumCoffeeMachine`.
-Beide Machinen haben eine Method um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
+Beide Maschinen haben eine Method, um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
 Filterkaffee auch noch Espresso brühen.
 
 {{< tabs tabTotal="2" >}}
@@ -204,9 +187,9 @@ public class PremiumCoffeeMachine {
 
 Der erste Schritt zur Dependency Injection ist die Abstraktion der öffentlichen Methoden.
 Dazu muss ein Interface für die Kaffeemaschine erstellt werden. Da nicht jede Kaffeemaschine
-Espresso brühen kann gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemaschine,
+Espresso brühen kann, gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemaschine,
 welches Filterkaffee brühen kann und ein zweites für die Premium Kaffeemaschine, welche auch
-Espresso brühen kann. Die `BasicCoffeeMachine` kann dann das einfach Interface implementieren
+Espresso brühen kann. Die `BasicCoffeeMachine` kann dann das einfachere Interface implementieren
 und die `PremiumCoffeeMachine` implementiert einfach beide.
 
 {{< tabs tabTotal="2" >}}

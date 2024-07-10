@@ -9,20 +9,8 @@ draft: false
 toc: true
 ---
 
-{{< rawhtml >}}
-<style>
-  .split-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 2rem;
-  }
-</style>
-{{< /rawhtml >}}
+{{< split type="start" >}}
 
-{{< rawhtml >}}
-<div class="split-container">
-  <div>
-{{< /rawhtml >}}
 ## Introduction
 
 With dependency injection, a class no longer has to manage its dependencies
@@ -74,17 +62,7 @@ the clients using the different interfaces, so that they can use them. In compar
 to the Dependency Inversion, the injector is the only new role that was not
 needed before.
 
-{{< rawhtml >}}
-  </div>
-  <div>
-{{< /rawhtml >}}
-
-## Sources
-
-[Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)  
-[Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)  
-[Stackify - Dependency Injection](https://stackify.com/dependency-injection/)  
-[Stackify - Dependency Inversion Principle](https://stackify.com/dependency-inversion-principle/)  
+{{< split >}}
 
 ## CDI
 
@@ -94,10 +72,14 @@ different modules to be automatically injected, eliminating the need to
 manually pass the required dependencies. CDI decides based on different
 contexts and a configuration which dependency is needed where.
 
-{{< rawhtml >}}
-  </div>
-</div>
-{{< /rawhtml >}}
+## Sources
+
+[Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)  
+[Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)  
+[Stackify - Dependency Injection](https://stackify.com/dependency-injection/)  
+[Stackify - Dependency Inversion Principle](https://stackify.com/dependency-inversion-principle/)  
+
+{{< split type="end" >}}
 
 ## Example
 

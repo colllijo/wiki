@@ -11,8 +11,8 @@ toc: true
 
 ## Einführung
 
-[Ngrx](https://ngrx.io) ist ein Framework für Angular, welches ermöglicht Reaktive Applikationen zu erstellen.
-Ngrx basiert auf dem Konzept des [Redux](https://redux.js.org/) Javascript frameworks.
+[Ngrx](https://ngrx.io) ist ein Framework für Angular, welches ermöglicht reaktive Applikationen zu erstellen.
+Ngrx basiert auf dem Konzept des [Redux](https://redux.js.org/) Javascript Frameworks.
 
 ## State
 
@@ -25,13 +25,13 @@ Der Ngrx Store besteht aus mehreren Featuren, welche jeweils ihren State sowie i
 ### State
 
 Im State eines Features wird der momentane Zustand der Applikation gespeichert.  
-Der State ist kann in der Applikation ausgelesen aber nicht verändert werden, da er
+Der State kann in der Applikation ausgelesen, aber nicht verändert werden, da er
 unveränderlich ist. Der State kann nur durch einen Reducer mit einer neuen Version
 des States überschrieben werden.
 
 ### Action
 
-Aktionen sind die Auslöser für Veränderungen und führen entweder dazu, das der State
+Aktionen sind die Auslöser für Veränderungen und führen entweder dazu, dass der State
 durch einen Reducer erneuert wird oder dass ein Effekt ausgeführt wird. Eine Aktion
 kann aus verschiedenen Gründen ausgelöst werden, dazu gehören das Laden einer Seite,
 das Klicken einer Komponente oder das Ausführen eines Effekts.
@@ -41,7 +41,7 @@ das Klicken einer Komponente oder das Ausführen eines Effekts.
 Reducer sind pure Funktionen, welche den Zustand der Applikation verändern.
 Sie werden durch Aktionen ausgelöst und erstellen anhand des aktuellen Zustands
 und allfälligen Parametern der Aktion den neuen Zustand. Da sie jedoch pure
-Funktionen sind dürfen keine Nebeneffekt, wie zum Beispiel das laden von Daten
+Funktionen sind, dürfen keine Nebeneffekte, wie zum Beispiel das Laden von Daten
 stattfinden.
 
 ### Effects
@@ -50,14 +50,14 @@ Die meisten Applikationen kommen jedoch nicht ohne die Benutzung von Nebeneffekt
 aus. Für dieses Bedürfnis bietet Ngrx Effekte. Diese werden ebenfalls durch eine
 Aktion ausgelöst und dürfen dann einen Nebeneffekt auslösen, dass heisst zum Beispiel
 eine Datenbankabfrage oder eine REST-Abfrage. Diese Daten dürfen dann jedoch nicht
-direkt in den Zustand geschrieben werden sondern mit einer Aktion an einen Reducer
+direkt in den Zustand geschrieben werden, sondern mit einer Aktion an einen Reducer
 weitergeleitet und erst dieser erneuert dann den Zustand.
 
 ## Feature erstellen
 
 Um die Funktionsweise von Ngrx zu verdeutlichen hier noch ein kurzes Beispiel.  
-Das untenstehende Beispiel ist nur eine Möglichkeit Ngrx zu verwenden, für andere Möglichkeiten und weitere Informationen
-lohnt es sich die offizielle [Dokumentation](https://ngrx.io/docs) zu Hilfe zu ziehen.
+Das unten stehende Beispiel ist nur eine Möglichkeit, Ngrx zu verwenden, für andere Möglichkeiten und weitere Informationen
+lohnt es sich, die offizielle [Dokumentation](https://ngrx.io/docs) zu Hilfe zu ziehen.
 
 ### Installation
 

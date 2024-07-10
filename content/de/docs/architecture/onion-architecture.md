@@ -9,18 +9,9 @@ draft: false
 toc: true
 ---
 
-{{< rawhtml >}}
-<style>
-  .split-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-</style>
-{{< /rawhtml >}}
-
 ## Einführung
 
-Eine Onion Architektur zielt darauf ab, eine Applikation möglichs *modular* zu
+Eine Onionarchitektur zielt darauf ab, eine Applikation möglichst *modular* zu
 erstellen. Dadurch soll die Unterhaltung der Applikation vereinfacht werden.
 Dazu soll es eine Grundlage dafür sein, in der Entwicklung *flexiblen*,
 *testbaren* und *erweiterbaren* Code zu schreiben.  
@@ -29,17 +20,15 @@ werden können, ohne dass andere Teile der Applikation davon betroffen sind,
 indem keine festen Abhängigkeiten erstellt werden und nur Interfaces verwendet
 werden.
 
-{{< rawhtml >}}
-<div class="split-container">
-  <div>
-{{< /rawhtml >}}
+{{< split type="start" size="3fr 1fr" >}}
+
 ## Konzepte
 
 ### Abhängigkeiten
 
-In einer Onion Architektur fliessen die Abhängigkeiten von aussen nach inne. So
-haben die inneren Module keine Kentnisse der äusseren Module. Dadurch gibt es
-keine festen Abhängigkeiten wodurch alle Komponenten einfacher ausgetauscht
+In einer Onionarchitektur fliessen die Abhängigkeiten von aussen nach inne. So
+haben die inneren Module keine Kenntnisse der äusseren Module. Dadurch gibt es
+keine festen Abhängigkeiten, wodurch alle Komponenten einfacher ausgetauscht
 werden können. Dies ohne dass andere Teile der Applikation bearbeitet werden
 müssen.
 
@@ -49,24 +38,23 @@ müssen.
 abgebildet. Hier sind die eigentlichen Geschäftsfalle und Entitäten
 implementiert.
 
-**Applikation:** Die Applikationsebene ermöglicht die Stellt die verschiedenen
+**Applikation:** Die Applikationsebene ermöglicht die verschiedenen
 Anwendungsfälle der Applikation zur Verfügung. Hier wird der Datenfluss
 zwischen den einzelnen Elementen und Ebenen ermöglicht.
 
 **Infrastruktur:** Die Infrastruktur ebene stellt die Schnittstellen zur
 Aussenwelt dar. Sie implementiert jegliche Kommunikation der Applikation mit
 andern Diensten und Systemen. Dazu gehört zum Beispiel die Datenbank, eine
-REST-Schnittstelle und viele weitere Services welche in der Applikation benötigt
+REST-Schnittstelle und viele weitere Services, welche in der Applikation benötigt
 / genutzt werden.
 
 **Präsentation:** Die Präsentationsebene ist ein Teil der Infrastruktur. Jedoch
-übernimmt sie keine Kommunikation mit anderen System sondern mit dem Benutzer.
+übernimmt sie keine Kommunikation mit anderen Systemen, sondern mit dem Benutzer.
 Indem sie ihm eine Benutzeroberfläche zum Beispiel in Form einer Website zur
 Verfügung stellt.
-{{< rawhtml >}}
-  </div>
-  <div>
-    <img src="/docs/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
-  </div>
-</div>
-{{< /rawhtml >}}
+
+{{< split >}}
+
+<img src="/docs/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
+
+{{< split type="end" >}}

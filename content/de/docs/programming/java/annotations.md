@@ -12,17 +12,24 @@ toc: true
 ## Einführung
 
 In Java können Annotation verwendet werden. Diese haben selber keinen Einfluss auf die Funktionalität des Codes.
-Sie ermöglichen es jedoch zusätzliche Metadaten zu einem Element hinzuzufügen. Diese können den Code für Entwickler verständlicher
-aber auch von anderen Teilen des Programms genutzt werden um damit zu arbeiten. Ein gutes Beispiel dafür ist [Spring Boot](https://spring.io/projects/spring-boot)
-In Spring Boot werden Annotationen genutzt um dem Framework zu sagen, welche Method eines Controllers wie Aufgerufen werden sollen.
-Zum Beispiel wird mit `@GetMapping` definiert, dass eine Methode aufgerufen werden soll, wenn ein GET Request an eine bestimmte URL gesendet wird.
+Sie ermöglichen es jedoch, zusätzliche Metadaten zu einem Element hinzuzufügen. Diese können den Code für Entwickler verständlicher,
+aber auch von anderen Teilen des Programms genutzt werden, um damit zu arbeiten. Ein gutes Beispiel dafür ist [Spring Boot](https://spring.io/projects/spring-boot).
+In Spring Boot werden Annotationen genutzt, um dem Framework zu sagen, welche Methode eines Controllers wie aufgerufen werden sollen.
+Zum Beispiel wird mit `@GetMapping` definiert, dass eine Methode aufgerufen werden soll, wenn ein GET-Request an eine bestimmte URL gesendet wird.
 
 ## Annotationen erstellen
 
 In Java können Annotationen mit dem Schlüsselwort `@interface` erstellt werden. Für jede Annotation muss noch eine Erhaltung und Ziel definiert werden.
-Die Erhaltung wird mit der `@Retention` Annotation gesetzt und bestimmt bis wann die Annotation erhalten bleibt, mit SOURCE ist sie nur im Quellcode vorhanden
-mit CLASS wird sie auch in die kompilierte `.class` Datei geschrieben und mit RUNTIME ist sie auch während der Ausführung des Programms noch vorhanden.
-Das Ziel wird mit `@Target` gesetzt und bestimmt auf welche Elemente die Annotation angewendet werden kann. Zum Beispiel auf Methoden, Klassen oder Variablen.
+Die Erhaltung wird mit der `@Retention` Annotation gesetzt und bestimmt, bis wann die Annotation erhalten bleibt.
+Das Ziel wird mit `@Target` gesetzt und bestimmt, auf welche Elemente die Annotation angewendet werden kann. Zum Beispiel auf Methoden, Klassen oder Variablen.
+
+{{% alert context="info" %}}
+
+**`RetentionPolicy.SOURCE`:** Die Annotation ist nur im Quellcode vorhanden, beim Kompilieren wird sie entfernt.  
+**`RetentionPolicy.CLASS`:** Die Annotation ist auch im kompilierten Bytecode (`.class` Datei) vorhanden, wird aber beim Laden des Programms entfernt.  
+**`RetentionPolicy.RUNTIME`:** Die Annotation ist auch während der Ausführung des Programms noch vorhanden.  
+
+{{% /alert %}}
 
 ### Beispiel
 
