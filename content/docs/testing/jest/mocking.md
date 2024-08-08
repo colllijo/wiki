@@ -1,32 +1,32 @@
 ---
 weight: 411
 title: "Mocking"
-description: "Using Jest to mock classes and functions."
+description: "Jest verwenden, um Klassen und Funktionen zu mocken."
 icon: "article"
-date: "2024-06-25T10:23:56+02:00"
-lastmod: "2024-06-25T10:23:56+02:00"
+date: "2024-06-25T10:23:58+02:00"
+lastmod: "2024-06-25T10:23:58+02:00"
 draft: false
 toc: true
 ---
 
-## Mocking global classes and functions
+## Globale Klassen und Funktionen mocken
 
-Using Jest it is possible to mock not only individual components. But also global classes and functions.
-This is especially useful when a certain functionality is only available in a specific Javascript runtime
-and therefore the functionality works on the website but throws an error in the test.
+Mit Jest ist es möglich, nicht nur einzelne Komponenten zu Mocken. Sondern auch globale Klassen und Funktionen.
+Dies ist vor allem nützlich, wenn eine bestimmte Funktionalität nur in einer bestimmten Javascriptruntime verfügbar ist
+und deshalb die Funktionalität auf der Website funktioniert, im Test jedoch einen Fehler wirft.
 
-To do this, the global object can simply be overridden with a Jest mock implementation.
+Dazu kann das globale Objekt einfach mit einer Jest Mockimplementation überschrieben werden.
 {{% alert context="info" %}}
-To prevent Typescript from showing errors, the mock can simply be converted to the type `unknown`:  
+Damit Typescript keine Fehler anzeigt kann der Mock einfach über `unknown` zum Typ umgewandelt werden:  
 `... as unknown as typeof Object;`
 {{% /alert %}}
 
-### Examples
+### Beispiele
 
 #### File
 
-The File implementation in JSDOM does not have the method [File#text()](https://w3c.github.io/FileAPI/#text-method-algo), which can be used in the browser.
-If a component is now to be tested, which creates a file and reads it, the File class must be mocked.
+Die `File`-Implementation in JSDOM verfügt nicht über die Methode [File#text()](https://w3c.github.io/FileAPI/#text-method-algo), welche im Browser genutzt werden kann.
+Wenn nun eine Komponente getestet werden soll, welche eine Datei erstellt und diese ausliest, muss die `File` Klasse gemockt werden.
 
 {{< prism lang="typescript" line-numbers="true" >}}
 global.File = jest.fn().mockImplementation((content, name, options) => {

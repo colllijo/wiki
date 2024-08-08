@@ -1,97 +1,102 @@
 ---
 weight: 312
 title: "Graalvm"
-description: "Documentation on GraalVM."
+description: "Dokumentation zu GraalVM."
 icon: "article"
-date: "2024-07-01T15:37:43+02:00"
-lastmod: "2024-07-01T15:37:43+02:00"
+date: "2024-07-01T15:35:11+02:00"
+lastmod: "2024-07-01T15:35:11+02:00"
 draft: false
 toc: true
 ---
 
-## Introduction
+## Einleitung
 
-GraalVM is an enhanced Java Development Kit (JDK) that allows Java applications
-to be compiled to native images. A native image is an executable file without
-dependencies on Java. This means that once a Java application has been compiled
-to a native image, it can be run directly on all systems of the target platform
-without the need to install Java. This means that you no longer need to install
-Java to use the program, and it is easier to start the program, as it can be
-started directly and not via Java.  
-Instead of `java -jar App.jar` the program can be started directly with
-`./App`. However, one disadvantage of native images is that they are platform
-dependent again, in contrast to Java archives a native image works either on
-Unix **or** Windows.
+GraalVM ist ein erweitertes Java Development Kit (JDK), welches es ermöglicht,
+Java-Applikationen zu Native-Images zu kompilieren. Ein Native-Image ist eine
+ausführbare Datei ohne Abhängigkeiten zu Java. Das heisst, sobald aus einer
+Java-Applikation ein Native-Image erstellt wurde, kann dieses direkt ausgeführt werden,
+ohne das Java installiert sein muss.
+Dadurch muss man nicht mehr Java installieren, um das Programm zu nutzen und es
+ist einfacher möglich, das Programm zu starten, da es direkt und nicht über Java
+gestartet werden kann.  
+Anstelle von `java -jar App.jar` kann das Programm direkt mit `./App` gestartet.
+Ein Nachteil von Native-Images ist es jedoch, dass diese wieder
+plattformabhängig sind, im Gegensatz zu Java-Archiven funktioniert ein
+Native-Image entweder auf Unix **oder** Windows.
 
 ## Installation
 
-All releases of the GraalVM JDK are available in the [GraalVM-CE-Builds](https://github.com/graalvm/graalvm-ce-builds) GitHub repository
-under the releases. The downloaded JDK can be unpacked and moved to a folder
-just like any other JDK, for example temurin.  
-*On Unix, the Java versions are usually stored under `/lib/jvm/`.*
+Alle Releases der GraalVM JDK sind im [GraalVM-CE-Builds](https://github.com/graalvm/graalvm-ce-builds) GitHub-Repository
+unter den Releases zu finden. Die heruntergeladene JDK kann gleich jeder anderen
+JDK, zum Beispiel temurin ausgepackt und in einen Ordner verschoben werden.  
+*Auf Unix werden die Java Versionen meist unter `/lib/jvm/` gespeichert.*
 
 {{% alert context="info" %}}
-To use GraalVM the `JAVA_HOME` environment variable must be set to the directory
-of the GraalVM JDK.
+Damit GraalVM genutzt werden kann muss die `JAVA_HOME` Umgebungsvariable auf
+das Verzeichnis der GraalVM-JDK gesetzt werden.
 {{% /alert %}}
 
-## Creating a Native-Image
+## Erstellung eines Native-Images
 
-Native images can be created with the `native-image` program, which is in the
-`bin/` directory of the GraalVM JDK. This can be done in different ways, on the
-one hand, compiled Java files or Java archives (jar files) can be transformed
-into an executable file directly using the `native-image` program, on the other
-hand, it is also possible to perform the native image creation as part of the
-normal build process, for example with Maven.
+Native-Images können mit dem `native-image` Programm, welches im `bin/` Verzeichnis der
+GraalVM-JDK ist, erstellt werden. Dies ist auf verschiedene Art und Weisen möglich,
+einerseits können kompilierte Java-Dateien oder Java-Archive (Jar-Dateien) direkt
+mittels des `native-image` Programms in eine ausführbare Datei verwandelt werden,
+anderseits ist es auch möglich, die Native-Image Erstellung als Teil des normalen
+Buildprozesses, zum Beispiel mit Maven durchzuführen.
 
-### Principle
+### Prinzip
 
-When creating a native image, GraalVM examines the source code of the program
-and recognizes which classes and functionalities from which libraries are
-required for the application, so GraalVM can bundle only the necessary classes
-into the native image, making it not unnecessarily large. In the end, the native
-image contains the source code of the program, as well as all libraries and Java
-classes used in this application. However, since GraalVM can only perform a
-static code analysis for this examination, it is not possible for GraalVM to
-recognize dynamic dependencies. If such dependencies exist, for example, because
-Java Reflection is used, which means that the actual program flow is only known
-during runtime, another step must be performed for the creation.
+Bei der Erstellung eines Native-Images untersucht GraalVM Quellcode des Programms
+und erkennt anhand dessen, welche Klassen und Funktionalitäten aus welchen
+Bibliotheken für die Applikation benötigt werden, so kann GraalVM nur die nötigen
+Klassen ins Native-Image bündeln, wodurch dieses nicht unnötig gross wird. Im
+Endeffekt beinhaltet das Native-Image schlussendlich den Quellcode des Programms
+sowie aller Bibliotheken und Java-Klassen, welche in dieser Applikation genutzt
+werden. Da GraalVM für diese Untersuchung jedoch nur eine statische Codeanalyse
+durchführen kann, ist es GraalVM nicht möglich, dynamische Abhängigkeiten zu
+erkennen. Falls solche Abhängigkeiten bestehen, da zum Beispiel Java Reflection
+benutzt wird, wodurch der effektive Programmablauf erst während der Runtime
+bekannt wird, muss für die Erstellung noch ein weiterer Schritt durchgeführt
+werden.
 
-In order for GraalVM to be able to transform dynamic programs into a native image,
-it needs a configuration that describes which classes and methods are needed,
-this can be created manually or more easily using the `native-image-agent` Java
-agent. This Java agent can be attached to the program execution, whereupon it
-writes down all used classes and methods in the configuration. After all program
-paths have been traced with the agent, the native image can be created with the
-created configuration.
+Damit GraalVM auch dynamische Programme in ein Native-Image verwandeln kann,
+benötigt es eine Konfiguration, in welcher beschrieben ist, welche Klassen und
+Methoden benötigt werden, diese kann manuell erstellt werden oder einfacher
+mittels des `native-image-agent` Javaagenten. Dieser Javaagent kann an die
+Programmausführung angebunden werden, woraufhin er alle benutzten Klassen und
+Methoden in der Konfiguration aufschreibt. Nachdem alle Programmpfade mit dem
+Agenten verfolgt wurden, kann das Native-Image mit der erstellten Konfiguration
+erstellt werden.
 
-### Using the native-image-agent
+#### Nutzung des native-image-agent
 
-To use the `native-image-agent`, the application can be started almost as usual,
-just add the `-agentlib:native-image-agent` option to the Java command. The Java
-agent can also be further configured, so the directory where the configuration
-is to be stored can be supplemented with the parameter `config-output-dir` or if
-part of the configuration already exists, the directory of this with the
-parameter `config-merge-dir` can be given, which will be extended. The
-configuration to the Java agent is specified in the format
-`-agentlib:native-image-agent=param1=value1,param2=value2`.
+Um den `native-image-agent` zu nutzen, kann die Applikation fast wie gewohnt
+gestartet werden, es muss einfach die `-agentlib:native-image-agent` Option im
+Java-Befehl ergänzt werden. Der Javaagent kann auch noch weiter konfiguriert
+werden, so kann das Verzeichnis, in dem die Konfiguration gespeichert werden soll,
+mit dem Parameter `config-output-dir` mitgegeben werden oder falls bereits ein
+Teil der Konfiguration existiert, kann das Verzeichnis dieser mit dem Parameter
+`config-merge-dir` mitgegeben werden, wodurch dieses erweitert wird. Die
+Konfiguration an den Javaagenten wird im Format
+`-agentlib:native-image-agent=param1=value1,param2=value2` angegeben.
 
-Example: [Configuration with a Tracing Agent](https://www.graalvm.org/latest/reference-manual/native-image/guides/configure-with-tracing-agent/)
+Beispiel: [Konfiguration mit einem Tracing Agent](https://www.graalvm.org/latest/reference-manual/native-image/guides/configure-with-tracing-agent/)
 
-*Further information:*  
-[Automatic Creation of Metadata](https://www.graalvm.org/latest/reference-manual/native-image/metadata/AutomaticMetadataCollection/)
+*Weiter Informationen:*  
+[Automatische Erstellung der Metadaten](https://www.graalvm.org/latest/reference-manual/native-image/metadata/AutomaticMetadataCollection/)
 
-### Creation with the CLI
+### Erstellung mit der CLI
 
-With the `native-image` CLI, compiled Java classes can be directly transformed
-into an executable program. For this purpose, the class can be compiled using
-`javac` and then built using `native-image`.
+Mit der `native-image` CLI können kompilierte Java Klassen direkt in ein
+ausführbares Programm verwandelt werden. Dazu kann die Klasse mittels `javac`
+kompiliert und dann mittels `native-image` gebaut werden:
 
 ```shell
 native-image [options] class [imagename] [options]
 ```
 
-A simple example with a `HelloWorld` program looks like this.
+Ein einfaches Beispiel mit einem `HelloWorld` Programm sieht wie folgt aus:
 
 HelloWorld.java
 
@@ -107,32 +112,34 @@ public class HelloWorld {
 # Build
 javac HelloWorld.java
 native-image HelloWorld
-# Start program
+# Programm starten
 ./helloworld
 ```
 
-However, since not every program fits into a class, it is also possible to
-transform Java Archives as well as Java Modules into executable files. To create
-a native image from a Java Archive, the `native-image` command can be executed
-with the same arguments as the Java command, as if the jar file were to be
-started. However, the arguments to the program itself must not be passed, they
-are only passed to the native image. This way, the file `App.jar` which is
-executed with `java -jar App.jar` can be transformed into a native image with the
-command `native-image -jar App.jar` and later executed with the command `./App`.
+Da jedoch nicht jedes Programm Platz in einer Klasse hat, ist es auch möglich,
+Java-Archive sowie Java-Module in ausführbare Dateien zu verwandeln.  
+Um aus einem Java-Archive ein Native-Image zu erstellen, kann der `native-image` Befehl mit
+den gleichen Argumenten wie der Java Befehl ausgeführt werden, wie wenn die Jar-Datei
+gestartet werden soll. Hierbei dürfen einfach die Argumente an das Programm
+selber nicht mitgegeben werden, diese werden dann erst dem Native-Image
+mitgegeben. So kann die Datei `App.jar`, welche mit `java -jar App.jar`  ausgeführt
+wird mit, dem Befehl `native-image -jar App.jar`  in ein Native-Image verwandelt
+werden und später mit dem Befehl `./App`  ausgeführt werden.
 
-*Further information:*  
+*Weitere Informationen:*  
 [Native-Image CLI](https://www.graalvm.org/latest/reference-manual/native-image/)  
-[Create Native-Image Program](https://www.graalvm.org/latest/reference-manual/native-image/guides/build-native-executable-from-jar/)
+[Native-Image Programm erstellen](https://www.graalvm.org/latest/reference-manual/native-image/guides/build-native-executable-from-jar/)
 
-### Creation with Maven
+### Erstellung mit Maven
 
-To avoid having to create the native image by hand each time, there is the
-`native-image-maven` Plugin from GraalVM, which can be added to the plugins
-section of the pom.xml file. Since the build of a native image usually takes
-longer than other types, it is recommended to create a Maven profile that builds
-the program without creating a native image if the program should not be executed
-as a Java archive, the [`really-exeutable-jar-maven-plugin`](https://github.com/brianm/really-executable-jars-maven-plugin)
-is a simple way to test the application quickly.
+Damit das Native-Image nicht jeweils von Hand erstellt werden muss, gibt es von
+GraalVM das `native-image-maven` Plugin, welches im Plugins Abschnitt der pom.xml
+Datei hinzugefügt werden kann. Da der Build eines Native-Images meist jedoch
+länger dauert als andere Arten, ist es empfehlenswert, ein Maven Profil zu
+erstellen, welches das Programm buildet, ohne ein Native-Image zu erstellen,
+wenn das Programm trotzdem nicht als Java-Archiv ausgeführt werden soll, ist das
+[`really-exeutable-jar-maven-plugin`](https://github.com/brianm/really-executable-jars-maven-plugin) eine einfache Möglichkeit, die Applikation
+schnell zu testen.
 
 ```xml
 <!-- ... -->
@@ -160,41 +167,46 @@ is a simple way to test the application quickly.
 <!-- ... -->
 ```
 
-*Further information:*  
+*Weitere Informationen:*  
 [Native-Build Maven plugin](https://graalvm.github.io/native-build-tools/latest/maven-plugin.html)
 
-## Building with a Pipeline
+## Build mit einer Pipeline
 
-To create a native image via a pipeline, this can be done similarly to a normal
-Java application. There are two main differences, on the one hand, instead of
-the Java Archives, the binary as well as the shared object's (file extension
-`.so`) must be distributed, this can be done for example as a pipeline artifact,
-NPM package. The second difference is that the build must also be executed using
-the GraalVM JDK. This is currently not yet available in the pipelines, which is
-why it must first be downloaded. In the build, it must then be ensured that the
-GraalVM JDK is used.
+Um ein Native-Image per Pipeline zu erstellen, kann dies ähnlich einer normalen
+Java-Applikation gemacht werden. Dabei gibt es wesentlich zwei Unterschiede,
+einerseits muss anstelle des Java-Archives das Binary so wie die *shared object's*
+(Dateiendung `.so`) verteilt werden, dies ist zum Beispiel als Pipeline Artefakt,
+NPM-Packet möglich. Der zweite Unterschied ist, dass
+der Build ebenfalls mittels der GraalVM-JDK ausgeführt werden muss. Diese ist
+momentan noch nicht standardmässig in den Pipelines verfügbar, weshalb diese
+zuerst heruntergeladen werden muss. Im Build muss dann auch sichergestellt
+werden, dass die GraalVM JDK genutzt wird.
 
-## Possible Problems
+## Mögliche Probleme
 
-- **Incomplete Configuration**  
-  When creating the configuration using the `native-image-agent`, it is possible
-  that not all classes are correctly captured. These differences can be different
-  from system to system, so it is possible that the correct configuration is
-  generated locally, but an incomplete one in the build pipeline. Creating the
-  native image also works with an incomplete configuration and the problem only
-  becomes apparent during program execution, as certain classes and methods cannot
-  be found. To detect this problem, the native image should be tested again after
-  creation to prevent such errors. Another way to detect such errors is in the
-  output of the native image build step. In the second substep, GraalVM lists all
-  program parts that are included in the executable, if there are differences
-  between the local build and the pipeline build, an incomplete configuration
-  is present.
+- **Unvollständige Konfiguration**  
+  Bei der Erstellung der Konfiguration mittels des `native-image-agent's` ist es
+  möglich, das nicht alle Klassen korrekt erfasst werden. Diese Unterschiede können
+  von System zu System unterschiedlich sein, so ist es zum Beispiel möglich, das
+  lokal die korrekte Konfiguration generiert wird, in der Build-Pipeline jedoch
+  eine unvollständige. Die Erstellung des Native-Images funktioniert auch mit
+  einer unvollständigen Konfiguration und das Problem wird erst bei der Ausführung
+  des Programmes klar ersichtlich, da gewisse Klassen und Methoden nicht gefunden
+  werden können. Um dieses Problem zu erkennen, sollte das Native-Image nach der
+  Erstellung erneut getestet werden, um solche Fehler zu verhindern. Eine andere
+  Möglichkeit, solche Fehler zu erkennen, bietet sich in der Ausgabe des
+  Native-Image Build Schrittes. Im zweiten Unterschritt listet GraalVM alle
+  Programmteile auf, welche in das Executable eingebunden werden, falls es hier
+  zwischen dem lokalen Build und dem Pipeline-Build Unterschiede gibt, ist eine
+  unvollständige Konfiguration vorhanden.
 
-  The reason why the configuration is not always the same is not yet known to me
-  , but there is a workaround for this problem, the unrecognized classes can be
-  added manually via configuration, the `merge` function of the Java agent can be
-  used so that the complete configuration does not have to be created manually.
-  If the incomplete configuration arises in the pipeline, it is possible to
-  modify the pipeline to publish the configuration created there as an artifact
-  in the pipeline, which makes it easy to manually add the difference between the
-  pipeline configuration and the local configuration.
+  Der Grund, weshalb die Konfiguration nicht immer gleich ist, ist mir noch nicht
+  bekannt jedoch gibt es einen Workaround für dieses Problem, die nicht erkannten
+  Klassen können per manuelle Konfiguration hinzugefügt werden, hierbei kann die
+  `merge` Funktion des Javaagenten genutzt werden, damit nicht die vollständige
+  Konfiguration manuell erstellt werden muss. Falls die unvollständige
+  Konfiguration in der Pipeline entsteht, ist es möglich, die Pipeline zu
+  modifizieren, um die dort erstellte Konfiguration als Artefakt in der Pipeline
+  zu veröffentlichen, wodurch einfach die Differenz zwischen der
+  Pipeline-Konfiguration und der lokalen Konfiguration manuell hinzugefügt werden
+  kann.

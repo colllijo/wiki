@@ -1,71 +1,60 @@
 ---
 weight: 210
-title: "Onion Architecture"
-description: "Simple Information and notes about the Onion Architecture"
+title: "Onion Architektur"
+description: "Informationen und Notizen zur Onion Architektur"
 icon: "article"
-date: "2024-06-14T16:10:13+02:00"
-lastmod: "2024-06-14T16:10:13+02:00"
+date: "2024-06-14T14:23:13+02:00"
+lastmod: "2024-06-14T14:23:13+02:00"
 draft: false
 toc: true
 ---
 
-{{< rawhtml >}}
-<style>
-  .split-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-</style>
-{{< /rawhtml >}}
+## Einführung
 
-## Introduction
+Eine Onionarchitektur zielt darauf ab, eine Applikation möglichst *modular* zu
+erstellen. Dadurch soll die Unterhaltung der Applikation vereinfacht werden.
+Dazu soll es eine Grundlage dafür sein, in der Entwicklung *flexiblen*,
+*testbaren* und *erweiterbaren* Code zu schreiben.  
+Das grosse Ziel der Architektur ist es, dass Komponenten einfach ausgetauscht
+werden können, ohne dass andere Teile der Applikation davon betroffen sind,
+indem keine festen Abhängigkeiten erstellt werden und nur Interfaces verwendet
+werden.
 
-The Onion Architecture tries to create applications as *modular* as possible.
-By doing so, the maintenance of the application can be kept simple. It is
-meant to provide a basis to create an environment for *flexible*, *testable*,
-and *extensible* developement.  
-The big goal is to make components easily exchangeable and interchangeable
-without needing to break open other parts of the application, a core part of
-making this possible is to avoid creating fixed dependencies and only using
-interfaces for communication between components.
+{{< split type="start" size="3fr 1fr" >}}
 
-{{< rawhtml >}}
-<div class="split-container">
-  <div>
-{{< /rawhtml >}}
+## Konzepte
 
-## Concepts
+### Abhängigkeiten
 
-### Dependencies
+In einer Onionarchitektur fliessen die Abhängigkeiten von aussen nach inne. So
+haben die inneren Module keine Kenntnisse der äusseren Module. Dadurch gibt es
+keine festen Abhängigkeiten, wodurch alle Komponenten einfacher ausgetauscht
+werden können. Dies ohne dass andere Teile der Applikation bearbeitet werden
+müssen.
 
-In an Onion Architecture, dependencies flow from the outside to the inside.
-This results in the inner layers of the application not needing to know
-about the outer components. This gets rid of fixed dependencies and makes
-it possible to easily exchange components without editing other parts of
-the application.
+### Schichten
 
-### Layers
+**Domain:** Auf der Domainebene werden die einzelnen Domänen des Geschäfts
+abgebildet. Hier sind die eigentlichen Geschäftsfalle und Entitäten
+implementiert.
 
-**Domain:** The domain layer is used to represent the different domains of a
-business. Here the actual business logic and entities are implemented.
+**Applikation:** Die Applikationsebene ermöglicht die verschiedenen
+Anwendungsfälle der Applikation zur Verfügung. Hier wird der Datenfluss
+zwischen den einzelnen Elementen und Ebenen ermöglicht.
 
-**Application:** The application layer provides the different use cases of the
-application. And it enabled the flow of data between the different elements
-and layers of the application.
+**Infrastruktur:** Die Infrastruktur ebene stellt die Schnittstellen zur
+Aussenwelt dar. Sie implementiert jegliche Kommunikation der Applikation mit
+andern Diensten und Systemen. Dazu gehört zum Beispiel die Datenbank, eine
+REST-Schnittstelle und viele weitere Services, welche in der Applikation benötigt
+/ genutzt werden.
 
-**Infrastructure:** The infrastructure layer provides the interfaces to the
-outside world. It implements the communication of the application with other
-services and systems. For example like a database, a REST-API or many other
-services needed by the application.
+**Präsentation:** Die Präsentationsebene ist ein Teil der Infrastruktur. Jedoch
+übernimmt sie keine Kommunikation mit anderen Systemen, sondern mit dem Benutzer.
+Indem sie ihm eine Benutzeroberfläche zum Beispiel in Form einer Website zur
+Verfügung stellt.
 
-**Presentation:** The presentation layer is part of the infrastructure. But
-instead of communication with other systems, it communicates with the user.
-This is done by providing a user interface like a website for example.
+{{< split >}}
 
-{{< rawhtml >}}
-  </div>
-  <div>
-    <img src="/docs/images/architecture/onion/onion-model.png" alt="Model of an Onion Architecture" />
-  </div>
-</div>
-{{< /rawhtml >}}
+<img src="/docs/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
+
+{{< split type="end" >}}

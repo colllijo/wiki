@@ -1,82 +1,78 @@
 ---
 weight: 120
 title: "Dependency Injection"
-description: "Eine kurze Einführung in das Thema Depedency Injection mit einem kleinen Java Beispiel"
+description: "Short documentation of the Dependency Injection design pattern, including a simple example."
 icon: "article"
-date: "2024-06-14T16:56:19+02:00"
-lastmod: "2024-06-14T16:56:19+02:00"
+date: "2024-06-14T16:56:21+02:00"
+lastmod: "2024-06-14T16:56:21+02:00"
 draft: false
 toc: true
 ---
 
-{{< split type="start" size="2fr 1fr" >}}
+{{< split type="start" >}}
 
-## Einführung
+## Introduction
 
-Mit Dependency Injection wird bewirkt, dass eine Klasse selber keine
-Abhängigkeiten mehr verwalten muss, da diese von aussen zur Verfügung gestellt
-werden. Dadurch soll es möglich werden, die Module, von welchen eine Klasse abhängig
-ist, frei zu wechseln, ohne die Klasse selber zu verändern.
+With dependency injection, a class no longer has to manage its dependencies
+itself, as they are automatically provided. This is intended to make it easier
+to change dependencies, as they will have fewer adjustments to their
+dependencies, and ideally no adjustments at all.
 
-Eine Abhängigkeit kann mittels Dependency Injection an drei verschiedenen
-Stellen eingeführt werden. Es ist möglich, die Abhängigkeit bei der
-Konstruktion des Clients zu erstellen, hierbei wird die Abhängigkeit in den
-Konstruktor eingeführt, eine zweite Möglichkeit ist es, die Abhängigkeit mit
-einer Methode zu setzen, welche nach dem Konstruktor aufgerufen wird.
-Die letzte Möglichkeit ist es, die Abhängigkeit direkt im Feld einzuführen, sodass
-weder ein Konstruktor noch eine spezifische Methode benötigt wird.
+Using dependency injection, the dependency can be injected a three points in a
+class. It is possible to introduce the dependency when constructing the client,
+where the dependency is introduced in the constructor. A second possibility is
+to introduce the dependency using a setter method, which is called after the
+constructor. The last possibility is to introduce the dependency directly in
+the field, so that neither a constructor nor a specific setter method is needed.
 
-Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
-[SOLID Prinzip](/docs/design-patterns/solid), welche die Abhängigkeit von unten nach oben bringt.
+Dependency injection is an extension of the Dependency Inversion under the
+[SOLID principle](/docs/design-patterns/solid), which brings the dependency
+from bottom to top.
 
-## Rollen
+## Roles
 
-Für die Umsetzung der Dependency Injection werden vier Rollen benötigt.
-Diese werden folgend kurz erläutert.
+To implement dependency injection four roles are needed.
+These will be explained in the following sections.
 
 ### Service
 
-Der Service ist der Teil der Applikation, welcher an einer anderen Stelle
-genutzt werden soll, da dieser einen Teil der benötigten Geschäftslogik
-implementiert. Damit die Applikation möglichst modular bleibt und mit dem
-Dependency Inversion Principle übereinstimmt, wird ein Service nie direkt in
-einem Client genutzt. Anstelle dessen implementiert ein Service ein Interface,
-welches wiederum von Clients verwendet werden kann.
-
+The service is the part of the application that should be used elsewhere, as it
+implements part of the required business logic. To keep the application as
+modular as possible and in line with the Dependency Inversion Principle, a
+service is never used directly in a client. Instead, a service implements an
+interface that can be used by clients.
 
 ### Client
 
-Der Client bezeichnet den Teil der Applikation, welcher einen Service
-konsumieren und benutzen soll. Die Abhängigkeit soll hier "eingespritzt"
-werden. Dadurch kann der Client die Funktionalitäten des Interface, welche vom
-Service implementiert werden, einfach nutzen ohne sich darum kümmern zu müssen,
-welche Implementation er jetzt benutzt.
+The client refers to the part of the application that should consume and use a
+service. The dependency should be "injected" here. This allows the client to
+easily use the functionalities of the interface implemented by the service
+without having to worry about which implementation it is using.
 
 ### Interface
 
-Das Interface ist die Abstraktion zwischen Client und Service. Es definiert eine
-Schnittstelle, wodurch ein Client weiss, welche Methoden ihm auf einem Service
-zur Verfügung stehen und macht es für einen Service klar, welche Methoden
-implementiert werden müssen.
+The interface is the abstraction between client and service. It defines an
+contract that tells a client which methods are available on a service and makes
+it clear to a service which methods need to be implemented.
 
 ### Injector
 
-Die Aufgabe des Injektors ist es, die jeweiligen Services mittels der
-Interfaces in die Clients "einzuspritzen", damit diese sie benutzen
-können. Der Injector ist im Vergleich zur Dependency Inversion die einzig neue
-Rolle, welche zu vor noch nicht benötigt wurde.
+The task of the injector is to "inject" the respective services into
+the clients using the different interfaces, so that they can use them. In comparison
+to the Dependency Inversion, the injector is the only new role that was not
+needed before.
 
 {{< split >}}
 
 ## CDI
 
-Contexts and Dependency Injection (CDI) ist ein Java-Standard, welcher das Prinzip
-der Dependency Injection erweitert. CDI ermöglicht es, die Abhängigkeiten der
-verschiedenen Module automatisiert zu injizieren, wodurch es nicht mehr nötig ist,
-die benötigten Abhängigkeiten manuell mitzugeben. CDI entscheidet anhand des Programmcodes
-und einer Konfiguration, welche Abhängigkeit wo benötigt wird.
+Contexts and Dependency Injection (CDI) is a Java standard that extends the
+principle of dependency injection. CDI allows the dependencies of the
+different modules to be automatically injected, eliminating the need to
+manually pass the required dependencies. CDI decides based on different
+contexts and a configuration which dependency is needed where.
 
-## Ressourcen
+## Sources
 
 [Wikipedia - Prinzipien objektorientierten Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs)  
 [Wikipedia - Contexts and Dependency Injection](https://de.wikipedia.org/wiki/Contexts_and_Dependency_Injection)  
@@ -85,17 +81,17 @@ und einer Konfiguration, welche Abhängigkeit wo benötigt wird.
 
 {{< split type="end" >}}
 
-## Beispiel
+## Example
 
-Um dieses Prinzip zu verdeutlichen, gibt es hier ein kleines Beispiel in Java.
-Dabei soll eine Applikation erstellt werden, welche genutzt werden kann, um mit
-unterschiedlichen Kaffeemaschinen Kaffee zu brühen.
+To illustrate this principle, here is a small example in Java.
+Here we want to create an application that can be used to brew coffee
+with different coffee machines.
 
-### Ausgangslage
+### Starting Point
 
-Für die Ausgangslage gibt es zwei Kaffeemaschine, die `BasicCoffeeMachine` und die `PremiumCoffeeMachine`.
-Beide Maschinen haben eine Method, um Kaffee zu brühen, jedoch kann die `PremiumCoffeeMachine` neben dem
-Filterkaffee auch noch Espresso brühen.
+For the starters there are two coffee machines, the `BasicCoffeeMachine`
+Both machines have a method to brew coffee, but the `PremiumCoffeeMachine` can
+also brew espresso next to the filter coffee.
 
 {{< tabs tabTotal="2" >}}
 {{< tab tabName="BasicCoffeeMachine.java" >}}
@@ -183,14 +179,14 @@ public class PremiumCoffeeMachine {
 {{< /tab >}}
 {{< /tabs >}}
 
-### Abstraktion
+### Abstraction
 
-Der erste Schritt zur Dependency Injection ist die Abstraktion der öffentlichen Methoden.
-Dazu muss ein Interface für die Kaffeemaschine erstellt werden. Da nicht jede Kaffeemaschine
-Espresso brühen kann, gibt es hier zwei Interfaces, ein Grundlegendes für alle Kaffeemaschine,
-welches Filterkaffee brühen kann und ein zweites für die Premium Kaffeemaschine, welche auch
-Espresso brühen kann. Die `BasicCoffeeMachine` kann dann das einfachere Interface implementieren
-und die `PremiumCoffeeMachine` implementiert einfach beide.
+The first step to Dependency Injection is the abstraction of the public methods.
+To do this, an interface for the coffee machine must be created. Since not every
+Coffee machine can brew espresso there are two interfaces here, a basic one for all
+Coffee machines, which can brew filter coffee and a second one for the premium coffee machine,
+which can also brew espresso. The `BasicCoffeeMachine` can then implement the simple interface
+and the `PremiumCoffeeMachine` implements both.
 
 {{< tabs tabTotal="2" >}}
 {{< tab tabName="CoffeeMachine.java" >}}
@@ -300,12 +296,12 @@ public class PremiumCoffeeMachine implements CoffeeMachine, EspressoMachine {
 {{< /tab >}}
 {{< /tabs >}}
 
-### Applikation
+### Application
 
-Da nun beide Klassen ihre Interfaces implementieren, kann die Kaffeeapplikation nach dem Dependency Injection
-Prinzip erstellt werden. Die Applikation muss jetzt nicht mehr selber verwalten, welche Kaffeemaschine sie
-benötigt, sondern kann einfach die Interfaces, welche sie benötigt über ihren Konstruktor anfordern.
-Wodurch die richtige Kaffeemaschine bei der Erstellung der Kaffeeapplikation injiziert werden kann.
+Now that both classes implement their interfaces, the coffee application can be created using the
+Dependency Injection principle. The application no longer has to manage which coffee machine it needs,
+but can simply request the interfaces it needs via its constructor.
+This allows the correct coffee machine to be injected when creating the coffee application.
 
 {{< tabs tabTotal="1" >}}
 {{< tab tabName="CoffeeApp.java" >}}

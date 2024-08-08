@@ -12,17 +12,17 @@ module:
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
       disable: false
 
-defaultContentLanguage: en
+defaultContentLanguage: de
 languages:
-  en:
-    disabled: false
-    languageName: "English"
-    weight: 10
-    params: {}
   de:
     disabled: false
     languageName: "Deutsch"
-    contentDir: "content/de"
+    weight: 10
+    params: {}
+  en:
+    disabled: false
+    languageName: "English"
+    contentDir: "content/en"
     weight: 20
     params: {}
 

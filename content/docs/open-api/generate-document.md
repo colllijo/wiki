@@ -1,25 +1,26 @@
 ---
 weight: 510
-title: "Generate Document"
-description: "Generate a (PDF) document from an OpenApi specification."
+title: "Dokument gnerieren"
+description: "(PDF) Dokument aus einer OpenApi-Spezifikation generieren."
 icon: "picture_as_pdf"
-date: "2024-06-21T10:53:41+02:00"
-lastmod: "2024-06-21T10:53:41+02:00"
+date: "2024-06-21T13:14:08+02:00"
+lastmod: "2024-06-21T13:14:08+02:00"
 draft: false
 toc: true
 ---
 
-OpenApi specifications are very helpful to document APIs. However, it is not really easy to read and understand the YAML or JSON file. It would be nice if you could read the specification as a PDF document.
+OpenApi Spezifikationen sind sehr hilfreich, um Schnittstellen zu dokumentieren.
+Jedoch ist es nicht wirklich einfach, die YAML oder JSON Datei zu lesen und verstehen.
+Hier wäre es schon wenn man die Spezifikation als PDF lesen könnte.
 
-There are different tools that can generate documents based on the OpenApi specification.
+Hier gibt es verschiedene Tools, welche die Dokumente anhand der OpenApi-Spezifikation generieren können.
 
-[**RapiPDF**](https://mrin9.github.io/RapiPdf/) is one of these tools that transforms the
-OpenApi specification into a PDF document. If the specification is in a public GitHub
-repository, the PDF can be created directly through the RapiPDF website by providing
-the GitHub raw link to the specification. However, it is also possible to host
-RapiPDF locally and use it in this way.
+[**`RapiPDF`**](https://mrin9.github.io/RapiPdf/) ist ein solches Tool, welches die OpenApi-Spezifikation in ein PDF Dokument umwandelt.
+Falls die Spezifikation in einem öffentlichen GitHub-Repository liegt, kann das PDF direkt über die `RapiPDF` Website erstellt werden.
+Indem der GitHub raw Link zur Spezifikation angegeben wird.  
+Es ist jedoch auch möglich, `RapiPDF` lokal zu hosten und so zu benutzen.
 
-[**OpenAPI Generator**](https://openapi-generator.tech/) is another tool. It cannot generate PDFs, but it offers the
-possibility to generate the documentation in many other formats such as asciidoc,
-html, and markdown. With the OpenAPI Generator, it is possible to generate clients
-and servers in many programming languages and frameworks.
+[**`OpenAPI Generator`**](https://openapi-generator.tech/) ist ein weiteres Tool. Es kann zwar keine PDFs generieren.
+Dafür bietet es jedoch die Möglichkeit, die Dokumentation in vielen anderen Formaten wie `asciidoc,` `html` und `markdown` zu generieren.
+Dazu ist es mit dem `OpenAPI Generator` möglich, Clients und Server in vielen Programmiersprachen und Frameworks zu generieren.
+

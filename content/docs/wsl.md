@@ -1,59 +1,59 @@
 ---
 weight: 600
 title: "Wsl"
-description: "Documentation for WSL"
+description: "Dokumentation für WSL"
 icon: "article"
-date: "2024-06-27T08:18:39+02:00"
-lastmod: "2024-06-27T08:18:39+02:00"
+date: "2024-06-27T08:18:41+02:00"
+lastmod: "2024-06-27T08:18:41+02:00"
 draft: false
 toc: true
 ---
 
-## Introduction
+## Einführung
 
-The Windows Subsystem for Linux (WSL) is a compatibility layer of Windows that allows
-linux distributions to run as a subsystem on Windows.
+Das Windows Subsystem for Linux (WSL) ist eine Kompatibilitätsschicht von Windows, welche es ermöglicht,
+Linux Distributionen als Subsystem auf Windows auszuführen.
 
-WSL can be used for various purposes, such as:
+WSL kann für verschiedene Zwecke genutzt werden, wie zum Beispiel:
 
 - Docker
-- Development environment
-- UNIX tools
+- Entwicklungsumgebung
+- UNIX Tools
 
-## Configuration
+## Konfiguration
 
-Next to the normal settings of the distribution used for WSL,
-there are also some settings for the WSL instance itself.
-[Documentation from Microsoft](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
+Neben den normalen Einstellungen der Distribution, welche für WSL genutzt wird,
+gibt es auch noch einige Einstellungen für die WSL Instanz selbst.  
+[Dokumentation von Microsoft](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
 
-### Resources
+### Ressourcen
 
-If not enough or too many resources are used in WSL.
-It is possible to change the resources available for WSL.
+Falls im WSL nicht genügend oder zu viele Ressourcen genutzt werden.
+Ist es Möglich die für WSL verfügbaren Ressourcen zu verändern.
 
-For this, the file `.wslconfig` can be created in Windows.
-This file should be located in the user's home directory.
+Dazu kann im Windows die Datei `.wslconfig` erstellt werden.
+Diese soll im Home Verzeichnis des Benutzers liegen.
 
 %UserProfile%\\.wslconfig
 
 ```plaintext
 [wsl2]
-memory=8GB # Available RAM for WSL
-processors=4 # Number of processors for WSL
+memory=8GB # Verfügbarer RAM für WSL
+processors=4 # Anzahl der Prozessoren für WSL
 ```
 
-### WSL Configuration
+### WSL Konfiguration
 
-Next to this file in the Windows system there is another configuration file in WSL.
-This file can be found under `/etc/wsl.conf`.
+Neben dieser Datei im Windows System gibt es noch eine weiter Konfigurationsdatei im WSL.
+Diese findet sich unter `/etc/wsl.conf`.
 
 /etc/wsl.conf
 
 ```plaintext
 [network]
-generateResolvConf = false # Don't generate the resolv.conf file
-generateHosts = false # Don't generate the hosts file
+generateResolvConf = false # resolv.conf Datei nicht generieren
+generateHosts = false # Hosts Datei nicht generieren
 
 [interop]
-appendWindowsPath = false # Don't append Windows paths to WSL
+appendWindowsPath = false # Windows Pfade nicht in WSL anhängen
 ```

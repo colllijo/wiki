@@ -1,22 +1,24 @@
 ---
 weight: 331
 title: "Ngrx"
-description: "Dokumentation zu Ngrx. Reactive State Framework für Angular."
+description: "Documentation for Ngrx. Reactive State Framework for Angular."
 icon: "article"
-date: "2024-06-25T14:00:23+02:00"
-lastmod: "2024-06-25T14:00:23+02:00"
+date: "2024-06-25T14:00:20+02:00"
+lastmod: "2024-06-25T14:00:20+02:00"
 draft: false
 toc: true
 ---
 
-## Einführung
+## Introduction
 
-[Ngrx](https://ngrx.io) ist ein Framework für Angular, welches ermöglicht reaktive Applikationen zu erstellen.
-Ngrx basiert auf dem Konzept des [Redux](https://redux.js.org/) Javascript Frameworks.
+[Ngrx](https://ngrx.io) is a framework for Angular that allows you to create reactive
+applications. NgRx is based on the concept of the [Redux](https://redux.js.org/)
+JavaScript framework.
 
 ## State
 
-Der Ngrx Store besteht aus mehreren Featuren, welche jeweils ihren State sowie ihre Actions, Reducer und Effects haben.
+The Ngrx Store consists of several features, each of which has its
+own state as well as its actions, reducers and effects.
 
 {{< rawhtml >}}
   <img src="/docs/images/programming/angular/ngrx-state-lifecycle.png" alt="Ngrx State Management Lifecycle" width="820px" />
@@ -24,40 +26,37 @@ Der Ngrx Store besteht aus mehreren Featuren, welche jeweils ihren State sowie i
 
 ### State
 
-Im State eines Features wird der momentane Zustand der Applikation gespeichert.  
-Der State kann in der Applikation ausgelesen, aber nicht verändert werden, da er
-unveränderlich ist. Der State kann nur durch einen Reducer mit einer neuen Version
-des States überschrieben werden.
+Here the current state of the application is stored.  
+The state can be read in the application but not changed, since it is immutable.
+The state can only be overwritten by a reducer with a new version of the state.
 
 ### Action
 
-Aktionen sind die Auslöser für Veränderungen und führen entweder dazu, dass der State
-durch einen Reducer erneuert wird oder dass ein Effekt ausgeführt wird. Eine Aktion
-kann aus verschiedenen Gründen ausgelöst werden, dazu gehören das Laden einer Seite,
-das Klicken einer Komponente oder das Ausführen eines Effekts.
+Actions are the triggers for changes and either lead to the state being
+renewed by a reducer or to an effect being executed. A action can be triggered
+for various reasons, such as loading a page, clicking a component or executing
+an effect.
 
 ### Reducer
 
-Reducer sind pure Funktionen, welche den Zustand der Applikation verändern.
-Sie werden durch Aktionen ausgelöst und erstellen anhand des aktuellen Zustands
-und allfälligen Parametern der Aktion den neuen Zustand. Da sie jedoch pure
-Funktionen sind, dürfen keine Nebeneffekte, wie zum Beispiel das Laden von Daten
-stattfinden.
+Reducers are pure functions that change the state of the application.
+They are triggered by actions and create the new state based on the current
+state and any parameters of the action. As they are pure functions, no side
+effects, such as loading data, may occur.
 
 ### Effects
 
-Die meisten Applikationen kommen jedoch nicht ohne die Benutzung von Nebeneffekten
-aus. Für dieses Bedürfnis bietet Ngrx Effekte. Diese werden ebenfalls durch eine
-Aktion ausgelöst und dürfen dann einen Nebeneffekt auslösen, dass heisst zum Beispiel
-eine Datenbankabfrage oder eine REST-Abfrage. Diese Daten dürfen dann jedoch nicht
-direkt in den Zustand geschrieben werden, sondern mit einer Aktion an einen Reducer
-weitergeleitet und erst dieser erneuert dann den Zustand.
+As most applications won't work without using side effects, Ngrx offers effects
+for this purpose. These are also triggered by an action and may then trigger a
+side effect, such as a database query or a REST query. The data fetched may not
+be written directly to the state but must be passed on to a reducer with an
+action, and only then will the state be updated.
 
 ## Feature erstellen
 
-Um die Funktionsweise von Ngrx zu verdeutlichen hier noch ein kurzes Beispiel.  
-Das unten stehende Beispiel ist nur eine Möglichkeit, Ngrx zu verwenden, für andere Möglichkeiten und weitere Informationen
-lohnt es sich, die offizielle [Dokumentation](https://ngrx.io/docs) zu Hilfe zu ziehen.
+To illustrate the functionality of Ngrx, here is a short example.  
+The below example is just one way to use Ngrx, for other possibilities and
+further information it is worth consulting the official [documentation](https://ngrx.io/docs).
 
 ### Installation
 
@@ -169,8 +168,8 @@ export const SessionFeature = createFeature({
 {{< /prism >}}
 
 {{% alert context="warning" %}}
-Wenn der Reducer mit `createFeature` erstellt wird darf es im State keine
-optionalen Eigenschaften geben.  
+When creating a reducer with `createFeature` there must not be any optional
+properties in the state.  
 ❌ `key ?: string`  
 ✔️ `key: string | null`
 {{% /alert %}}

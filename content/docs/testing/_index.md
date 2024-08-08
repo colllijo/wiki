@@ -1,10 +1,10 @@
 ---
 weight: 400
-title: "Testing"
-description: "Documentation about various topics related to testing applications."
+title: "Testen"
+description: "Dokumentation zu verschiedenen Themen im Zusammenhang mit dem Testen von Anwendungen."
 icon: "monitor_heart"
-date: "2024-07-08T08:08:21+02:00"
-lastmod: "2024-07-08T08:08:21+02:00"
+date: "2024-07-08T08:08:24+02:00"
+lastmod: "2024-07-08T08:08:24+02:00"
 draft: false
 toc: true
 ---

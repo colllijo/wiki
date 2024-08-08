@@ -1,26 +1,37 @@
 ---
 weight: 311
 title: "Annotations"
-description: "Documentation about Java annotations."
+description: "Dokumentation zu Java-Annotationen."
 icon: "alternate_email"
-date: "2024-06-21T13:36:08+02:00"
-lastmod: "2024-06-21T13:36:08+02:00"
+date: "2024-06-21T13:36:06+02:00"
+lastmod: "2024-06-21T13:36:06+02:00"
 draft: false
 toc: true
 ---
 
-## Introduction
+## Einführung
 
+In Java können Annotation verwendet werden. Diese haben selber keinen Einfluss auf die Funktionalität des Codes.
+Sie ermöglichen es jedoch, zusätzliche Metadaten zu einem Element hinzuzufügen. Diese können den Code für Entwickler verständlicher,
+aber auch von anderen Teilen des Programms genutzt werden, um damit zu arbeiten. Ein gutes Beispiel dafür ist [Spring Boot](https://spring.io/projects/spring-boot).
+In Spring Boot werden Annotationen genutzt, um dem Framework zu sagen, welche Methode eines Controllers wie aufgerufen werden sollen.
+Zum Beispiel wird mit `@GetMapping` definiert, dass eine Methode aufgerufen werden soll, wenn ein GET-Request an eine bestimmte URL gesendet wird.
 
-In Java, annotations can be used. These do not have an influence on the functionality of the code themselves. They allow to add additional metadata to an element.
-These can make the code more understandable for developers but can also be used by other parts of the program to work with. A good example for this is [Spring Boot](https://spring.io/projects/spring-boot).
-In Spring Boot annotations are used to tell the framework which method of a controller should be called how. For example with `@GetMapping` it is defined that a method should be called when a GET request is sent to a specific URL.
+## Annotationen erstellen
 
-## Creating Annotations
+In Java können Annotationen mit dem Schlüsselwort `@interface` erstellt werden. Für jede Annotation muss noch eine Erhaltung und Ziel definiert werden.
+Die Erhaltung wird mit der `@Retention` Annotation gesetzt und bestimmt, bis wann die Annotation erhalten bleibt.
+Das Ziel wird mit `@Target` gesetzt und bestimmt, auf welche Elemente die Annotation angewendet werden kann. Zum Beispiel auf Methoden, Klassen oder Variablen.
 
-In Java, annotations can be created with the keyword `@interface`. For each annotation, a retention and target must be defined. The retention is set with the `@Retention` annotation and determines until when the annotation is retained. With SOURCE it is only present in the source code, with CLASS it is also written into the compiled `.class` file and with RUNTIME it is still present during the execution of the program. The target is set with `@Target` and determines on which elements the annotation can be applied. For example on methods, classes or variables.
+{{% alert context="info" %}}
 
-### Example
+**`RetentionPolicy.SOURCE`:** Die Annotation ist nur im Quellcode vorhanden, beim Kompilieren wird sie entfernt.  
+**`RetentionPolicy.CLASS`:** Die Annotation ist auch im kompilierten Bytecode (`.class` Datei) vorhanden, wird aber beim Laden des Programms entfernt.  
+**`RetentionPolicy.RUNTIME`:** Die Annotation ist auch während der Ausführung des Programms noch vorhanden.  
+
+{{% /alert %}}
+
+### Beispiel
 
 CustomAnnotation.java
 {{< prism lang="java" line-numbers="true"  >}}

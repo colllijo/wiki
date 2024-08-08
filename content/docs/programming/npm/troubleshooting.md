@@ -1,19 +1,20 @@
 ---
-weight: 321
+weight: 322
 title: "Troubleshooting"
-description: "Documentation of the solutions for some common problems in NPM."
+description: "Dokumentation der Lösungen für einige gängige Probleme in NPM."
 icon: "troubleshoot"
-date: "2024-06-21T16:43:07+02:00"
-lastmod: "2024-06-21T16:43:07+02:00"
+date: "2024-06-21T16:43:04+02:00"
+lastmod: "2024-06-21T16:43:04+02:00"
 draft: false
 toc: true
 ---
 
-## Certificate Problems
+## Zertifikatsprobleme
 
-When executing `npm install` or `npm update`, it may happen that an untrusted certificate is found in the chain.
-In this case, this leads to an NPM error. To still be able to execute the NPM command, the certificate verification can be disabled.
-But it is important to know that NPM will trust every certificate by doing this, so this adjustment should be reverted as soon as the installation is completed.
+Bei einem Ausführen von `npm install` oder `npm update` kann es vorkommen, dass ein unvertrautes Zertifikat in der Kette gefunden wird.
+In diesem Fall führt das zu einem NPM Fehler. Damit der NPM Befehl jedoch trotzdem ausgeführt werden kann, kann
+die Zertifikatsprüfung deaktiviert werden. Es ist jedoch wichtig zu wissen, das NPM dadurch jedem Zertifikat vertraut,
+deshalb sollte diese Anpassung direkt wieder rückgängig gemacht werden, sobald die Installation durchgelaufen ist.
 
 ```shell
 export NODE_TLS_REJECT_UNAUTHORIZED=0

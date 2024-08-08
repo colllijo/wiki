@@ -1,44 +1,63 @@
 ---
 weight: 110
 title: "SOLID"
-description: "Information about the basic acronym of the object-oriented programming, SOLID."
+description: "Informationen zu den grundlegenden Prinzipien der Objektorientierten Programmierung, welche hinter dem Akronym SOLID stehen."
 icon: "article"
-date: "2024-06-14T16:56:21+02:00"
-lastmod: "2024-06-14T16:56:21+02:00"
+date: "2024-06-14T16:56:19+02:00"
+lastmod: "2024-07-09T11:20:19+02:00"
 draft: false
 toc: true
 ---
 
-Solid describes 5 principles of object-oriented programming. These can be used
-individually, but together they lead to the creation of robust and maintainable
-programs.  
-Depending on the project, it may be useful to adhere to the principles to
-different degrees.
+Solid beschreibt 5 Prinzipien der objektorientierten Programmierung. Diese
+können einzeln eingesetzt werden, doch zusammen führen sie zur Erstellung von
+robusten und wartbaren Programmen.  
+Je nach Projekt kann es sinnvoll sein, die Prinzipien unterschiedlich strikt
+einzuhalten.
 
-## Single Responsibility Principle
+## Single Responsibility Principle (SRP)
 
-A class has only one reason to exist. It only has this use and therefore it's
-only responsibility is to fulfill this purpose.
+Ziel des Single Responsibility Principle ist es, die verschiedenen Belange zu trennen ([Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)).
+Das heisst, eine Klasse sollte alle Sachen sammeln, welche sich aus einem bestimmten Grund ändern und nicht mehr.
+So hat jede Klasse nur die Verantwortung, sich um die Anforderungen einer spezifischen Sache zu kümmern.
 
-## Open/Closed Principle
+## Open/Closed Principle (OCP)
 
-The entities which make up software must be open for extension (open), but
-closed from modifications, it needs to be extensible without changing the
-original (closed).
+Software-Einheiten müssen erweiterbar sein (open).  
+Dies muss möglich sein, ohne dass die grundlegende Einheit in irgend einer Weise
+verändert werden muss (closed).
 
-## Liskov Substitution Principle
+## Liskov Substitution Principle (LSP)
 
-A class using a method of a different class should not need to worry if it is
-calling the method on the base class or any of the derived/sub classes.
+Das Ausführen einer Operation der Klasse `T` auf der Klasse `S` muss zum
+gleichen Ergebnis führen wie das ausführen der Operation auf der Klasse `T`,
+wenn die Klasse `S` eine Unterklasse der Klasse `T` ist. Ist dies nicht der
+Fall, so wird das Liskovsche Substitutionsprinzip verletzt.
 
-## Interface Segregation Principle
+Dies führt dazu, dass Unterklassen ein Ist-ein-Kriterium erfüllen müssen.
+Hat man die Klassen `Kreis` und `Ellipse`, so ist es planimetrisch korrekt
+anzunehmen, dass ein `Kreis` eine `Ellipse` ist und deshalb eine Unterklasse von
+`Ellipse` sein kann. Hat die `Ellipse` jedoch Funktionalitäten unabhängig in der X
+und Y Achse skaliert zu werden, so ist ein `Kreis` keine `Ellipse` mehr, da ein
+`Kreis` immer in beide Achsen skaliert werden muss.
 
-Interfaces should be created in a way that they fit the clients needs.
-A client should not be forced to use interfaces it doesn't need and
-the interface shouldn't provide methods which aren't used.
+## Interface Segregation Principle (ISP)
 
-## Dependency Inversion Principle
+Interfaces sollen so aufgeteilt werden, dass sie den Anforderungen des Clients
+entsprechen, sodass diese nicht Interfaces benutzen müssen, welche Methoden
+beinhalten, welche sie nicht benötigen.
 
-Moduls of higher levels should not depend on modules of lower levels but on
-abstracts. These abstracts should not depend on details, but the details should
-depend on them.
+## Dependency Inversion Principle (DIP)
+
+Module hoher Ebenen sollen nicht von Modulen tieferer Ebenen abhängen, beide sollen von Abstraktionen abhängig sein.  
+Diese Abstraktionen sollen nicht von Details, sondern die Details von ihnen abhängen.
+
+**Ressourcen**:  
+[Wikipedia - SOLID](https://en.wikipedia.org/wiki/SOLID)  
+[Wikipedia - Prinzipien objektorientiertes Designs](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien)  
+
+[Wikipedia - Single Responsibility Principle](https://de.wikipedia.org/wiki/Single-Responsibility-Prinzip)  
+[Wikipedia - Open-closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)  
+[Wikipedia - Liskovsches Substitutionsprinzip](https://de.wikipedia.org/wiki/Liskovsches_Substitutionsprinzip)  
+[Wikipedia - Interface segregation principle]()  
+[Wikipedia - Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)  
