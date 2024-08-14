@@ -32,10 +32,12 @@ in the `assets` directory for styling changes.
 - Translations
 
 - [ ] Testing
-- [ ] Testing - JUnit
-- [ ] Testing - Cypress
-- [ ] C++ - CMake
-- [ ] C++ - Clang
+  - [ ] Testing - JUnit
+  - [ ] Testing - Cypress
+  - [ ] Testing - K6
+- [ ] C++
+  - [ ] C++ - CMake
+  - [ ] C++ - Clang
 - [ ] Neovim
 - [ ] Arch Linux
 - [ ] Design Patterns
