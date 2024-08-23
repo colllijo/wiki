@@ -38,6 +38,8 @@ in the `assets` directory for styling changes.
 - [ ] C++
   - [ ] C++ - CMake
   - [ ] C++ - Clang
+- [ ] Java CLI
 - [ ] Neovim
 - [ ] Arch Linux
 - [ ] Design Patterns
+- [ ] Kubernetes
