@@ -1,7 +1,7 @@
 ---
 weight: 120
 title: "Dependency Injection"
-description: "Short documentation of the Dependency Injection design pattern, including a simple example."
+description: "Short documentation of the Dependency Injection design pattern, including a simple Java example."
 icon: "article"
 date: "2024-06-14T16:56:21+02:00"
 lastmod: "2024-06-14T16:56:21+02:00"
@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-{{< split type="start" >}}
+{{< split type="start" size="2fr 1fr" >}}
 
 ## Introduction
 
