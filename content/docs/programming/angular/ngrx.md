@@ -18,9 +18,7 @@ Ngrx basiert auf dem Konzept des [Redux](https://redux.js.org/) Javascript Frame
 
 Der Ngrx Store besteht aus mehreren Featuren, welche jeweils ihren State sowie ihre Actions, Reducer und Effects haben.
 
-{{< rawhtml >}}
-  <img src="/docs/images/programming/angular/ngrx-state-lifecycle.png" alt="Ngrx State Management Lifecycle" width="820px" />
-{{< /rawhtml >}}
+<img src="/docs/images/programming/angular/ngrx-state-lifecycle.png" alt="Ngrx State Management Lifecycle" width="820px" />
 
 ### State
 
