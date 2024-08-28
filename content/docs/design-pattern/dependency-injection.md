@@ -27,7 +27,7 @@ Die letzte Möglichkeit ist es, die Abhängigkeit direkt im Feld einzuführen, s
 weder ein Konstruktor noch eine spezifische Methode benötigt wird.
 
 Die Dependency Injection ist eine Erweiterung der Dependency Inversion unter dem
-[SOLID Prinzip](/docs/design-patterns/solid), welche die Abhängigkeit von unten nach oben bringt.
+[SOLID Prinzip](/docs/design-pattern/solid), welche die Abhängigkeit von unten nach oben bringt.
 
 ## Rollen
 
