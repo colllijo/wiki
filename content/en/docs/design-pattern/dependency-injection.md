@@ -26,7 +26,7 @@ constructor. The last possibility is to introduce the dependency directly in
 the field, so that neither a constructor nor a specific setter method is needed.
 
 Dependency injection is an extension of the Dependency Inversion under the
-[SOLID principle](/docs/design-patterns/solid), which brings the dependency
+[SOLID principle](/docs/design-pattern/solid), which brings the dependency
 from bottom to top.
 
 ## Roles
