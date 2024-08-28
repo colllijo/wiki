@@ -5,7 +5,7 @@ description: "Grundlagen zum Testen mit K6."
 icon: "analytics"
 date: "2024-08-23T16:21:32+02:00"
 lastmod: "2024-08-23T16:21:32+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
