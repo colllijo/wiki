@@ -12,18 +12,19 @@ module:
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
       disable: false
 
-defaultContentLanguage: en
+defaultContentLanguage: de
 languages:
-  en:
-    params:
-      disbaled: false
-      languageName: "English"
-      weight: 10
   de:
-    params:
-      disabled: false
-      languageName: "Deutsch"
-      weight: 20
+    disabled: false
+    languageName: "Deutsch"
+    weight: 10
+    params: {}
+  en:
+    disabled: false
+    languageName: "English"
+    contentDir: "content/en"
+    weight: 20
+    params: {}
 
 markup:
   defaultMarkdownHandler: "goldmark"
