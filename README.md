@@ -43,3 +43,9 @@ in the `assets` directory for styling changes.
 - [ ] Arch Linux
 - [ ] Design Patterns
 - [ ] Kubernetes
+- [ ] Sonarcube
+- [ ] Hugo
+  - [ ] My hugo theme colllijo/lotusdocs
+- [ ] Wireshark
+- [ ] CTFs
+  - [ ] Ghidra
