@@ -65,4 +65,4 @@ Ein Test kann dann mit dem `run` Befehl von k6 ausgeführt werden, dabei muss al
 Zum Beispiel `k6 run test.js`. Dadurch wird der Test gestartet was einige Zeit dauern kann. Sobald der Test beendet ist zeigt
 K6 eine Zusammenfassung des Tests mit allen Metriken an. Dies könnte zum Beispiel so aussehen:
 
-<img src="/docs/images/testing/k6/k6-test.png" alt="K6 Test Ergebnis"/>
+![K6 Test Ergebnis](/docs/images/testing/k6/k6-test.png "Ausführung des K6 Tests im Terminal")

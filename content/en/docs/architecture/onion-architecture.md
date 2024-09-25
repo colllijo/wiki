@@ -51,6 +51,6 @@ This is done by providing a user interface like a website for example.
 
 {{< split >}}
 
-<img src="/docs/images/architecture/onion/onion-model.png" alt="Model of an Onion Architecture" />
+![Model of an Onion Architecture](/docs/images/architecture/onion/onion-model.png "Model of the Onion Architektur")
 
 {{< split type="end" >}}

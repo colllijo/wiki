@@ -48,6 +48,7 @@ params:
       Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)
   social:
     github: "colllijo/wiki"
+    rss: true
   docs:
     # Core Options
     landingPage: false
