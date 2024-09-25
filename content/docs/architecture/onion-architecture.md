@@ -55,6 +55,6 @@ Verfügung stellt.
 
 {{< split >}}
 
-<img src="/docs/images/architecture/onion/onion-model.png" alt="Onion Architektur Model" />
+![Onion Architektur](/docs/images/architecture/onion/onion-model.png "Modell der Onion Architektur")
 
 {{< split type="end" >}}

@@ -117,4 +117,4 @@ Falls noch spezifische Argumente an Jest übergeben werden sollen ist es auch M�
 
 Das Resultat vom Testlauf wird dann in der Konsole ausgegeben und könnte etwa so aussehen:
 
-<img src="/docs/images/testing/jest/Jest-Result.png" alt="Jest Test Resultat">
+![Jest Test Resultat](/docs/images/testing/jest/Jest-Result.png "Ausführung des Tests mit `npm test`")

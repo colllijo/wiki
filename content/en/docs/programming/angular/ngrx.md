@@ -20,7 +20,12 @@ JavaScript framework.
 The Ngrx Store consists of several features, each of which has its
 own state as well as its actions, reducers and effects.
 
-<img src="/docs/images/programming/angular/ngrx-state-lifecycle.png" alt="Ngrx State Management Lifecycle" width="820px" />
+{{< figure
+  src="/docs/images/programming/angular/ngrx-state-lifecycle.png"
+  caption="Lifecycle of the \"State\" in Ngrx"
+  width="840px"
+  alt="Ngrx State Management Lifecycle"
+>}}
 
 ### State
 
