@@ -35,10 +35,12 @@ in the `assets` directory for styling changes.
   - [ ] Testing - JUnit
   - [ ] Testing - Cypress
   - [ ] Testing - K6
+  - [ ] Testing - Sentry
 - [ ] C++
   - [ ] C++ - CMake
   - [ ] C++ - Clang
 - [ ] Java CLI
+- [ ] Nestjs
 - [ ] Neovim
 - [ ] Arch Linux
 - [ ] Design Patterns
@@ -49,3 +51,19 @@ in the `assets` directory for styling changes.
 - [ ] Wireshark
 - [ ] CTFs
   - [ ] Ghidra
+  - [ ] Pwntools
+- [ ] Technologien
+  - [ ] WebSockets
+  - [ ] RabbitMQ
+  - [ ] MQTT
+  - [ ] REST
+  - [ ] GraphQL
+- [ ] Monitoring
+- [ ] Deployment
+  - [ ] Docker
+  - [ ] Kubernetes
+  - [ ] ArgoCD
+- [ ] Databases
+  - [ ] Relational
+  - [ ] NoSQL
+- [ ] Assembly
