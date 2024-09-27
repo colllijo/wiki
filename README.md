@@ -40,10 +40,12 @@ in the `assets` directory for styling changes.
   - [ ] C++ - CMake
   - [ ] C++ - Clang
 - [ ] Java CLI
+- [ ] Maven
 - [ ] Nestjs
 - [ ] Neovim
 - [ ] Arch Linux
 - [ ] Design Patterns
+- [ ] Software Architektur
 - [ ] Kubernetes
 - [ ] Sonarcube
 - [ ] Hugo
@@ -59,6 +61,9 @@ in the `assets` directory for styling changes.
   - [ ] REST
   - [ ] GraphQL
 - [ ] Monitoring
+  - [ ] Graphana
+  - [ ] Prometheus
+  - [ ] CheckMK
 - [ ] Deployment
   - [ ] Docker
   - [ ] Kubernetes
