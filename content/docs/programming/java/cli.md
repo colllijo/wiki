@@ -5,7 +5,7 @@ description: "Dokumentation und Informationen zum `java` und `javac` Befehl."
 icon: "emoji_food_beverage"
 date: "2024-09-25T17:06:18+02:00"
 lastmod: "2024-09-25T17:06:18+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
