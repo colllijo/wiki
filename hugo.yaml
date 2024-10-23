@@ -47,7 +47,7 @@ params:
       © :YEAR: Liam Metzger.  
       Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)
   social:
-    github: "colllijo/wiki"
+    github: "colllijo"
     rss: true
   docs:
     # Core Options
