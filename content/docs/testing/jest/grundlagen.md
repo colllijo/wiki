@@ -1,5 +1,5 @@
 ---
-weight: 411
+weight: 5110
 title: "Grundlagen"
 description: "Grundlagen zum Testen mit Jest."
 icon: "article"

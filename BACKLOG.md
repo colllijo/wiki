@@ -1,0 +1,52 @@
+# Backlog
+
+- Translations
+
+- [ ] Testing
+  - [x] Testing - JUnit
+  - [ ] Testing - Cypress
+  - [x] Testing - K6
+  - [ ] Testing - Sentry
+- [ ] C++
+  - [ ] C++ - Make
+  - [ ] C++ - CMake
+  - [ ] C++ - Clang
+- [x] Java CLI
+- [ ] Maven
+- [ ] Nestjs
+- [ ] Neovim
+- [ ] Arch Linux
+- [ ] Design Patterns
+- [ ] Software Architektur
+- [ ] Sonarcube
+- [ ] Hugo
+  - [ ] My hugo theme colllijo/lotusdocs
+- [ ] Wireshark
+- [ ] CTFs
+  - [ ] Ghidra
+  - [ ] Pwntools
+  - [ ] Stenography
+- [ ] Technologien
+  - [ ] WebSockets
+  - [ ] RabbitMQ
+  - [ ] MQTT
+  - [ ] REST
+  - [ ] GraphQL
+- [ ] Monitoring
+  - [ ] Graphana
+  - [ ] Prometheus
+  - [ ] CheckMK
+- [ ] Deployment
+  - [ ] Docker
+  - [ ] Kubernetes
+  - [ ] ArgoCD
+- [ ] Databases
+  - [ ] Relational
+  - [ ] NoSQL
+- [ ] Assembly
+  - [ ] x86
+- [ ] Python
+  - [ ] Python - NumPy
+  - [ ] Python - Pandas
+  - [ ] Python - Manim
+- [ ] OpenAPI / Contracts

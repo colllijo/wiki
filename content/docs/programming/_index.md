@@ -1,5 +1,5 @@
 ---
-weight: 300
+weight: 4000
 title: "Programmieren"
 description: "Dokumentationen zu verschiedenen Programmier Themen."
 icon: "code"

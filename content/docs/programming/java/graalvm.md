@@ -1,5 +1,5 @@
 ---
-weight: 313
+weight: 4130
 title: "Graalvm"
 description: "Dokumentation zu GraalVM."
 icon: "article"
