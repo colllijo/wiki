@@ -27,8 +27,8 @@
   - [ ] Pwntools
   - [ ] Stenography
 - [ ] Technologien
-  - [ ] WebSockets
-  - [ ] RabbitMQ
+  - [x] WebSockets
+  - [x] RabbitMQ
   - [ ] MQTT
   - [ ] REST
   - [ ] GraphQL
@@ -49,4 +49,7 @@
   - [ ] Python - NumPy
   - [ ] Python - Pandas
   - [ ] Python - Manim
+- [ ] Machine Learning / AI
 - [ ] OpenAPI / Contracts
+- [ ] APL (A Programming language)
+- [ ] Glossar
