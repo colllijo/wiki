@@ -1,7 +1,7 @@
 ---
 weight: 3120
 title: "WebSockets mit JavaScript"
-description: "Dokumentation, wie WebSockets mit JavaScript verwendet werden können."
+description: "Dokumentation wie WebSockets mit JavaScript verwendet werden können."
 icon: "code"
 date: "2024-10-18T10:48:38+02:00"
 lastmod: "2024-10-18T10:48:38+02:00"
