@@ -1,5 +1,5 @@
 ---
-weight: 5210
+weight: 6210
 title: "Grundlagen"
 description: "Grundlagen zum Testen mit JUnit und Mockito."
 icon: "article"
