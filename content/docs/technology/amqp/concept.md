@@ -5,7 +5,7 @@ description: "Informationen zum Advanced Message Queuing Protocol und dessen Zwe
 icon: "article"
 date: "2024-10-23T16:23:52+02:00"
 lastmod: "2024-10-23T16:23:52+02:00"
-draft: true
+draft: false
 toc: true
 ---
 
