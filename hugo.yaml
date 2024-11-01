@@ -45,7 +45,7 @@ params:
   footer:
     copyright: |
       © :YEAR: Liam Metzger.  
-      Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)
+      Built with [**Lotus Docs**](https://github.com/colllijo/lotusdocs)
   social:
     github: "colllijo"
     rss: true

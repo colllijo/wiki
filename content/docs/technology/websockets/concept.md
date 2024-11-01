@@ -1,7 +1,7 @@
 ---
 weight: 3110
 title: "Konzept"
-description: "Informationen und Zweck von Websockets"
+description: "Informationen zu Websockets und deren Zweck"
 icon: "article"
 date: "2024-10-18T10:48:20+02:00"
 lastmod: "2024-10-18T10:48:20+02:00"
@@ -17,6 +17,15 @@ Request-Response-Protokoll ist, hält ein WebSocket die Verbindung offen und
 ermöglicht es beiden Parteien Nachrichten zu senden. So ist für einen Server
 möglich denn Client über Ereignisse zu informieren, ohne das dieser wie bei
 HTTP eine Anfrage senden muss.
+
+## Zweck
+
+Wie bereits in der Einleitung angedeutet wurden WebSockets dazu entwickelt
+bidirektionale Kommunikation im Web zu ermöglichen. WebSockets ermöglichen es
+Websites zu erstellen, welche dem Nutzer Echtzeitinformationen liefern können.
+Dies ist für viele Anwendungen von Vorteil, so wäre es ohne WebSockets sehr
+schwierig eine Website für einen Chat ein Onlinespiel oder Börseninformationen
+zu erstellen.
 
 ## Funktionsweise
 
@@ -58,4 +67,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 ## Ressourcen
 
-[The WebSocket Protocol](https://datatracker.ietf.org/rfc6455)
+[The WebSocket Protocol](https://datatracker.ietf.org/rfc6455)  
+[WebSocket - Wikipedia](https://en.wikipedia.org/wiki/WebSocket)  
+[The WebSocket API - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)  
+[WebSocket - Mozila](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)  

@@ -1,6 +1,6 @@
 ---
 weight: 3000
-title: "Technology"
+title: "Technologien"
 description: "Dokumentation und Beispiele zu unterschiedlichen Technologien der Informatik"
 icon: "dashboard"
 date: "2024-10-18T10:47:43+02:00"

@@ -7,31 +7,40 @@
   - [ ] Testing - Cypress
   - [x] Testing - K6
   - [ ] Testing - Sentry
-- [ ] C++
-  - [ ] C++ - Make
-  - [ ] C++ - CMake
-  - [ ] C++ - Clang
-- [x] Java CLI
-- [ ] Maven
-- [ ] Nestjs
-- [ ] Neovim
+- [ ] Programming
+  - [ ] C++
+    - [ ] C++ - Make
+    - [ ] C++ - CMake
+    - [ ] C++ - Clang
+  - [ ] Java
+    - [x] Java CLI
+    - [ ] Maven
+  - [ ] APL (A Programming language)
+  - [ ] Assembly
+    - [ ] x86
+  - [ ] Python
+    - [ ] Python - NumPy
+    - [ ] Python - Pandas
+    - [ ] Python - Manim
+- [ ] Tools
+  - [ ] Git
+  - [ ] Neovim
+  - [ ] Sonarcube
+  - [ ] Hugo
+    - [ ] My hugo theme colllijo/lotusdocs
+- [ ] Framework
+  - [ ] Nestjs
 - [ ] Arch Linux
 - [ ] Design Patterns
 - [ ] Software Architektur
-- [ ] Sonarcube
-- [ ] Hugo
-  - [ ] My hugo theme colllijo/lotusdocs
-- [ ] Wireshark
-- [ ] CTFs
-  - [ ] Ghidra
-  - [ ] Pwntools
-  - [ ] Stenography
 - [ ] Technologien
-  - [ ] WebSockets
-  - [ ] RabbitMQ
+  - [x] WebSockets
+  - [x] RabbitMQ
   - [ ] MQTT
   - [ ] REST
   - [ ] GraphQL
+  - [ ] Machine Learning / AI
+  - [ ] OpenAPI / Contracts
 - [ ] Monitoring
   - [ ] Graphana
   - [ ] Prometheus
@@ -43,10 +52,12 @@
 - [ ] Databases
   - [ ] Relational
   - [ ] NoSQL
-- [ ] Assembly
-  - [ ] x86
-- [ ] Python
-  - [ ] Python - NumPy
-  - [ ] Python - Pandas
-  - [ ] Python - Manim
-- [ ] OpenAPI / Contracts
+- [ ] Algorithms
+- [ ] Security
+  - [ ] CORS and Cookie schenanigans
+  - [ ] Wireshark
+  - [ ] CTFs
+    - [ ] Ghidra
+    - [ ] Pwntools
+    - [ ] Stenography
+- [ ] Glossar

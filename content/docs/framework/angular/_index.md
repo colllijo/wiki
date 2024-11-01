@@ -1,5 +1,5 @@
 ---
-weight: 4300
+weight: 5100
 title: "Angular"
 description: "Dokumentation für Angular."
 icon: "article"

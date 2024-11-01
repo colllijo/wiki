@@ -1,5 +1,5 @@
 ---
-weight: 5200
+weight: 7200
 title: "Cypress"
 description: "Dokumentation zu Cypress."
 icon: "article"
