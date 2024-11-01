@@ -1,0 +1,252 @@
+- term: Advanced Message Queueing Protocol
+  abbr: AMQP
+  reference: technology/amqp/concept
+  definition: |
+    AMQP ist ein offener Standard für die Nachrichtenübermittelung zwischen
+    Anwendungen über einen zentralen Broker. AMQP findet meist Anwendung in
+    verteilten Systemen und ermöglicht es Applikationen über sogenannte
+    Exchanges in Queues zu veröffentlichen, von wo aus diese von anderen
+    Anwendungen bearbeitet werden können.
+  categories:
+    - protocol
+    - technology
+- term: Application Programming Interface
+  abbr: API
+  definition: |
+    Eine API ist eine Schnittstelle, welche es anderen Applikationen ermöglicht
+    programatisch mit einer anderen Applikation zu interagieren.
+  categories:
+    - communication
+- term: Command Line Interface
+  abbr: CLI
+  definition: |
+    Eine CLI oder zu deutsch ein Kommandozeileninterface ist eine textbasierte
+    Schnittstelle einer Applikation, welche es dem Benutzer ermöglicht diese
+    Applikation zu benutzen. CLI's werden meist im Terminal benutzt, dabei
+    gibt der Benutzer der CLI Parameter zur Ausführung von Befehlen und erhält
+    eine Textbasierte Antwort.
+  categories:
+    - technology
+- term: Docker
+  definition: |
+    Docker ist eine Software zur Containerisierung von Applikationen. Dabei
+    werden Applikaitonen in sogenannte Container verpackt, welche als Images
+    ausgeführt werden können. Diese Container dienen als Isolationsschicht
+    zur physischen Hardware, welche es ermöglich sollen eine Applikation überall
+    auszuführen.
+  categories:
+    - technology
+- term: Framework
+  definition: |
+    Ein Framework ist eine Sammlung von Bibliotheken, welche es dem Entwickler
+    ermöglichen sollen schneller und einfacher Applikationen zu entwickeln.
+    Frameworks geben dabei meist eine Struktur vor, welche der Entwickler
+    befolgen muss um die Funktionalität des Frameworks zu nutzen.
+- term: Gnu's not Unix
+  abbr: GNU
+  definition: |
+    GNU ist ein Betriebssystem, welches von Richard Stallman entwickelt wurde.
+    GNU ist ein freies Betriebssystem, welches es jedem ermöglichen soll
+    Software frei zu nutzen, zu studieren, zu kopieren und zu verbreiten.
+    GNU ist dabei Teil des GNU-Projekts, welche zum Ziel hat ein freies
+    Betriebssystem inklusive Hilfsprogramme zu entwickeln.
+  categories:
+    - technology
+- term: Hypertext Transfer Protocol
+  abbr: HTTP
+  definition: |
+    HTTP ist ein Protokoll zur Übertragung von Daten im World Wide Web. Dabei
+    wird HTTP meist verwendet um Webseiten und Dateien von einem Server zu einem
+    Client zu übertragen. HTTP als Protokol ist zustandslos und basiert auf dem
+    Request-Response Prinzip.
+  categories:
+    - protocol
+    - technology
+- term: Hypertext Transfer Protocol Secure
+  abbr: HTTPS
+  definition: |
+    HTTPS ist die verschlüsselte Variante des HTTP Protokolls. Dabei werden
+    alle Daten, welche zwischen Server und Client übertragen werden
+    verschlüsselt, damit diese nicht von dritten eingesehen werden können.
+  categories:
+    - protocol
+    - technology
+- term: Integrated Development Environment
+  abbr: IDE
+  definition: |
+    Eine IDE ist eine Applikation für Entwickler, welche das programmieren
+    erleichtern soll. IDE's sind Grundsätzlich Texteditoren, welche spezifische
+    Funktionen für die Enticklung von Programmen enthalten so haben die meisten
+    IDS's Funktionen wie Syntax Highlighting, Code Completion und Debugging und
+    ermöglichen es dem Entwickler seine Applikation direkt aus der IDE zu
+    starten.
+  categories:
+    - development
+- term: Integration Test
+  definition: |
+    Integrationstests sind Tests, welche die Interaktion zwischen mehreren
+    Komponenten einer Applikation testen. Dabei wird getestet ob die
+    Kommunikation zwischen den Komponenten korrekt ist und ob die
+    Komponenten korrekt zusammenarbeiten.
+  categories:
+    - testing
+- term: Internet of Things
+  abbr: IoT
+  definition: |
+    Das Internet der Dinge ist ein Netzwerk von miteinander verbundenen
+    Geräten, welche Daten über das Internet austauschen können. Dabei können
+    diese Geräte Sensoren, Aktoren oder auch Computer sein. Jegliche Art von
+    SmartHome Geräten fallen unter den Begriff Internet der Dinge.
+  categories:
+    - technology
+- term: JavaScript Object Notation
+  abbr: JSON
+  definition: |
+    JSON ist ein leichtgewichtiges Datenaustauschformat, welches von Menschen
+    leicht gelesen und von Maschinen leicht verarbeitet werden kann. JSON
+    besteht aus einer Sammlung von Schlüssel-Wert Paaren und Arrays, welche
+    in einem Textformat dargestellt werden. JSON ist vor allem im Web sehr
+    verbreitet.
+  categories:
+    - programming
+- term: Message Queue Telemetry Transport
+  abbr: MQTT
+  definition: |
+    MQTT ist ein offenes Netzwerkprotokoll, welches für die Übertragung von
+    Nachrichten zwischen Geräten in einem Netzwerk entwickelt wurde. MQTT
+    ist ein Publish-Subscribe Protokoll, bei dem Geräte Nachrichten an einen
+    Broker senden, welcher diese Nachrichten an alle Geräte weiterleitet,
+    welche sich für diese Nachrichten interessieren. MQTT ist dafür ausgelegt
+    möglichs wenig Resourcen zu verbrauchen und eignet sich daher gut für IoT.
+  categories:
+    - technology
+- term: Mocking
+  definition: |
+    Mocking ist eine Technik im Softwaretesting, dabei werden die Abhängigkeiten
+    der zu testenden Komponente durch Objekte ersetzt, welche die selbe
+    Schnittstelle anbieten, jedoch ein vordefiniertes Verhalten haben. Dadurch
+    können Tests unabhängig von den echten Abhängigkeiten durchgeführt werden.
+  categories:
+    - testing
+- term: Node Package Manager
+  abbr: NPM
+  reference: programming/javascript/npm
+  definition: |
+    NPM ist ein Paketmanager für JavaScript, welcher es Entwicklern ermöglicht
+    JavaScript Pakete zu installieren und zu verwalten. Diese Pakete enthlaten
+    wiederverwendbaren Code, wodurch weniger Code dupliziert werden muss. NPM
+    ist der Standard Paketmanager für Node.js und wird meist in Verbindung mit
+    Node.js Projekten verwendet.
+  categories:
+    - programming
+- term: Portable Operating Systm Interface
+  abbr: POSIX
+  definition: |
+    POSIX ist ein Standard für Betriebssysteme, welcher die Kompatibilität
+    zwischen verschiedenen Betriebssystemen sicherstellen soll. POSIX
+    definiert eine Menge von Funktionen, welche ein Betriebssystem implementieren
+    muss, um als POSIX kompatibel zu gelten, dazu gehören C-Systemaufrufe, sowie
+    Hilfsprogramme, welche installiert sein müssen.
+  categories:
+    - technology
+    - standard
+- term: Representational State Transfer
+  abbr: REST
+  definition: |
+    REST ist ein Architekturstil für verteilte Systeme, welcher auf dem
+    HTTP-Protokoll basiert. Dabei werden Ressourcen über Endpunkte angesprochen.
+    Eine REST-API ist dabei zustandslos, so das die gleiche Anfrage immer das
+    selbe Ergebnis liegert. Eine vollständig RESTful API muss es dem Client
+    ermöglichen die komplette API zu nutzen solange dieser nur einen Endpunkt
+    kennt. Dies wird dur HATEOAS ermöglicht, wobei dem Client alle mit der
+    Abfrage verbundenen Endpunkte mitgeteilt werden.
+  categories:
+    - technology
+    - communication
+- term: SOLID
+  reference: design-pattern/solid
+  definition: |
+    SOLID ist ein Akronym für fünf Designprinzipien, welche von Robert C. Martin
+    definiert wurden. Diese Prinzipien sollen die Erstellung von wartbaren und
+    erweiterbaren Softwarekomponenten erleichtern. Die Prinzipien sind:  
+    - Single Responsibility Principle  
+    - Open/Closed Principle  
+    - Liskov Substitution Principle  
+    - Interface Segregation Principle  
+    - Dependency Inversion Principle  
+- term: Socket
+  definition: |
+    Ein Socket ist ein Endpunkt einer Kommunikationsverbindung zwischen zwei
+    Programmen. Dabei wird ein Socket meist durch eine IP-Adresse und einen
+    Port definiert. Ein Socket kann dabei entweder als Server oder als Client
+    agieren und ermöglicht es Daten zwischen den Programmen über das Netzwerk
+    auszutauschen.
+  categories:
+    - technology
+    - networking
+- term: Test Driven Development
+  abbr: TDD
+  definition: |
+    Test Driven Development ist eine Entwicklungspraktik, bei der zuerst die
+    Tests geschrieben werden und dann der Code, um diese Tests zu bestehen.
+    Dabei wird der Code so geschrieben, dass er nur die Tests besteht und
+    nicht mehr. TDD soll dabei helfen sicherzustellen, dass der Code
+    funktioniert und das erwartete Verhalten aufweist.
+  categories:
+    - testing
+- term: Transmission Control Protocol
+  abbr: TCP
+  definition: |
+    TCP ist ein Protokoll zur Übertragung von Daten über ein Netzwerk. Dabei
+    wird TCP meist verwendet um eine zuverlässige Verbindung zwischen zwei
+    Endpunkten herzustellen. TCP sorgt dafür, dass die Daten in der richtigen
+    Reihenfolge und ohne Fehler übertragen werden.
+  categories:
+    - protocol
+    - communication
+- term: Unittest
+  definition: |
+    Unittests sind Tests, welche die kleinste Einheit einer Software, meist
+    eine Funktion oder eine Klasse, testen. Dabei wird getestet ob die
+    Einheit das erwartete Verhalten aufweist und ob alle möglichen Pfade
+    durch die Einheit getestet wurden.
+  categories:
+    - testing
+- term: User Datagram Protocol
+  abbr: UDP
+  definition: |
+    UDP ist ein Protokoll zur Übertragung von Daten über ein Netzwerk. Dabei
+    wird UDP meist verwendet um Daten schnell und unzuverlässig zu übertragen.
+    UDP sorgt nicht dafür, dass die Daten in der richtigen Reihenfolge oder
+    ohne Fehler übertragen werden, sondern überträgt die Daten so schnell wie
+    möglich.
+  categories:
+    - protocol
+    - communication
+- term: Windows Subsystem for Linux
+  abbr: WSL
+  definition: |
+    WSL ist eine Kompatibilitätsschicht für Windows, welche es ermöglicht
+    Linux auf einem Windows-System auszuführen. Dabei wird ein
+    Linux-Kernel in Windows emuliert, welcher es ermöglicht Linux
+    auf Windows auszuführen. WSL ermöglicht es Entwicklern Linux-Tools auf
+    Windows zu nutzen.
+- term: Institute of Electrical and Electronics Engineers
+  abbr: IEEE
+  definition: |
+    Das Institute of Electrical and Electronics Engineers ist eine
+    internationale Organisation, welche sich mit der Standardisierung von
+    Technologien im Bereich Elektrotechnik und Informatik beschäftigt.
+  categories:
+    - standard
+- term: Hypermedia as the Engine of Application State
+  abbr: HATEOAS
+  definition: |
+    HATEOAS ist ein Konzept in der Softwarearchitektur, bei dem der Server
+    dem Client alle möglichen Endpunkte mitteilt, welche mit der aktuellen
+    Anfrage verbunden sind. Dadurch kann der Client die komplette API
+    nutzen, ohne diese zu kennen. HATEOAS wird meist in RESTful APIs
+    verwendet.
+  categories:
+    - technology
+    - communication
