@@ -30,13 +30,14 @@
     - [ ] My hugo theme colllijo/lotusdocs
 - [ ] Framework
   - [ ] Nestjs
+  - [ ] React
 - [ ] Arch Linux
 - [ ] Design Patterns
 - [ ] Software Architektur
 - [ ] Technologien
   - [x] WebSockets
   - [x] RabbitMQ
-  - [ ] MQTT
+  - [x] MQTT
   - [ ] REST
   - [ ] GraphQL
   - [ ] Machine Learning / AI
@@ -47,6 +48,7 @@
   - [ ] CheckMK
 - [ ] Deployment
   - [ ] Docker
+  - [ ] Kustomize
   - [ ] Kubernetes
   - [ ] ArgoCD
 - [ ] Databases
