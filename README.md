@@ -7,7 +7,7 @@ This wiki is built with [Hugo](https://gohugo.io/) and [Lotusdocs](https://lotus
 
 ## Usage
 
-This wiki is built with GitHub Actions and hosted as a GitHub Page under the URL: `[https://wiki.coll.dev](https://wiki.coll.dev)`.
+This wiki is built with GitHub Actions and hosted as a GitHub Page under the URL: [`https://wiki.coll.dev`](https://wiki.coll.dev).
 
 ## Development
 
