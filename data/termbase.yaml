@@ -1,6 +1,6 @@
 - term: Advanced Message Queueing Protocol
   abbr: AMQP
-  reference: technology/amqp/concept
+  reference: technology/amqp/concept/
   definition: |
     AMQP ist ein offener Standard für die Nachrichtenübermittelung zwischen
     Anwendungen über einen zentralen Broker. AMQP findet meist Anwendung in
@@ -130,7 +130,7 @@
     - testing
 - term: Node Package Manager
   abbr: NPM
-  reference: programming/javascript/npm
+  reference: programming/javascript/npm/
   definition: |
     NPM ist ein Paketmanager für JavaScript, welcher es Entwicklern ermöglicht
     JavaScript Pakete zu installieren und zu verwalten. Diese Pakete enthlaten
@@ -164,7 +164,7 @@
     - technology
     - communication
 - term: SOLID
-  reference: design-pattern/solid
+  reference: design-pattern/solid/
   definition: |
     SOLID ist ein Akronym für fünf Designprinzipien, welche von Robert C. Martin
     definiert wurden. Diese Prinzipien sollen die Erstellung von wartbaren und
