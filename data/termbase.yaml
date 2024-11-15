@@ -27,6 +27,16 @@
     eine Textbasierte Antwort.
   categories:
     - technology
+- term: Cross-Origin Resource Sharing
+  abbr: CORS
+  reference: security/web/cors/
+  definition: |
+    CORS ist ein Mechanismus, welcher es Webapplikationen ermöglicht Ressourcen
+    von anderen Origins, trotz der Same-Origin-Policy, zu laden. Dabei definiert
+    die angefragte Website, welche Ressourcen, sie wem zur Verfügung stellen
+    möchte.
+  categories:
+    - security
 - term: Docker
   definition: |
     Docker ist eine Software zur Containerisierung von Applikationen. Dabei
@@ -52,6 +62,17 @@
     Betriebssystem inklusive Hilfsprogramme zu entwickeln.
   categories:
     - technology
+- term: Hypermedia as the Engine of Application State
+  abbr: HATEOAS
+  definition: |
+    HATEOAS ist ein Konzept in der Softwarearchitektur, bei dem der Server
+    dem Client alle möglichen Endpunkte mitteilt, welche mit der aktuellen
+    Anfrage verbunden sind. Dadurch kann der Client die komplette API
+    nutzen, ohne diese zu kennen. HATEOAS wird meist in RESTful APIs
+    verwendet.
+  categories:
+    - technology
+    - communication
 - term: Hypertext Transfer Protocol
   abbr: HTTP
   definition: |
@@ -71,6 +92,14 @@
   categories:
     - protocol
     - technology
+- term: Institute of Electrical and Electronics Engineers
+  abbr: IEEE
+  definition: |
+    Das Institute of Electrical and Electronics Engineers ist eine
+    internationale Organisation, welche sich mit der Standardisierung von
+    Technologien im Bereich Elektrotechnik und Informatik beschäftigt.
+  categories:
+    - standard
 - term: Integrated Development Environment
   abbr: IDE
   definition: |
@@ -174,6 +203,15 @@
     - Liskov Substitution Principle  
     - Interface Segregation Principle  
     - Dependency Inversion Principle  
+- term: Same-Origin-Policy
+  abbr: SOP
+  definition: |
+    Die Same-Origin-Policy ist ein Sicherheitskonzept bei Browsern und
+    Webanwendungen, welche verhindert dass clientseitige Skriptsprachen, wie
+    JavaScript und CSS auf Objekte zugreiffen können, welche nicht die selbe
+    Herkunft haben, zum Beispiel da sie von einer anderen Website stammen.
+  categories:
+    - security
 - term: Socket
   definition: |
     Ein Socket ist ein Endpunkt einer Kommunikationsverbindung zwischen zwei
@@ -231,22 +269,3 @@
     Linux-Kernel in Windows emuliert, welcher es ermöglicht Linux
     auf Windows auszuführen. WSL ermöglicht es Entwicklern Linux-Tools auf
     Windows zu nutzen.
-- term: Institute of Electrical and Electronics Engineers
-  abbr: IEEE
-  definition: |
-    Das Institute of Electrical and Electronics Engineers ist eine
-    internationale Organisation, welche sich mit der Standardisierung von
-    Technologien im Bereich Elektrotechnik und Informatik beschäftigt.
-  categories:
-    - standard
-- term: Hypermedia as the Engine of Application State
-  abbr: HATEOAS
-  definition: |
-    HATEOAS ist ein Konzept in der Softwarearchitektur, bei dem der Server
-    dem Client alle möglichen Endpunkte mitteilt, welche mit der aktuellen
-    Anfrage verbunden sind. Dadurch kann der Client die komplette API
-    nutzen, ohne diese zu kennen. HATEOAS wird meist in RESTful APIs
-    verwendet.
-  categories:
-    - technology
-    - communication
