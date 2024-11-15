@@ -9,9 +9,9 @@
   - [ ] Testing - Sentry
 - [ ] Programming
   - [ ] C++
-    - [ ] C++ - Make
     - [ ] C++ - CMake
     - [ ] C++ - Clang
+  - [ ] Golang
   - [ ] Java
     - [x] Java CLI
     - [ ] Maven
@@ -26,6 +26,8 @@
   - [ ] Git
   - [ ] Neovim
   - [ ] Sonarcube
+  - [ ] Taskfile
+  - [ ] GNU Make
   - [ ] Hugo
     - [ ] My hugo theme colllijo/lotusdocs
 - [ ] Framework
@@ -56,8 +58,11 @@
   - [ ] NoSQL
 - [ ] Algorithms
 - [ ] Security
-  - [ ] CORS and Cookie schenanigans
+  - [x] CORS
+  - [ ] Cookies
   - [ ] Wireshark
+  - [ ] Crypto
+    - [ ] RSA
   - [ ] CTFs
     - [ ] Ghidra
     - [ ] Pwntools
