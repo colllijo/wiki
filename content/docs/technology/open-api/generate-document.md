@@ -1,6 +1,6 @@
 ---
-weight: 7100
-title: "Dokument gnerieren"
+weight: 3410
+title: "Dokument generieren"
 description: "(PDF) Dokument aus einer OpenApi-Spezifikation generieren."
 icon: "picture_as_pdf"
 date: "2024-06-21T13:14:08+02:00"
