@@ -216,7 +216,7 @@ $ javac -cp ./lib/* ./src/Main.java
 $ java -cp ./bin Main
 ```
 
-- `-Xmx<size>`: Diese Option legt die maximale Größe des Speicher-Heap fest. Wenn Sie eine Anwendung mit hohem Speicherbedarf haben, können Sie diese Option verwenden, um die Menge des für die JVM verfügbaren Speichers zu erhöhen.
+- `-Xmx<size>`: Diese Option legt die maximale Grösse des Speicher-Heap fest. Wenn Sie eine Anwendung mit hohem Speicherbedarf haben, können Sie diese Option verwenden, um die Menge des für die JVM verfügbaren Speichers zu erhöhen.
 
 ```shell
 $ java -Xmx512m -cp ./bin Main

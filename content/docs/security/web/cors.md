@@ -31,6 +31,7 @@ hat, so kann die Anfrage trotzdem durchgeführt werden.
 {{< figure
   src="/docs/images/security/web/cors-example.svg"
   width="840px"
+  class="text-center"
   alt="Graphik, welches ein CORS-Request aufzeigt"
 >}}
 

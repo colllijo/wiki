@@ -1,5 +1,5 @@
 ---
-weight: 110
+weight: 2100
 title: "SOLID"
 description: "Information about the basic acronym of the object-oriented programming, SOLID."
 icon: "article"

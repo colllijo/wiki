@@ -1,10 +1,10 @@
 ---
-weight: 331
+weight: 5110
 title: "Ngrx"
-description: "Documentation for Ngrx. Reactive State Framework for Angular."
+description: "Documentation about Ngrx, a reactive state framework for Angular."
 icon: "article"
-date: "2024-06-25T14:00:20+02:00"
-lastmod: "2024-06-25T14:00:20+02:00"
+date: "2024-06-25T14:00:23+02:00"
+lastmod: "2024-06-25T14:00:23+02:00"
 draft: false
 toc: true
 ---
@@ -282,3 +282,7 @@ export class SessionComponent {
   }
 }
 {{< /prism >}}
+
+## Resources
+
+[Ngrx Documentation](https://ngrx.io/docs)  
