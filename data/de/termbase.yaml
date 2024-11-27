@@ -128,6 +128,13 @@
     SmartHome Geräten fallen unter den Begriff Internet der Dinge.
   categories:
     - technology
+- term: Java Virtual Machine
+  abbr: JVM
+  definition: |
+    Die Java Virtual Machine ist die virtuelle Laufzeitumgebung für
+    Java-Programme. Sie ist dafür zuständig Java-Bytecode auf dem Zielsystem
+    auszuführen. Da die JVM in jeder Java installation vorhanden ist und gleich
+    funktioniert ist es möglich Java-Programme auf allen System auszuführen.
 - term: JavaScript Object Notation
   abbr: JSON
   definition: |
@@ -194,15 +201,7 @@
     - communication
 - term: SOLID
   reference: design-pattern/solid/
-  definition: |
-    SOLID ist ein Akronym für fünf Designprinzipien, welche von Robert C. Martin
-    definiert wurden. Diese Prinzipien sollen die Erstellung von wartbaren und
-    erweiterbaren Softwarekomponenten erleichtern. Die Prinzipien sind:  
-    - Single Responsibility Principle  
-    - Open/Closed Principle  
-    - Liskov Substitution Principle  
-    - Interface Segregation Principle  
-    - Dependency Inversion Principle  
+  definition: "SOLID ist ein Akronym für fünf Designprinzipien, welche von Robert C. Martin\ndefiniert wurden. Diese Prinzipien sollen die Erstellung von wartbaren und\nerweiterbaren Softwarekomponenten erleichtern. Die Prinzipien sind:  \n- Single Responsibility Principle  \n- Open/Closed Principle  \n- Liskov Substitution Principle  \n- Interface Segregation Principle  \n- Dependency Inversion Principle  \n"
 - term: Same-Origin-Policy
   abbr: SOP
   definition: |
