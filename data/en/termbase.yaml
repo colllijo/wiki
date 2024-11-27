@@ -1,0 +1,242 @@
+- term: Advanced Message Queueing Protocol
+  abbr: AMQP
+  reference: technology/amqp/concept/
+  definition: |
+    AMQP is an open standard for message transmission between applications via a central broker. AMQP is mostly used in distributed systems and allows applications to publish to queues via so-called exchanges, from where they can be processed by other applications.
+  categories:
+    - protocol
+    - technology
+- term: Application Programming Interface
+  abbr: API
+  definition: |
+    An API is an interface that allows other applications to interact programmatically with another application.
+  categories:
+    - communication
+- term: Command Line Interface
+  abbr: CLI
+  definition: |
+    A CLI, or command line interface, is a text-based interface of an application that allows the user to use the application. CLIs are mostly used in the terminal, where the user provides parameters to the CLI to execute commands and receives a text-based response.
+  categories:
+    - technology
+- term: Cross-Origin Resource Sharing
+  abbr: CORS
+  reference: security/web/cors/
+  definition: |
+    CORS is a mechanism that allows web applications to load resources from other origins despite the same-origin policy. The requested website defines which resources it wants to make available to whom.
+  categories:
+    - security
+- term: Docker
+  definition: |
+    Docker is software for containerizing applications. Applications are packaged into so-called containers, which can be run as images. These containers serve as an isolation layer to the physical hardware, allowing an application to be run anywhere.
+  categories:
+    - technology
+- term: Framework
+  definition: |
+    A framework is a collection of libraries that enable developers to develop applications faster and easier. Frameworks usually provide a structure that the developer must follow to use the framework's functionality.
+- term: Gnu's not Unix
+  abbr: GNU
+  definition: |
+    GNU is an operating system developed by Richard Stallman.
+    GNU is a free operating system that allows everyone to freely use,
+    study, copy, and distribute software. GNU is part of the GNU Project,
+    which aims to develop a free operating system including auxiliary programs.
+  categories:
+    - technology
+- term: Hypermedia as the Engine of Application State
+  abbr: HATEOAS
+  definition: |
+    HATEOAS is a concept in software architecture where the server informs
+    the client of all possible endpoints related to the current request.
+    This allows the client to use the entire API without knowing it beforehand.
+    HATEOAS is mostly used in RESTful APIs.
+  categories:
+    - technology
+    - communication
+- term: Hypertext Transfer Protocol
+  abbr: HTTP
+  definition: |
+    HTTP is a protocol for transferring data on the World Wide Web. It is
+    mostly used to transfer web pages and files from a server to a client.
+    HTTP is a stateless protocol based on the request-response principle.
+  categories:
+    - protocol
+    - technology
+- term: Hypertext Transfer Protocol Secure
+  abbr: HTTPS
+  definition: |
+    HTTPS is the encrypted version of the HTTP protocol. All data transferred
+    between the server and client is encrypted to prevent third parties from
+    viewing it.
+  categories:
+    - protocol
+    - technology
+- term: Institute of Electrical and Electronics Engineers
+  abbr: IEEE
+  definition: |
+    The Institute of Electrical and Electronics Engineers is an international
+    organization that focuses on the standardization of technologies in the
+    fields of electrical engineering and computer science.
+  categories:
+    - standard
+- term: Integrated Development Environment
+  abbr: IDE
+  definition: |
+    An IDE is an application for developers that aims to make programming
+    easier. IDEs are essentially text editors with specific functions for
+    software development, such as syntax highlighting, code completion, and
+    debugging. They also allow developers to run their applications directly
+    from the IDE.
+  categories:
+    - development
+- term: Integration Test
+  definition: |
+    Integration tests are tests that check the interaction between multiple
+    components of an application. They verify if the communication between
+    components is correct and if the components work together properly.
+  categories:
+    - testing
+- term: Internet of Things
+  abbr: IoT
+  definition: |
+    The Internet of Things is a network of interconnected devices that can
+    exchange data over the internet. These devices can include sensors,
+    actuators, and computers. Any type of smart home device falls under the
+    term Internet of Things.
+  categories:
+    - technology
+- term: Java Virtual Machine
+  abbr: JVM
+  definition: |
+    The Java Virtual Machine is the virtual runtime environment for Java
+    programs. It is responsible for executing Java bytecode on the target
+    system. Since the JVM is present in every Java installation and works
+    the same way, it allows Java programs to run on all systems.
+- term: JavaScript Object Notation
+  abbr: JSON
+  definition: |
+    JSON is a lightweight data interchange format that is easy for humans
+    to read and write and easy for machines to parse and generate. JSON
+    consists of a collection of key-value pairs and arrays, represented in
+    a text format. JSON is widely used on the web.
+  categories:
+    - programming
+- term: Message Queue Telemetry Transport
+  abbr: MQTT
+  definition: |
+    MQTT is an open network protocol designed for transferring messages
+    between devices in a network. MQTT is a publish-subscribe protocol where
+    devices send messages to a broker, which forwards them to all devices
+    interested in those messages. MQTT is designed to use minimal resources,
+    making it suitable for IoT.
+  categories:
+    - technology
+- term: Mocking
+  definition: |
+    Mocking is a technique in software testing where the dependencies of the
+    component being tested are replaced with objects that offer the same
+    interface but have predefined behavior. This allows tests to be conducted
+    independently of the actual dependencies.
+  categories:
+    - testing
+- term: Node Package Manager
+  abbr: NPM
+  reference: programming/javascript/npm/
+  definition: |
+    NPM is a package manager for JavaScript that allows developers to install
+    and manage JavaScript packages. These packages contain reusable code,
+    reducing code duplication. NPM is the standard package manager for Node.js
+    and is mostly used with Node.js projects.
+  categories:
+    - programming
+- term: Portable Operating System Interface
+  abbr: POSIX
+  definition: |
+    POSIX is a standard for operating systems that ensures compatibility
+    between different operating systems. POSIX defines a set of functions
+    that an operating system must implement to be considered POSIX compliant,
+    including C system calls and utility programs that must be installed.
+  categories:
+    - technology
+    - standard
+- term: Representational State Transfer
+  abbr: REST
+  definition: |
+    REST is an architectural style for distributed systems based on the
+    HTTP protocol. Resources are addressed via endpoints. A REST API is
+    stateless, so the same request always yields the same result. A fully
+    RESTful API must allow the client to use the entire API as long as it
+    knows one endpoint. This is enabled by HATEOAS, where the client is
+    informed of all endpoints related to the query.
+  categories:
+    - technology
+    - communication
+- term: SOLID
+  reference: design-pattern/solid/
+  definition: |
+    SOLID is an acronym for five design principles defined by Robert C. Martin.
+    These principles aim to facilitate the creation of maintainable and
+    extensible software components. The principles are:
+    - Single Responsibility Principle
+    - Open/Closed Principle
+    - Liskov Substitution Principle
+    - Interface Segregation Principle
+    - Dependency Inversion Principle
+- term: Same-Origin Policy
+  abbr: SOP
+  definition: |
+    The Same-Origin Policy is a security concept in browsers and web
+    applications that prevents client-side scripting languages like
+    JavaScript and CSS from accessing objects that do not have the same
+    origin, for example, because they come from a different website.
+  categories:
+    - security
+- term: Socket
+  definition: |
+    A socket is an endpoint of a communication connection between two
+    programs. A socket is usually defined by an IP address and a port.
+    A socket can act as either a server or a client and allows data to be
+    exchanged between programs over the network.
+  categories:
+    - technology
+    - networking
+- term: Test Driven Development
+  abbr: TDD
+  definition: |
+    Test Driven Development is a development practice where tests are written
+    first and then the code is written to pass those tests. The code is written
+    to only pass the tests and nothing more. TDD helps ensure that the code
+    works and exhibits the expected behavior.
+  categories:
+    - testing
+- term: Transmission Control Protocol
+  abbr: TCP
+  definition: |
+    TCP is a protocol for transferring data over a network. TCP is mostly
+    used to establish a reliable connection between two endpoints. TCP ensures
+    that data is transferred in the correct order and without errors.
+  categories:
+    - protocol
+    - communication
+- term: Unit Test
+  definition: |
+    Unit tests are tests that check the smallest unit of software, usually
+    a function or a class. They verify if the unit exhibits the expected
+    behavior and if all possible paths through the unit have been tested.
+  categories:
+    - testing
+- term: User Datagram Protocol
+  abbr: UDP
+  definition: |
+    UDP is a protocol for transferring data over a network. UDP is mostly
+    used to transfer data quickly and unreliably. UDP does not ensure that
+    data is transferred in the correct order or without errors, but transfers
+    data as quickly as possible.
+  categories:
+    - protocol
+    - communication
+- term: Windows Subsystem for Linux
+  abbr: WSL
+  definition: |
+    WSL is a compatibility layer for Windows that allows Linux to run on a
+    Windows system. A Linux kernel is emulated in Windows, allowing Linux
+    to run on Windows. WSL enables developers to use Linux tools on Windows.
