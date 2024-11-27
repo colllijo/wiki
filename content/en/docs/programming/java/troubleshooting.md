@@ -1,5 +1,5 @@
 ---
-weight: 313
+weight: 4190
 title: "Troubleshooting"
 description: "Documentation of the solutions for some common problems in Java."
 icon: "troubleshoot"

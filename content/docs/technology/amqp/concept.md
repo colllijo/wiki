@@ -162,7 +162,7 @@ Fanout Exchange mit dem Namen `amq.fanout` bereitstellen.
 Ein solcher Exchange eignet sich besonders für ein [Broadcast](https://de.wikipedia.org/wiki/Broadcast) von Nachrichten.
 Wenn jeder Konsument über eine Nachricht informiert werden soll.
 
-Dabei sieht der Abluaf wie folgt aus:
+Dabei sieht der Ablauf wie folgt aus:
 
 - Eine Queue bindet sich an den Exchange.
 - Ein Producer sendet eine Nachricht an den Exchange.
@@ -236,7 +236,7 @@ einer Tabelle von Attribute an den Exchange und der Exchange leitet eine
 Nachricht an die Queue weiter, wenn die Attribute der Nachricht mit denen des
 Bindings übereinstimmen.  
 Dieser Exchange sollte von Brokern umgesetzt werden, wenn dies der Fall ist,
-muss ein Topic Exchange mit dem Namen `amq.match` bereitgestellt werden.
+muss ein Headers Exchange mit dem Namen `amq.match` bereitgestellt werden.
 
 Dabei gibt es zwei verschiedene Arten der Überprüfung, diese können beim binden
 mittels des Arguments `x-match` definiert werden:
@@ -291,7 +291,7 @@ werden die Bindings auch unterschiedlich definiert.
 ### Consumer
 
 Der Consumer ist die AMQP Entität, welche Nachrichten aus einer Queue
-konsumiert. When ein Client eine Queue konsumiert, wird für dessen Verbindung
+konsumiert. Wenn ein Client eine Queue konsumiert, wird für dessen Verbindung
 ein Consumer erstellt, welcher Nachrichten asynchron an den Client sendet.
 
 ### Messages

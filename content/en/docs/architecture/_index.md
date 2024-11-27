@@ -1,5 +1,5 @@
 ---
-weight: 200
+weight: 1000
 title: "Architecture"
 description: "Documentation of various architectural concepts."
 icon: "account_tree"

@@ -1,6 +1,6 @@
 ---
 weight: 4212
-title: "Troubleshooting"
+title: "Fehlerbehebung"
 description: "Dokumentation der Lösungen für einige gängige Probleme in NPM."
 icon: "troubleshoot"
 date: "2024-06-21T16:43:04+02:00"

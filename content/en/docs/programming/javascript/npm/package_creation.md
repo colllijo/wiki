@@ -1,7 +1,7 @@
 ---
-weight: 999
-title: "Package_creation"
-description: ""
+weight: 4211
+title: "Package creation"
+description: "Create and publish NPM package."
 icon: "article"
 date: "2024-07-08T13:07:46+02:00"
 lastmod: "2024-07-08T13:07:46+02:00"

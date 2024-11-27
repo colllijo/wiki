@@ -283,3 +283,7 @@ export class SessionComponent {
   }
 }
 {{< /prism >}}
+
+## Ressourcen
+
+[Ngrx Dokumentation](https://ngrx.io/docs)  

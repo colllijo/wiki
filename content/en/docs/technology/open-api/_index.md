@@ -1,5 +1,5 @@
 ---
-weight: 500
+weight: 3400
 title: "Open Api"
 description: "Documentation about the OpenApi standard."
 icon: "api"

@@ -1,5 +1,5 @@
 ---
-weight: 100
+weight: 2000
 title: "Design Patterns"
 description: "Documentation of various design patterns."
 icon: "article"
