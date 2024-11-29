@@ -70,4 +70,4 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 [The WebSocket Protocol](https://datatracker.ietf.org/rfc6455)  
 [WebSocket - Wikipedia](https://en.wikipedia.org/wiki/WebSocket)  
 [The WebSocket API - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)  
-[WebSocket - Mozila](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)  
+[WebSocket - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)  
