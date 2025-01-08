@@ -1,5 +1,5 @@
 ---
-weight: 6120
+weight: 7120
 title: "Mocking"
 description: "Using Jest to mock classes and functions."
 icon: "article"

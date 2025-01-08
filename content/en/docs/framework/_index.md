@@ -1,5 +1,5 @@
 ---
-weight: 5000
+weight: 6000
 title: "Framework"
 description: "Documentation about different frameworks"
 icon: "border_bottom"

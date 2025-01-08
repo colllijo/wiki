@@ -1,5 +1,5 @@
 ---
-weight: 7000
+weight: 8000
 title: "Security"
 description: "Dokumentation zu Sicherheitsthemen, wie Angriffe, Schwachstellen und Gegenmassnahmen"
 icon: "security"

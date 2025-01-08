@@ -1,5 +1,5 @@
 ---
-weight: 6210
+weight: 7210
 title: "Basics"
 description: "Basics for thesting with JUnit and Mockito"
 icon: "article"

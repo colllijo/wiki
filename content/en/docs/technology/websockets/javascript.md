@@ -1,5 +1,5 @@
 ---
-weight: 3120
+weight: 4120
 title: "WebSockets with Javascript"
 description: "Documentation for using WebSockets with JavaScript"
 icon: "article"

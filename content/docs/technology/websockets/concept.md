@@ -1,5 +1,5 @@
 ---
-weight: 3110
+weight: 4110
 title: "Konzept"
 description: "Informationen zu Websockets und deren Zweck"
 icon: "article"

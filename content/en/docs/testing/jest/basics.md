@@ -1,5 +1,5 @@
 ---
-weight: 6110
+weight: 7110
 title: "Basics"
 description: "Basics for testing with Jest"
 icon: "article"

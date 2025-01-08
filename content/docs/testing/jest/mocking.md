@@ -1,5 +1,5 @@
 ---
-weight: 6120
+weight: 7120
 title: "Mocking"
 description: "Jest verwenden, um Klassen und Funktionen zu mocken."
 icon: "article"

@@ -1,5 +1,5 @@
 ---
-weight: 7000
+weight: 8000
 title: "Testen"
 description: "Dokumentation zu verschiedenen Themen im Zusammenhang mit dem Testen von Anwendungen."
 icon: "monitor_heart"

@@ -1,5 +1,5 @@
 ---
-weight: 3000
+weight: 4000
 title: "Technology"
 description: "Documentation and exmaples for different technologies in computer science"
 icon: "dashboard"

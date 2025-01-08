@@ -1,5 +1,5 @@
 ---
-weight: 9999
+weight: 10999
 title: "Glossar"
 description: "Kurzbeschreibung zu relevanten Begriffen"
 icon: "book"

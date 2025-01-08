@@ -1,5 +1,5 @@
 ---
-weight: 7100
+weight: 8100
 title: "Web"
 description: "Dokumentation zu Sicherheitsthemen im Bereich Web"
 icon: "web"

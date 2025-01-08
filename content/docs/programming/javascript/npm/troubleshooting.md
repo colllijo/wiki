@@ -1,5 +1,5 @@
 ---
-weight: 4212
+weight: 5212
 title: "Fehlerbehebung"
 description: "Dokumentation der Lösungen für einige gängige Probleme in NPM."
 icon: "troubleshoot"

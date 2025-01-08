@@ -1,5 +1,5 @@
 ---
-weight: 7110
+weight: 8110
 title: "Cross-Origin Resource Sharing"
 description: "Documentation about Cross-Origin Resource Sharing (CORS)"
 icon: "share"

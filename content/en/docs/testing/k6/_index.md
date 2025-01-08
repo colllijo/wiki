@@ -1,5 +1,5 @@
 ---
-weight: 6300
+weight: 7300
 title: "K6"
 description: "Documentation for K6"
 icon: "article"

@@ -1,5 +1,5 @@
 ---
-weight: 4110
+weight: 5110
 title: "Java CLI"
 description: "Documentation and information about the `java`and `javac` command"
 icon: "emoji_food_beverage"

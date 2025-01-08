@@ -1,5 +1,5 @@
 ---
-weight: 3310
+weight: 4310
 title: "Concept"
 description: "Information about MQQT and its purpose"
 icon: "article"

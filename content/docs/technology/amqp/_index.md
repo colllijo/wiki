@@ -1,5 +1,5 @@
 ---
-weight: 3200
+weight: 4200
 title: "AMQP"
 description: "Dokumentation und Beispiele zum Advanced Message Queuing Protocol"
 icon: "queue"

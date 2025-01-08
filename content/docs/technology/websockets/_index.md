@@ -1,5 +1,5 @@
 ---
-weight: 3100
+weight: 4100
 title: "Websockets"
 description: "Dokumentation und Beispiele für Websockets"
 icon: "sync_alt"

@@ -1,5 +1,5 @@
 ---
-weight: 6310
+weight: 7310
 title: "Basics"
 description: "Basics for testing with K6"
 icon: "analytics"

@@ -1,5 +1,5 @@
 ---
-weight: 3210
+weight: 4210
 title: "Konzept"
 description: "Informationen zum Advanced Message Queuing Protocol und dessen Zweck"
 icon: "article"

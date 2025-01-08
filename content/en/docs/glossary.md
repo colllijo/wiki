@@ -1,5 +1,5 @@
 ---
-weight: 9999
+weight: 10999
 title: "Glossary"
 description: "Description of terms and concepts used in this documentation."
 icon: "book"

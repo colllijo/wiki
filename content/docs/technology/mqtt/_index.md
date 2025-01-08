@@ -1,5 +1,5 @@
 ---
-weight: 3300
+weight: 4300
 title: "MQTT"
 description: "Dokumentation und Beispiele zum Message Queuing Telemetry Transport"
 icon: "sensors"

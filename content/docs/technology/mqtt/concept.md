@@ -1,5 +1,5 @@
 ---
-weight: 3310
+weight: 4310
 title: "Konzept"
 description: "Informationen zu MQTT und dessen Zweck"
 icon: "article"

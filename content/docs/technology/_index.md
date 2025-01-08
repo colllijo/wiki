@@ -1,5 +1,5 @@
 ---
-weight: 3000
+weight: 4000
 title: "Technologien"
 description: "Dokumentation und Beispiele zu unterschiedlichen Technologien der Informatik"
 icon: "dashboard"

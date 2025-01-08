@@ -1,5 +1,5 @@
 ---
-weight: 3120
+weight: 4120
 title: "WebSockets mit JavaScript"
 description: "Dokumentation wie WebSockets mit JavaScript verwendet werden können."
 icon: "code"

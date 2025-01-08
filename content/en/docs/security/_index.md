@@ -1,5 +1,5 @@
 ---
-weight: 7000
+weight: 8000
 title: "Security"
 description: "Documentation on security topics such as attacks, vulnerabilities and countermeasures"
 icon: "article"

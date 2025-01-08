@@ -1,5 +1,5 @@
 ---
-weight: 6200
+weight: 7200
 title: "Junit"
 description: "Dokumentation für Junit."
 icon: "article"
