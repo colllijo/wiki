@@ -12,6 +12,8 @@ github.com/colllijo/lotusdocs v0.0.0-20241127134014-2673c386b584 h1:GqUQfbh4IK5c
 github.com/colllijo/lotusdocs v0.0.0-20241127134014-2673c386b584/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
 github.com/colllijo/lotusdocs v0.0.0-20250113084628-4aa2fffd8e30 h1:wiohsuwezrzWMpbIpTDUQ9tP+fAL8g+Oa5lK2Pt3teY=
 github.com/colllijo/lotusdocs v0.0.0-20250113084628-4aa2fffd8e30/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
+github.com/colllijo/lotusdocs v0.0.0-20250113101501-be73399cb44f h1:0fcRIh3g/tHcSOmX7y8iNriUEdLC3uUUS1LJNLLbW14=
+github.com/colllijo/lotusdocs v0.0.0-20250113101501-be73399cb44f/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 h1:SmpwwN3DNzJWbV+IT8gaFu07ENUFpCvKou5BHYUKuVs=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 h1:GZxx4Hc+yb0/t3/rau1j8XlAxLE4CyXns2fqQbyqWfs=
