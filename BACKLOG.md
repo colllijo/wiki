@@ -8,6 +8,7 @@
   - [x] Testing - K6
   - [ ] Testing - Sentry
 - [ ] Programming
+  - [ ] C
   - [ ] C++
     - [ ] C++ - CMake
     - [ ] C++ - Clang
@@ -18,6 +19,7 @@
   - [ ] APL (A Programming language)
   - [ ] Assembly
     - [ ] x86
+    - [ ] RISC | CISC
   - [ ] Python
     - [ ] Python - NumPy
     - [ ] Python - Pandas
