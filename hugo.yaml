@@ -95,6 +95,10 @@ params:
       - - Code sample errors
         - One or more code samples are incorrect.
       - - Something else
+  plausible:
+    dataDomain: localhost:8000
+    scriptURL: http://localhost:8000/js/script.js
+    eventAPI: http://localhost:8000/stats/api/event
 
 services:
   googleAnalytics:
