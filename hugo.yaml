@@ -95,6 +95,9 @@ params:
       - - Code sample errors
         - One or more code samples are incorrect.
       - - Something else
+  plausible:
+    dataDomain: "wiki.coll.dev"
+    scriptURL: "https://plausible.coll.dev/js/script.js"
 
 services:
   googleAnalytics:
