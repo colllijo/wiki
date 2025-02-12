@@ -70,6 +70,6 @@
     - [ ] Pwntools
     - [ ] Stenography
 - [ ] Competitions
-  - [ ] Advent of Code (AoC)
+  - [x] Advent of Code (AoC)
   - [ ] Swiss Hacking Challenge (SHC)
 - [ ] Glossar

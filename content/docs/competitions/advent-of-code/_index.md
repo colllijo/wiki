@@ -1,5 +1,5 @@
 ---
-weight: 9100
+weight: 10100
 title: "Advent of Code"
 description: "Informationen zu Advent of Code und meinen Lösungen"
 icon: "park"
