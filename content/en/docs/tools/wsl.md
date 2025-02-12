@@ -1,5 +1,5 @@
 ---
-weight: 9000
+weight: 9100
 title: "Wsl"
 description: "Documentation for WSL"
 icon: "article"
