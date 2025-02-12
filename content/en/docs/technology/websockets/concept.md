@@ -1,7 +1,7 @@
 ---
 weight: 4110
 title: "Concept"
-description: "Information about Websockets and their usage"
+description: "Information about WebSockets and their usage"
 icon: "article"
 date: "2024-11-27T13:31:32+01:00"
 lastmod: "2024-11-27T13:31:32+01:00"
@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## What are Websockets?
+## What are WebSockets?
 
 WebSockets are based on TCP and enable bidirectional communication between a client and server. Unlike HTTP, which is a request-response protocol, a WebSocket keeps the connection open and allows both parties to send messages. This makes it possible for a server to inform the client about events without the client having to send a request as with HTTP.
 

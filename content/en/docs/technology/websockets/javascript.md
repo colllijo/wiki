@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## Websockets in JavaScript
+## WebSockets in JavaScript
 
 The main use case for WebSockets is that websites can inform their users about changes in real-time. This is the case, for example, with chat apps or multiplayer games. For this reason, many WebSocket applications use JavaScript. JavaScript already has a built-in [WebSocket client](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket), and many server-side runtimes for JavaScript, such as [Deno](https://docs.deno.com/examples/http-server-websocket/), have a WebSocket server implementation.
 

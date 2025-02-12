@@ -1,7 +1,7 @@
 ---
 weight: 4110
 title: "Konzept"
-description: "Informationen zu Websockets und deren Zweck"
+description: "Informationen zu WebSockets und deren Zweck"
 icon: "article"
 date: "2024-10-18T10:48:20+02:00"
 lastmod: "2024-10-18T10:48:20+02:00"
@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## Was sind Websockets?
+## Was sind WebSockets?
 
 WebSockets basieren auf TCP sie ermöglichen eine bidirektionale Kommunikation
 zwischen einem Client und Server. Im Gegensatz zu HTTP, welches ein

@@ -9,7 +9,7 @@ draft: false
 toc: true
 ---
 
-## Websockets in JavaScript
+## WebSockets in JavaScript
 
 Der grösste Anwendungsfall für WebSockets ist das Websites ihre Nutzer über
 Änderungen in Echtzeit informieren können. Dies wird zum Beispiel bei Chat-Apps
