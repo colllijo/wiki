@@ -52,9 +52,9 @@
   - [ ] CheckMK
 - [ ] Deployment
   - [ ] Docker
-  - [ ] Kustomize
   - [ ] Kubernetes
-  - [ ] ArgoCD
+    - [ ] Kustomize
+    - [ ] ArgoCD
 - [ ] Databases
   - [ ] Relational
   - [ ] NoSQL
@@ -69,4 +69,7 @@
     - [ ] Ghidra
     - [ ] Pwntools
     - [ ] Stenography
+- [ ] Competitions
+  - [ ] Advent of Code (AoC)
+  - [ ] Swiss Hacking Challenge (SHC)
 - [ ] Glossar
