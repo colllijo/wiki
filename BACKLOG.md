@@ -13,6 +13,8 @@
     - [ ] C++ - CMake
     - [ ] C++ - Clang
   - [ ] Golang
+  - [ ] JavaScript
+    - [ ] Why `this` sucks in JavaScript (You don't actually know the context)
   - [ ] Java
     - [x] Java CLI
     - [ ] Maven
@@ -32,10 +34,10 @@
   - [ ] GNU Make
   - [ ] Hugo
     - [ ] My hugo theme colllijo/lotusdocs
+  - [ ] Arch Linux
 - [ ] Framework
   - [ ] Nestjs
   - [ ] React
-- [ ] Arch Linux
 - [ ] Design Patterns
 - [ ] Software Architektur
 - [ ] Technologien
