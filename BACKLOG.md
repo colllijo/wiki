@@ -73,5 +73,5 @@
     - [ ] Stenography
 - [ ] Competitions
   - [x] Advent of Code (AoC)
-  - [ ] Swiss Hacking Challenge (SHC)
+  - [x] Swiss Hacking Challenge (SHC)
 - [ ] Glossar

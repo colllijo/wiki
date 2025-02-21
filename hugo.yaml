@@ -76,11 +76,7 @@ params:
     enabled: true
     emoticonTpl: false
     eventDest:
-      - google
+      - plausible
   plausible:
     dataDomain: "wiki.coll.dev"
     scriptURL: "https://plausible.coll.dev/js/script.js"
-
-services:
-  googleAnalytics:
-    id: "G-J0MTL4YQF1"
