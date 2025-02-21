@@ -16,6 +16,8 @@ github.com/colllijo/lotusdocs v0.0.0-20250113101501-be73399cb44f h1:0fcRIh3g/tHc
 github.com/colllijo/lotusdocs v0.0.0-20250113101501-be73399cb44f/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
 github.com/colllijo/lotusdocs v0.0.0-20250214144003-2bd1ad08d846 h1:cuifavFCohzRUTWdKJVI34EUzQzhYLOBi+2apxaDUjU=
 github.com/colllijo/lotusdocs v0.0.0-20250214144003-2bd1ad08d846/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
+github.com/colllijo/lotusdocs v0.0.0-20250221075516-cfbdac87d254 h1:HyurYCZSDiDjLUACJyqkha0gg+Xx28KFKp2wQmkeyiY=
+github.com/colllijo/lotusdocs v0.0.0-20250221075516-cfbdac87d254/go.mod h1:eSwdsT4dpBhkijvO5nZIl/A/lWMnlro15C7FuZBweRA=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 h1:SmpwwN3DNzJWbV+IT8gaFu07ENUFpCvKou5BHYUKuVs=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 h1:L6+F22i76xmeWWwrtijAhUbf3BiRLmpO5j34bgl1ggU=
