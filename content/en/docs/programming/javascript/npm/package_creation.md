@@ -1,5 +1,5 @@
 ---
-weight: 5211
+weight: 5291
 title: "Package creation"
 description: "Create and publish NPM package."
 icon: "article"

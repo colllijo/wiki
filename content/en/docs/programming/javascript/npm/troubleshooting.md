@@ -1,5 +1,5 @@
 ---
-weight: 5212
+weight: 5292
 title: "Troubleshooting"
 description: "Documentation of the solutions for some common problems in NPM."
 icon: "troubleshoot"

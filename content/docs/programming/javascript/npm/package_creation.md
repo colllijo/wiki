@@ -1,5 +1,5 @@
 ---
-weight: 5211
+weight: 5291
 title: "Packet Erstellen"
 description: "NPM Packet erstellen und veröffentlichen."
 icon: "article"

@@ -14,7 +14,7 @@
     - [ ] C++ - Clang
   - [ ] Golang
   - [ ] JavaScript
-    - [ ] Why `this` sucks in JavaScript (You don't actually know the context)
+    - [x] Why `this` sucks in JavaScript (You don't actually know the context)
   - [ ] Java
     - [x] Java CLI
     - [ ] Maven
@@ -44,6 +44,7 @@
   - [x] WebSockets
   - [x] RabbitMQ
   - [x] MQTT
+  - [ ] Server-sent evnents
   - [ ] REST
   - [ ] GraphQL
   - [ ] Machine Learning / AI
@@ -71,7 +72,7 @@
     - [ ] Ghidra
     - [ ] Pwntools
     - [ ] Stenography
-- [ ] Competitions
+- [x] Competitions
   - [x] Advent of Code (AoC)
   - [x] Swiss Hacking Challenge (SHC)
 - [ ] Glossar
