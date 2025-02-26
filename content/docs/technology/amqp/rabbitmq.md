@@ -1,5 +1,5 @@
 ---
-weight: 4220
+weight: 4320
 title: "RabbitMQ"
 description: "Informationen und Dokumentation zu RabbitMQ"
 icon: "cruelty_free"

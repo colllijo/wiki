@@ -1,5 +1,5 @@
 ---
-weight: 4400
+weight: 4500
 title: "Open Api"
 description: "Informationen zum OpenApi Standard."
 icon: "api"

@@ -1,5 +1,5 @@
 ---
-weight: 4410
+weight: 4510
 title: "Dokument generieren"
 description: "(PDF) Dokument aus einer OpenApi-Spezifikation generieren."
 icon: "picture_as_pdf"

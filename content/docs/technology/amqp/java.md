@@ -1,5 +1,5 @@
 ---
-weight: 4230
+weight: 4330
 title: "RabbitMQ mit Java"
 description: "Dokumentation wie RabbitMQ mit Java verwendet werden kann."
 icon: "code"

@@ -38,13 +38,14 @@
 - [ ] Framework
   - [ ] Nestjs
   - [ ] React
+  - [ ] Angular
 - [ ] Design Patterns
 - [ ] Software Architektur
 - [ ] Technologien
   - [x] WebSockets
   - [x] RabbitMQ
   - [x] MQTT
-  - [ ] Server-sent evnents
+  - [x] Server-sent events
   - [ ] REST
   - [ ] GraphQL
   - [ ] Machine Learning / AI
