@@ -41,6 +41,9 @@
   - [ ] Angular
 - [ ] Design Patterns
 - [ ] Software Architektur
+  - [ ] MVC
+  - [ ] Microservices
+  - [ ] Monolith
 - [ ] Technologien
   - [x] WebSockets
   - [x] RabbitMQ
