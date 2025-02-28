@@ -3,6 +3,7 @@ languageCode: "en-ch"
 title: "Coll Wiki"
 contentDir: "content"
 enableEmoji: true
+enableGitInfo: true
 
 module:
   hugoVersion:
@@ -63,6 +64,7 @@ params:
     # GitInfo options
     repoURL: https://github.com/colllijo/wiki
     repoBranch: main
+    editPage: true
     lastMod: true
     # Linking options
     intLinkTooltip: true
