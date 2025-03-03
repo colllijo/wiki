@@ -31,6 +31,7 @@
   - [ ] Neovim
   - [ ] Sonarcube
   - [ ] Taskfile
+  - [ ] Language Server Protocol
   - [ ] GNU Make
   - [ ] Hugo
     - [ ] My hugo theme colllijo/lotusdocs
@@ -70,6 +71,8 @@
   - [x] CORS
   - [ ] Cookies
   - [ ] Wireshark
+  - [ ] O Auth
+  - [ ] JWT
   - [ ] Crypto
     - [ ] RSA
   - [ ] CTFs
