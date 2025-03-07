@@ -50,7 +50,7 @@
   - [x] RabbitMQ
   - [x] MQTT
   - [x] Server-sent events
-  - [ ] REST
+  - [x] REST
   - [ ] GraphQL
   - [ ] Machine Learning / AI
   - [ ] OpenAPI / Contracts
