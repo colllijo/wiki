@@ -1,7 +1,5 @@
 # Backlog
 
-- Translations
-
 - [ ] Testing
   - [x] Testing - JUnit
   - [ ] Testing - Cypress

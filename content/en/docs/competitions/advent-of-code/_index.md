@@ -2,9 +2,9 @@
 weight: 10100
 title: "Advent of Code"
 description: ""
-icon: "article"
+icon: "park"
 date: "2025-01-09T13:12:19+01:00"
 lastmod: "2025-01-09T13:12:19+01:00"
-draft: true
+draft: false
 toc: true
 ---
