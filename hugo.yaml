@@ -79,6 +79,6 @@ params:
     emoticonTpl: false
     eventDest:
       - plausible
-  plausible:
-    dataDomain: "wiki.coll.dev"
-    scriptURL: "https://plausible.coll.dev/js/script.js"
+  # plausible:
+  #   dataDomain: "wiki.coll.dev"
+  #   scriptURL: "https://plausible.coll.dev/js/script.js"
