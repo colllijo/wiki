@@ -25,7 +25,7 @@
     - [ ] Python - Pandas
     - [ ] Python - Manim
 - [ ] Tools
-  - [ ] Git
+  - [x] Git
   - [ ] Neovim
   - [ ] Sonarcube
   - [ ] Taskfile
@@ -57,7 +57,7 @@
   - [ ] Prometheus
   - [ ] CheckMK
 - [ ] Deployment
-  - [ ] Docker
+  - [x] Docker
   - [ ] Kubernetes
     - [ ] Kustomize
     - [ ] ArgoCD
