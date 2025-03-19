@@ -9,6 +9,100 @@ draft: false
 toc: true
 ---
 
+## Objekte mocken
+
+Jest ermöglicht es Klassen oder Objekte für Tests zu mocken. Dabei gibt es zwar
+keine Möglichkeit eine Klasse an Jest zu übergeben und einen Mock zu erhalten,
+jedoch kann einfach ein neues Objekt erstellt werden, bei welchem die Methoden
+durch `jest.fn()` aufrufe ersetzt wurden, welche das mock Verhalten umsetzen.
+
+Hierbei ist es wichtig, dass `jest.fn()` verwendet wird, denn nur so kann Jest
+die Methodenaufrufe und Argumente überwachen und es ermöglichen, Assertions
+zu diesen zu machen.
+
+### Beispiel
+
+In einem Projekt, welches mit einer externen API Kommuniziert kann es Sinn
+machen die Komponente, welche für die Kommunikation zuständig ist zu mocken, um
+die Abhöngigkeit zur API zu entfernen.
+
+Ein Beispiel wie das aussehen könnte ist in der folgenden Test-Suite
+ersichtlich:
+
+{{< prism lang="typescript" line-numbers="true" >}}
+
+describe('Service', () => {
+  let service;
+  let apiClientMock;
+
+  beforeAll(() => {
+    mockApiClient = {
+      get: jest.fn().mockResolvedValue({ data: 'mocked data' }),
+      post: jest.fn().mockImplementation((data) => Promise.resolve({ data: `mocked post: ${data}` }))
+    };
+
+    services = Service(mockApiClient);
+  });
+
+  it('should return the mocked data', async () => {
+    const data = await service.getData();
+
+    expect(data).toBe('mocked data');
+    expect(mockApiClient.get).toHaveBeenCalledTimes(1);
+  });
+
+  it('should use the mocked post', async () => {
+    const response = await service.postData('some data');
+
+    expect(response).toBe('mocked post: some data');
+    expect(mockApiClient.post).toHaveBeenCalledTimes(1);
+    expect(mockApiClient.post).toHaveBeenCalledWith('some data');
+  });
+});
+
+{{< /prism >}}
+
+## Funktionen mocken
+
+Jest ermöglicht es nicht nur ganze Objekte zu mocken, sondern auch einzelne
+Funktionsaufrufe auf tatsächlichen Objekten abzufangen und durch Mocks zu
+Ersetzen.
+
+### Beispiel
+
+Als Beispiel dafür verwende ich nochmals das Beispiel aus dem vorherigen
+Abschnitt, mocke jedoch nicht den kompletten ApiClient, sondern nur die `post`
+Funktionalität, mithilfe eines Jest spys.
+
+{{< prism lang="typescript" line-numbers="true" >}}
+
+describe('Service', () => {
+  let service;
+  let apiClient;
+
+
+  beforeAll(() => {
+    apiClient = ApiClient();
+    services = Service(ApiClient);
+  });
+
+  it('should mock the post call', () => {
+    const spy = jest.spyOn(apiClient, 'post').mockResolvedValue({ data: 'mocked post' });
+
+    const response = await service.postData('some data');
+
+    expect(response).toBe('mocked post');
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+})
+
+{{< /prism >}}
+
+Dieses Verhalten mit den Jest Spionen kann auch dann nützlich sein, wenn die
+Funktion nur in gewissen fällen gemockt sein soll, so kann zum Beispiel anstelle
+von `mockResolvedValue` `mockResolvedValueOnce` verwendet werden, um die
+Funktion nur beim ersten Aufruf zu mocken.
+
 ## Globale Klassen und Funktionen mocken
 
 Mit Jest ist es möglich, nicht nur einzelne Komponenten zu Mocken. Sondern auch globale Klassen und Funktionen.

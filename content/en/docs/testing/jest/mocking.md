@@ -9,6 +9,98 @@ draft: false
 toc: true
 ---
 
+## Mocking objects
+
+Jest allows for mocking classes or objects for testing. It isn't as easy as
+passing a class to Jest a receiving a mock, but it is possible to create a new
+object where the methods have been replaced with `jest.fn()` calls that
+implement the mock behavior.
+
+Here it is important to use `jest.fn()`, as this is the only way Jest can
+observe the method calls and arguments, allowing for assertions to be made on
+these function calls.
+
+### Example
+
+In a project which communicates with an external API, it might make sense to
+mock the component, which is responsible for the communication with the API, to
+remove the dependency on the API.
+
+A simple example of how this could look is shown in the following test suite:
+
+{{< prism lang="typescript" line-numbers="true" >}}
+
+describe('Service', () => {
+  let service;
+  let apiClientMock;
+
+  beforeAll(() => {
+    mockApiClient = {
+      get: jest.fn().mockResolvedValue({ data: 'mocked data' }),
+      post: jest.fn().mockImplementation((data) => Promise.resolve({ data: `mocked post: ${data}` }))
+    };
+
+    services = Service(mockApiClient);
+  });
+
+  it('should return the mocked data', async () => {
+    const data = await service.getData();
+
+    expect(data).toBe('mocked data');
+    expect(mockApiClient.get).toHaveBeenCalledTimes(1);
+  });
+
+  it('should use the mocked post', async () => {
+    const response = await service.postData('some data');
+
+    expect(response).toBe('mocked post: some data');
+    expect(mockApiClient.post).toHaveBeenCalledTimes(1);
+    expect(mockApiClient.post).toHaveBeenCalledWith('some data');
+  });
+});
+
+{{< /prism >}}
+
+## Mocking functions
+
+Jest also allows for mocking of individual functions on real objects. For this
+you can create a spy on the function which can catch calls to the function and
+let the mock behavior run instead.
+
+### Example
+
+As example I will use the example from the previous section, but instead of
+mocking the complete ApiClient, I will only mock the `post` functionality using
+a Jest spy.
+
+{{< prism lang="typescript" line-numbers="true" >}}
+
+describe('Service', () => {
+  let service;
+  let apiClient;
+
+
+  beforeAll(() => {
+    apiClient = ApiClient();
+    services = Service(ApiClient);
+  });
+
+  it('should mock the post call', () => {
+    const spy = jest.spyOn(apiClient, 'post').mockResolvedValue({ data: 'mocked post' });
+
+    const response = await service.postData('some data');
+
+    expect(response).toBe('mocked post');
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+})
+
+{{< /prism >}}
+
+The Jest spys can also be used to mock a function only in specific case, for
+example one can use the `mockImplementationOnce` method instead of
+`mockResolvedValue` to mock a function only for the first call.
+
 ## Mocking global classes and functions
 
 Using Jest it is possible to mock not only individual components. But also global classes and functions.
