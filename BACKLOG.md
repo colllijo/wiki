@@ -65,6 +65,7 @@
   - [ ] Relational
   - [ ] NoSQL
 - [ ] Algorithms
+  - [ ] Extended Eucledian Algorithm
 - [ ] Security
   - [x] CORS
   - [ ] Cookies
@@ -72,7 +73,9 @@
   - [ ] O Auth
   - [ ] JWT
   - [ ] Crypto
-    - [ ] RSA
+    - [x] RSA
+    - [ ] ECC
+    - [ ] Diffie-Helman Key-Exchange
   - [ ] CTFs
     - [ ] Ghidra
     - [ ] Pwntools
