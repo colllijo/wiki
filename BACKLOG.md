@@ -66,6 +66,7 @@
   - [ ] NoSQL
 - [ ] Algorithms
   - [ ] Extended Eucledian Algorithm
+  - [ ] A* Path finding
 - [ ] Security
   - [x] CORS
   - [ ] Cookies
