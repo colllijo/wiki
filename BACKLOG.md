@@ -65,8 +65,8 @@
   - [ ] Relational
   - [ ] NoSQL
 - [ ] Algorithms
-  - [ ] Extended Eucledian Algorithm
-  - [ ] A* Path finding
+  - [x] Extended Eucledian Algorithm
+  - [x] A* Path finding
 - [ ] Security
   - [x] CORS
   - [ ] Cookies
