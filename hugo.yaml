@@ -29,10 +29,9 @@ languages:
 
 markup:
   defaultMarkdownHandler: "goldmark"
-  markup:
-    tableOfContents:
-      startLevel: 1
-      endLevel: 3
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
   goldmark:
     renderer:
       unsafe: true
