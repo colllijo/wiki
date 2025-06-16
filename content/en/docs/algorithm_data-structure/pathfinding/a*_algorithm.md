@@ -1,12 +1,12 @@
 ---
-weight: 999
+weight: 3302
 title: "A* algorithm"
 description: |
   Description of the A* algorithm and its functionality.
 icon: "route"
 date: "2025-05-26T08:46:38+02:00"
 lastmod: "2025-05-26T08:46:38+02:00"
-draft: false
+draft: true
 toc: true
 katex: true
 ---

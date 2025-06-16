@@ -2,7 +2,7 @@
 weight: 8202
 title: "Diffie-Hellman-Schlüsselaustausch"
 description: |
-  Beischreibung und Dokumentation des Diffie Hellman-Schlüsselaustausch-Protokolls.
+  Beischreibung und Dokumentation des Diffie-Hellman-Schlüsselaustausch-Protokolls.
 icon: "swap_horiz"
 date: "2025-05-26T14:30:56+02:00"
 lastmod: "2025-05-26T14:30:56+02:00"
@@ -56,9 +56,9 @@ ist.
 Eine Gruppe wird durch das Paar (G,\*)$ bestehend aus einer Menge $G$ und einer
 Verknüpfung $*$, für die das [assoziativ Gesetz][assoziativ-law] gilt, gebildet.
 Zusätzlich muss diese Gruppe ein neutrales Element $e$ enthalten, welches für alle
-Elemente $a \in G$ die Bedingung $e * a = a * e = a$ erfüllt. Und jedes Element
+Elemente $a \in G$ die Bedingung $e \* a = a \* e = a$ erfüllt. Und jedes Element
 $a \in G$ muss ein inverses Element $a^{-1} \in G$ besitzen, welches die Bedingung
-$a * a^{-1} = a^{-1} * a = e$ erfüllt.
+$a \* a^{-1} = a^{-1} \* a = e$ erfüllt.
 
 Ein Beispiel für eine solche Gruppe ist die Gruppe der ganzen Zahlen mit der Addition
 als Verknüpfung. Dabei ist $0$ das neutrale Element da für jede ganze Zahl $a$ gilt
@@ -251,13 +251,15 @@ Die Implementation des DHM-Verfahrens als Programmcode ist relativ einfach, gege
 dass die benötigten Funktionen durch die Programmiersprache oder eine Bibliothek
 unterstützt werden.
 
-{{< alert context="info" >}}
+{{% alert context="info" %}}
 
 Für die Auswahl der Parameter $p$ und $g$ gibt es verschiedene Standards, einer
 davon ist der [RFC 7919][rfc7919], welcher eine Sammlung von Gruppenparametern
-beinhaltet.
+beinhaltet.  
+Alternative können auch die Parameter aus von den beiden Parteien selbst gewählt
+werden.
 
-{{< /alert >}}
+{{% /alert %}}
 
 {{< prism lang="python" >}}
 
@@ -335,7 +337,7 @@ aus zwei Teilproblemen.
 Angenommen, die Lauscherin Eve erfährt auf dem unsicheren Kanal die Zahlen $p$,
 $g$, $A$ und $B$. Ist es für Eve möglich den gemeinsamen geheimen Schlüssel $K$
 oder die nicht übertragenen Zahlen $a$ oder $b$, welche es trivial machen würden
-$k$ zu berechnen, herauszufinden. Die Problemstellung lautet also:
+$K$ zu berechnen, herauszufinden. Die Problemstellung lautet also:
 
 > Wenn ein Element $g$ einer Gruppe und die Werte $A \equiv g^a \pmod p$ und
 > $B \equiv g^b \pmod p$ gegeben sind, welchen Wert hat $K \equiv g^{ab} \pmod p$,
