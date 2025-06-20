@@ -1,5 +1,5 @@
 ---
-weight: 3200
+weight: 3300
 title: "Sortieralgorithmen"
 description: |
   Algorithmen, welche eine Liste von Elementen in eine bestimmte Reihenfolge

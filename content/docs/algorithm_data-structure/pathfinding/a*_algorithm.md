@@ -1,5 +1,5 @@
 ---
-weight: 3302
+weight: 3402
 title: "A*-Algorithmus"
 description: |
   Beschreibung des A*-Algorithmus, seiner Funktionsweise und Anwendungsfälle.

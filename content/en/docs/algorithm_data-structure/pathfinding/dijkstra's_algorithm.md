@@ -1,5 +1,5 @@
 ---
-weight: 3301
+weight: 3401
 title: "Dijkstra's Algorithm"
 description: "Description, functionality and implementation of Dijkstra's Algorithm"
 icon: "route"

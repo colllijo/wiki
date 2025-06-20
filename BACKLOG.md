@@ -10,6 +10,7 @@
   - [ ] C++
     - [ ] C++ - CMake
     - [ ] C++ - Clang
+    - [ ] C++ - LLVM
   - [ ] Golang
   - [ ] JavaScript
     - [x] Why `this` sucks in JavaScript (You don't actually know the context)
@@ -38,6 +39,7 @@
   - [ ] Nestjs
   - [ ] React
   - [ ] Angular
+  - [ ] Spring Boot
 - [ ] Design Patterns
 - [ ] Software Architektur
   - [ ] MVC
@@ -67,6 +69,16 @@
 - [ ] Algorithms
   - [x] Extended Eucledian Algorithm
   - [x] A* Path finding
+  - [ ] Breath-First Search (BFS)
+  - [ ] Depth-First Search (DFS)
+  - [ ] Maps
+  - [ ] Sets
+  - [ ] Graph
+  - [ ] Trees
+  - [ ] Queus
+  - [ ] Stacks
+  - [ ] Heap
+  - [ ] Concurrency
 - [ ] Security
   - [x] CORS
   - [ ] Cookies

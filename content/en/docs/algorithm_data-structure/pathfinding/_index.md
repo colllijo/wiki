@@ -1,5 +1,5 @@
 ---
-weight: 3300
+weight: 3400
 title: "Pathfinding algorithms"
 description: |
   Algorithms that find the best path between two nodes of a graph

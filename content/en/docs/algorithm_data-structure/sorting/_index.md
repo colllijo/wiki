@@ -1,5 +1,5 @@
 ---
-weight: 3200
+weight: 3300
 title: "Sorting algorithms"
 description: |
   Algorithms that sort a list of elements into a specific order.

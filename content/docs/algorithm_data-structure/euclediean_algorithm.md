@@ -1,5 +1,5 @@
 ---
-weight: 3400
+weight: 3500
 title: "Euklidischer Algorithmus"
 description: |
   Dokumentation zum euklidischen und dem erweiterten euklidischen Algorithmus.

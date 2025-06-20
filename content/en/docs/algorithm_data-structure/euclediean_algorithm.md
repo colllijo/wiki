@@ -1,5 +1,5 @@
 ---
-weight: 3400
+weight: 3500
 title: "Euclidean algorithm"
 description: |
   Documentation about the euclidean and extended euclidean algorithm.

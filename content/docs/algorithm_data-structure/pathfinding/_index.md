@@ -1,5 +1,5 @@
 ---
-weight: 3300
+weight: 3400
 title: "Wegfindungsalgorithmen"
 description: |
   Algorithmen, welche den besten Weg zwischen zwei Knoten eines Graphens finden

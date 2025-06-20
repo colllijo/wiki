@@ -1,5 +1,5 @@
 ---
-weight: 3202
+weight: 3302
 title: "Quicksort"
 description: "Funktionsweise des Quicksort Algorithmus"
 icon: "sort"
