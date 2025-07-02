@@ -71,19 +71,19 @@
   - [x] A* Path finding
   - [ ] Breath-First Search (BFS)
   - [ ] Depth-First Search (DFS)
-  - [ ] Maps
-  - [ ] Sets
+  - [x] Maps
+  - [x] Sets
   - [ ] Graph
   - [ ] Trees
-  - [ ] Queus
+  - [ ] Queues
   - [ ] Stacks
-  - [ ] Heap
+  - [x] Heap
   - [ ] Concurrency
 - [ ] Security
   - [x] CORS
   - [ ] Cookies
   - [ ] Wireshark
-  - [ ] O Auth
+  - [ ] O Auth 2.0
   - [ ] JWT
   - [ ] Crypto
     - [x] RSA
