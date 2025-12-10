@@ -1,9 +1,7 @@
 # Backlog
 
 - [ ] Testing
-  - [x] Testing - JUnit
   - [ ] Testing - Cypress
-  - [x] Testing - K6
   - [ ] Testing - Sentry
 - [ ] Programming
   - [ ] C
@@ -13,9 +11,7 @@
     - [ ] C++ - LLVM
   - [ ] Golang
   - [ ] JavaScript
-    - [x] Why `this` sucks in JavaScript (You don't actually know the context)
   - [ ] Java
-    - [x] Java CLI
     - [ ] Maven
   - [ ] APL (A Programming language)
   - [ ] Assembly
@@ -46,11 +42,6 @@
   - [ ] Microservices
   - [ ] Monolith
 - [ ] Technologien
-  - [x] WebSockets
-  - [x] RabbitMQ
-  - [x] MQTT
-  - [x] Server-sent events
-  - [x] REST
   - [ ] GraphQL
   - [ ] Machine Learning / AI
   - [ ] OpenAPI / Contracts
@@ -59,7 +50,6 @@
   - [ ] Prometheus
   - [ ] CheckMK
 - [ ] Deployment
-  - [x] Docker
   - [ ] Kubernetes
     - [ ] Kustomize
     - [ ] ArgoCD
@@ -74,26 +64,21 @@
   - [x] Maps
   - [x] Sets
   - [ ] Graph
-  - [ ] Trees
+  - [x] Trees
   - [ ] Queues
   - [ ] Stacks
   - [x] Heap
   - [ ] Concurrency
 - [ ] Security
-  - [x] CORS
   - [ ] Cookies
   - [ ] Wireshark
   - [ ] O Auth 2.0
   - [ ] JWT
   - [ ] Crypto
-    - [x] RSA
     - [ ] ECC
     - [ ] Diffie-Helman Key-Exchange
   - [ ] CTFs
     - [ ] Ghidra
     - [ ] Pwntools
     - [ ] Stenography
-- [x] Competitions
-  - [x] Advent of Code (AoC)
-  - [x] Swiss Hacking Challenge (SHC)
 - [ ] Glossar
